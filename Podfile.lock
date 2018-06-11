@@ -1,0 +1,21 @@
+PODS:
+  - SwiftPing (1.1.1)
+
+DEPENDENCIES:
+  - SwiftPing (from `https://github.com/FroeMic/SwiftPing.git`)
+
+EXTERNAL SOURCES:
+  SwiftPing:
+    :git: https://github.com/FroeMic/SwiftPing.git
+
+CHECKOUT OPTIONS:
+  SwiftPing:
+    :commit: 8ced83517e33a32a0d73d385af0aded26d9b93d9
+    :git: https://github.com/FroeMic/SwiftPing.git
+
+SPEC CHECKSUMS:
+  SwiftPing: 9b444bde61c3f9272a51fabc1aa08eee03c986d1
+
+PODFILE CHECKSUM: 4d9754c191be2840c52c70fd9b77576b218b2806
+
+COCOAPODS: 1.5.3

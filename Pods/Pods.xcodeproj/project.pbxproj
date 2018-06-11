@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0569B196BD4254B4273EDAEF8C0039DF /* PingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */; };
+		1659586459AC5A7353172D60BD6CFA4E /* Pods-ping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */; };
+		22E32C473E953CD1E0CDB7176D468783 /* SwiftPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */; };
+		29B5288A68D28C31E43AE872970F8882 /* ICMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */; };
+		457732EFC2F916A7D9D8D7F0D5394C73 /* SwiftPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55931361102D2AADC9C674A197D31666 /* SwiftPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */; };
+		5D9AE6049C58C37090ED503ACA778702 /* Pods-pingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780792D33FE0526E3A89699BE681E4A0 /* Pods-ping-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		980307190098F7DC645E5ED317043E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		A698103A2A5E8365E3620E37E6B97519 /* PingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */; };
+		BE5A57B3166347DE0839DB16C9FADFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		BFE811401BA3346B8F5809200A87FB1D /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */; };
+		D5925437FFFB7E798C8195EAB26DD74F /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE150D4D2C586B100A420E81209F15EE /* Shared.swift */; };
+		D993AC33BE568CB0E98E78DB38E6F73D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		FC89BE5FA2355B6B328777D69ED8C803 /* Pods-pingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C4287CF4E9A8453FDFC6CBD496A0C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 864D2BC428A3FAB7951DD07A8C643AD2;
+			remoteInfo = "Pods-ping";
+		};
+		B53830E0477AFF98D2F2C20598275963 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFF481D600DD182A2251FDEFB549BF17;
+			remoteInfo = SwiftPing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ping.framework; path = "Pods-ping.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftPing.xcconfig; sourceTree = "<group>"; };
+		046EE1259E691341B0F04C04F576ACAA /* SwiftPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftPing-prefix.pch"; sourceTree = "<group>"; };
+		0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
+		11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pingTests-dummy.m"; sourceTree = "<group>"; };
+		131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPing.swift; path = Sources/Shared/SwiftPing.swift; sourceTree = "<group>"; };
+		1A8180E78CBD3D237D8325B21564FDA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ping-dummy.m"; sourceTree = "<group>"; };
+		1C46D3985A142756D848E7455C087371 /* Pods-ping.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ping.modulemap"; sourceTree = "<group>"; };
+		53BFD58AE2EB087154CC8780919BF117 /* SwiftPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftPing.modulemap; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftPing-umbrella.h"; sourceTree = "<group>"; };
+		5D081B743627257DCC46614DB4E79F72 /* Pods-ping-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-resources.sh"; sourceTree = "<group>"; };
+		66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pingTests-umbrella.h"; sourceTree = "<group>"; };
+		6FF3075C1C31736483FDE4A4076F99F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ICMP.swift; path = Sources/Shared/ICMP.swift; sourceTree = "<group>"; };
+		8EF9903C7CEDC1D97174751EC167E88A /* Pods-pingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pingTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98D62C04D34B9B70A8F11F34321D29ED /* Pods-pingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-frameworks.sh"; sourceTree = "<group>"; };
+		A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pingTests.framework; path = "Pods-pingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PingResponse.swift; path = Sources/Shared/PingResponse.swift; sourceTree = "<group>"; };
+		ABC3DD52D4CF4BFCEA441BDF19C1A1CD /* Pods-ping-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ping-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftPing-dummy.m"; sourceTree = "<group>"; };
+		AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftPing.framework; path = SwiftPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B411BF6688B2F035FEE7F0DA0E594BF4 /* Pods-pingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pingTests.modulemap"; sourceTree = "<group>"; };
+		C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.release.xcconfig"; sourceTree = "<group>"; };
+		D79ABE28B8766771ECCB299B8A0431DF /* Pods-ping-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-frameworks.sh"; sourceTree = "<group>"; };
+		DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PingConfiguration.swift; path = Sources/Shared/PingConfiguration.swift; sourceTree = "<group>"; };
+		E0167A59AEF114AA1BAA2570E606AE2D /* Pods-pingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-resources.sh"; sourceTree = "<group>"; };
+		E70132A8BF6D9702E3AC2681C3B87FB6 /* Pods-pingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ping-umbrella.h"; sourceTree = "<group>"; };
+		EBCF7D3CCF80824984E5769112D8AB89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE150D4D2C586B100A420E81209F15EE /* Shared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = Sources/Shared/Shared.swift; sourceTree = "<group>"; };
+		F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOS.swift; path = Sources/iOS/iOS.swift; sourceTree = "<group>"; };
+		F73438897BC0B6134B6259E2B69CD983 /* Pods-ping-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ping-acknowledgements.plist"; sourceTree = "<group>"; };
+		FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10A8CDB571612AC3FBB3B9F5032A46EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				980307190098F7DC645E5ED317043E78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7063AD9C0864C2C07F959F96E5A330BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5A57B3166347DE0839DB16C9FADFA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA5E7393E04AA5F01F519549CDDE3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D993AC33BE568CB0E98E78DB38E6F73D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B7F033BDFAABB96FDE5E11D385DCB8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB02477FF74AAD3237BCD291DB1235 /* SwiftPing */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47C55653472B2BDBBCE3175EEFEADA05 /* Pods-pingTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBCF7D3CCF80824984E5769112D8AB89 /* Info.plist */,
+				B411BF6688B2F035FEE7F0DA0E594BF4 /* Pods-pingTests.modulemap */,
+				E70132A8BF6D9702E3AC2681C3B87FB6 /* Pods-pingTests-acknowledgements.markdown */,
+				8EF9903C7CEDC1D97174751EC167E88A /* Pods-pingTests-acknowledgements.plist */,
+				11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */,
+				98D62C04D34B9B70A8F11F34321D29ED /* Pods-pingTests-frameworks.sh */,
+				E0167A59AEF114AA1BAA2570E606AE2D /* Pods-pingTests-resources.sh */,
+				66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */,
+				5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */,
+				C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */,
+			);
+			name = "Pods-pingTests";
+			path = "Target Support Files/Pods-pingTests";
+			sourceTree = "<group>";
+		};
+		487267C172B1F1B489CDA3AB148533DC /* Pods-ping */ = {
+			isa = PBXGroup;
+			children = (
+				1A8180E78CBD3D237D8325B21564FDA9 /* Info.plist */,
+				1C46D3985A142756D848E7455C087371 /* Pods-ping.modulemap */,
+				ABC3DD52D4CF4BFCEA441BDF19C1A1CD /* Pods-ping-acknowledgements.markdown */,
+				F73438897BC0B6134B6259E2B69CD983 /* Pods-ping-acknowledgements.plist */,
+				1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */,
+				D79ABE28B8766771ECCB299B8A0431DF /* Pods-ping-frameworks.sh */,
+				5D081B743627257DCC46614DB4E79F72 /* Pods-ping-resources.sh */,
+				E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */,
+				FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */,
+				0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */,
+			);
+			name = "Pods-ping";
+			path = "Target Support Files/Pods-ping";
+			sourceTree = "<group>";
+		};
+		4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */,
+				A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */,
+				AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0B7F033BDFAABB96FDE5E11D385DCB8A /* Pods */,
+				4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */,
+				DF38BBC805350A2D8B801EF906D7AE78 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		90A9DB65177768DBADE46CE75414FF25 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FF3075C1C31736483FDE4A4076F99F1 /* Info.plist */,
+				53BFD58AE2EB087154CC8780919BF117 /* SwiftPing.modulemap */,
+				02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */,
+				ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */,
+				046EE1259E691341B0F04C04F576ACAA /* SwiftPing-prefix.pch */,
+				5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftPing";
+			sourceTree = "<group>";
+		};
+		AFBB02477FF74AAD3237BCD291DB1235 /* SwiftPing */ = {
+			isa = PBXGroup;
+			children = (
+				87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */,
+				F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */,
+				DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */,
+				A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */,
+				EE150D4D2C586B100A420E81209F15EE /* Shared.swift */,
+				131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */,
+				90A9DB65177768DBADE46CE75414FF25 /* Support Files */,
+			);
+			name = SwiftPing;
+			path = SwiftPing;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF38BBC805350A2D8B801EF906D7AE78 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				487267C172B1F1B489CDA3AB148533DC /* Pods-ping */,
+				47C55653472B2BDBBCE3175EEFEADA05 /* Pods-pingTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		580474417230201E90D0C527BF33E070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9AE6049C58C37090ED503ACA778702 /* Pods-pingTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE8050FA6E4DA16536875E882089349 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780792D33FE0526E3A89699BE681E4A0 /* Pods-ping-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5303144D12ABACED29F541C20106377 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457732EFC2F916A7D9D8D7F0D5394C73 /* SwiftPing-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D895E2C96B0B3FE35E142D8371030776 /* Build configuration list for PBXNativeTarget "Pods-ping" */;
+			buildPhases = (
+				0EA6E36FDCD2F069D828A6E2D91AB890 /* Sources */,
+				10A8CDB571612AC3FBB3B9F5032A46EC /* Frameworks */,
+				5CE8050FA6E4DA16536875E882089349 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				575973D2881031F7164E0B2FFDAD9A7A /* PBXTargetDependency */,
+			);
+			name = "Pods-ping";
+			productName = "Pods-ping";
+			productReference = 015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 880BBEDB3C2A2C7761CE6CF29A91C0DC /* Build configuration list for PBXNativeTarget "Pods-pingTests" */;
+			buildPhases = (
+				6BB3CF5128E7325E281195E0BED78579 /* Sources */,
+				CEA5E7393E04AA5F01F519549CDDE3B6 /* Frameworks */,
+				580474417230201E90D0C527BF33E070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66879116489CB14BDCB3625DC7947E17 /* PBXTargetDependency */,
+			);
+			name = "Pods-pingTests";
+			productName = "Pods-pingTests";
+			productReference = A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2208C691B228196C3DE62E2B56398C3 /* Build configuration list for PBXNativeTarget "SwiftPing" */;
+			buildPhases = (
+				89CB04908A9DE73820E2FFF198A30FCA /* Sources */,
+				7063AD9C0864C2C07F959F96E5A330BE /* Frameworks */,
+				A5303144D12ABACED29F541C20106377 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftPing;
+			productName = SwiftPing;
+			productReference = AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */,
+				AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */,
+				CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EA6E36FDCD2F069D828A6E2D91AB890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1659586459AC5A7353172D60BD6CFA4E /* Pods-ping-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BB3CF5128E7325E281195E0BED78579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC89BE5FA2355B6B328777D69ED8C803 /* Pods-pingTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CB04908A9DE73820E2FFF198A30FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B5288A68D28C31E43AE872970F8882 /* ICMP.swift in Sources */,
+				BFE811401BA3346B8F5809200A87FB1D /* iOS.swift in Sources */,
+				0569B196BD4254B4273EDAEF8C0039DF /* PingConfiguration.swift in Sources */,
+				A698103A2A5E8365E3620E37E6B97519 /* PingResponse.swift in Sources */,
+				D5925437FFFB7E798C8195EAB26DD74F /* Shared.swift in Sources */,
+				22E32C473E953CD1E0CDB7176D468783 /* SwiftPing-dummy.m in Sources */,
+				55931361102D2AADC9C674A197D31666 /* SwiftPing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		575973D2881031F7164E0B2FFDAD9A7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftPing;
+			target = CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */;
+			targetProxy = B53830E0477AFF98D2F2C20598275963 /* PBXContainerItemProxy */;
+		};
+		66879116489CB14BDCB3625DC7947E17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ping";
+			target = 864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */;
+			targetProxy = 4C4287CF4E9A8453FDFC6CBD496A0C98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		174561006CEBE1206B7227C36A8761C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftPing/SwiftPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftPing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftPing/SwiftPing.modulemap";
+				PRODUCT_MODULE_NAME = SwiftPing;
+				PRODUCT_NAME = SwiftPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25155BE473B811590DB7BAFB2D352509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-pingTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-pingTests/Pods-pingTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30CDE8F82A95253EE39BD8744D845869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B7A0293C91E129AFAEFF021A6E0822A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-pingTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-pingTests/Pods-pingTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5568000EF22F88A0A1CC3EBFFBF4254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftPing/SwiftPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftPing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftPing/SwiftPing.modulemap";
+				PRODUCT_MODULE_NAME = SwiftPing;
+				PRODUCT_NAME = SwiftPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E59BC1731178DD3F100E6E0B08EB9729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		880BBEDB3C2A2C7761CE6CF29A91C0DC /* Build configuration list for PBXNativeTarget "Pods-pingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25155BE473B811590DB7BAFB2D352509 /* Debug */,
+				B7A0293C91E129AFAEFF021A6E0822A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D895E2C96B0B3FE35E142D8371030776 /* Build configuration list for PBXNativeTarget "Pods-ping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59BC1731178DD3F100E6E0B08EB9729 /* Debug */,
+				30CDE8F82A95253EE39BD8744D845869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2208C691B228196C3DE62E2B56398C3 /* Build configuration list for PBXNativeTarget "SwiftPing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174561006CEBE1206B7227C36A8761C9 /* Debug */,
+				E5568000EF22F88A0A1CC3EBFFBF4254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

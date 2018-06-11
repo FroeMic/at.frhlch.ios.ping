@@ -1,0 +1,6 @@
+framework module Pods_ping {
+  umbrella header "Pods-ping-umbrella.h"
+
+  export *
+  module * { export * }
+}

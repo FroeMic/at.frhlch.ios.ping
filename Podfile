@@ -6,6 +6,7 @@ target 'ping' do
   use_frameworks!
 
   # Pods for ping
+  pod 'SwiftPing', :git => 'https://github.com/FroeMic/SwiftPing.git'
 
   target 'pingTests' do
     inherit! :search_paths
