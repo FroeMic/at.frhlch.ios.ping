@@ -13,6 +13,7 @@
 		2704491920CEAD5D001C4004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2704491820CEAD5D001C4004 /* Assets.xcassets */; };
 		2704491C20CEAD5D001C4004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */; };
 		2704492720CEAD5D001C4004 /* pingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704492620CEAD5D001C4004 /* pingTests.swift */; };
+		2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2704492220CEAD5D001C4004 /* pingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2704492620CEAD5D001C4004 /* pingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pingTests.swift; sourceTree = "<group>"; };
 		2704492820CEAD5D001C4004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,11 @@
 		2704491020CEAD5C001C4004 /* ping */ = {
 			isa = PBXGroup;
 			children = (
-				2704491120CEAD5C001C4004 /* AppDelegate.swift */,
-				2704491320CEAD5C001C4004 /* ViewController.swift */,
-				2704491520CEAD5C001C4004 /* Main.storyboard */,
-				2704491820CEAD5D001C4004 /* Assets.xcassets */,
-				2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */,
 				2704491D20CEAD5D001C4004 /* Info.plist */,
+				2704493220CEAD6D001C4004 /* Base */,
+				2704493120CEAD62001C4004 /* Presentation */,
+				2704493320CEAD75001C4004 /* Model */,
+				2704493420CEAD82001C4004 /* Data */,
 			);
 			path = ping;
 			sourceTree = "<group>";
@@ -94,6 +95,40 @@
 				2704492820CEAD5D001C4004 /* Info.plist */,
 			);
 			path = pingTests;
+			sourceTree = "<group>";
+		};
+		2704493120CEAD62001C4004 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2704491320CEAD5C001C4004 /* ViewController.swift */,
+				2704491520CEAD5C001C4004 /* Main.storyboard */,
+				2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */,
+				2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2704493220CEAD6D001C4004 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2704491120CEAD5C001C4004 /* AppDelegate.swift */,
+				2704491820CEAD5D001C4004 /* Assets.xcassets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2704493320CEAD75001C4004 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2704493420CEAD82001C4004 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2704491420CEAD5C001C4004 /* ViewController.swift in Sources */,
+				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
 				2704491220CEAD5C001C4004 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8739VU9P7E;
 				INFOPLIST_FILE = ping/Info.plist;
@@ -376,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8739VU9P7E;
 				INFOPLIST_FILE = ping/Info.plist;

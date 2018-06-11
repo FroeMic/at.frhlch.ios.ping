@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGw-R9-Beo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="0Re-iO-axH">
+            <objects>
+                <viewController id="hGw-R9-Beo" customClass="LaunchViewController" customModule="ping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UV7-ZL-hGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ping" translatesAutoresizingMaskIntoConstraints="NO" id="J44-yz-qAI">
+                                <rect key="frame" x="67" y="163.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="W3Q-Lk-dl4"/>
+                                    <constraint firstAttribute="width" constant="240" id="lq6-xc-3rb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="p!ng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw0-ju-Ran">
+                                <rect key="frame" x="0.0" y="403.5" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oTS-ri-p0K" firstAttribute="trailing" secondItem="Qw0-ju-Ran" secondAttribute="trailing" id="9zP-MX-grB"/>
+                            <constraint firstItem="Qw0-ju-Ran" firstAttribute="leading" secondItem="oTS-ri-p0K" secondAttribute="leading" id="NII-Eb-WRB"/>
+                            <constraint firstItem="Qw0-ju-Ran" firstAttribute="top" secondItem="J44-yz-qAI" secondAttribute="bottom" id="diz-bB-S8A"/>
+                            <constraint firstItem="J44-yz-qAI" firstAttribute="centerY" secondItem="UV7-ZL-hGQ" secondAttribute="centerY" constant="-50" id="ia6-bX-Ydp"/>
+                            <constraint firstItem="J44-yz-qAI" firstAttribute="centerX" secondItem="UV7-ZL-hGQ" secondAttribute="centerX" id="vO2-3y-Jq8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oTS-ri-p0K"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showMainScreen" animates="NO" id="N4o-gk-W4D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rr0-Jd-Cr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="32"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ping" width="1024" height="1024"/>
+    </resources>
+</document>
