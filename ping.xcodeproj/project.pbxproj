@@ -14,6 +14,23 @@
 		2704491C20CEAD5D001C4004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */; };
 		2704492720CEAD5D001C4004 /* pingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704492620CEAD5D001C4004 /* pingTests.swift */; };
 		2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */; };
+		27251D4D20D03AF800F85DD7 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251D4B20D03AF800F85DD7 /* DashedView.swift */; };
+		27251D4E20D03AF800F85DD7 /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251D4C20D03AF800F85DD7 /* AnimatedTextField.swift */; };
+		2781CE8420D12BB70050C8A7 /* QNNPingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8320D12BB70050C8A7 /* QNNPingManager.swift */; };
+		2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */; };
+		2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */; };
+		2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */; };
+		278A6C9020D04F0D0007322A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C8F20D04F0D0007322A /* HistoryViewController.swift */; };
+		278A6C9420D05E600007322A /* PingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9320D05E600007322A /* PingResult.swift */; };
+		278A6C9620D05E990007322A /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9520D05E990007322A /* Host.swift */; };
+		278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9720D062FF0007322A /* HostHistoryRepository.swift */; };
+		278A6C9A20D063F90007322A /* UDTHostHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */; };
+		278A6C9C20D067280007322A /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9B20D067280007322A /* Injection.swift */; };
+		278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */; };
+		278A6CA020D077470007322A /* PingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9F20D077470007322A /* PingDelegate.swift */; };
+		27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */; };
+		27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */; };
+		27EB1E4B20D1250D00B64536 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB1E4A20D1250D00B64536 /* PingManager.swift */; };
 		483E67CA1A67BC8D44691FD0 /* Pods_ping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4A680256749F30D6138B /* Pods_ping.framework */; };
 		4B93FA6CF86CC7740930D87B /* Pods_pingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B19013CAD92418202AFA4F /* Pods_pingTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +58,23 @@
 		2704492620CEAD5D001C4004 /* pingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pingTests.swift; sourceTree = "<group>"; };
 		2704492820CEAD5D001C4004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		27251D4B20D03AF800F85DD7 /* DashedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
+		27251D4C20D03AF800F85DD7 /* AnimatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
+		2781CE8320D12BB70050C8A7 /* QNNPingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QNNPingManager.swift; sourceTree = "<group>"; };
+		2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+stdev.swift"; sourceTree = "<group>"; };
+		2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewDelegate.swift; sourceTree = "<group>"; };
+		2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTableViewCell.swift; sourceTree = "<group>"; };
+		278A6C8F20D04F0D0007322A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		278A6C9320D05E600007322A /* PingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingResult.swift; sourceTree = "<group>"; };
+		278A6C9520D05E990007322A /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		278A6C9720D062FF0007322A /* HostHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryRepository.swift; sourceTree = "<group>"; };
+		278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDTHostHistoryRepository.swift; sourceTree = "<group>"; };
+		278A6C9B20D067280007322A /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryPublisher.swift; sourceTree = "<group>"; };
+		278A6C9F20D077470007322A /* PingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingDelegate.swift; sourceTree = "<group>"; };
+		27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressStyle.swift; sourceTree = "<group>"; };
+		27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTableViewCell.swift; sourceTree = "<group>"; };
+		27EB1E4A20D1250D00B64536 /* PingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
 		6F8B4A680256749F30D6138B /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A254B6C7A68F62B324969BA5 /* Pods-ping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ping/Pods-ping.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3153AA0F18C2C88704E8CE /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ping.release.xcconfig"; path = "Pods/Target Support Files/Pods-ping/Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,10 +146,13 @@
 		2704493120CEAD62001C4004 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				2704491320CEAD5C001C4004 /* PingViewController.swift */,
+				27251D4A20D03AEC00F85DD7 /* Views */,
 				2704491520CEAD5C001C4004 /* Main.storyboard */,
 				2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */,
 				2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */,
+				2704491320CEAD5C001C4004 /* PingViewController.swift */,
+				278A6C8F20D04F0D0007322A /* HistoryViewController.swift */,
+				2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -123,7 +160,9 @@
 		2704493220CEAD6D001C4004 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2781CE8D20D19A760050C8A7 /* Extension */,
 				2704491120CEAD5C001C4004 /* AppDelegate.swift */,
+				278A6C9B20D067280007322A /* Injection.swift */,
 				2704491820CEAD5D001C4004 /* Assets.xcassets */,
 			);
 			path = Base;
@@ -132,6 +171,12 @@
 		2704493320CEAD75001C4004 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				278A6C9520D05E990007322A /* Host.swift */,
+				27EB1E4A20D1250D00B64536 /* PingManager.swift */,
+				27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */,
+				278A6C9F20D077470007322A /* PingDelegate.swift */,
+				278A6C9320D05E600007322A /* PingResult.swift */,
+				2781CE8320D12BB70050C8A7 /* QNNPingManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,8 +184,30 @@
 		2704493420CEAD82001C4004 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */,
+				278A6C9720D062FF0007322A /* HostHistoryRepository.swift */,
+				278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		27251D4A20D03AEC00F85DD7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27251D4C20D03AF800F85DD7 /* AnimatedTextField.swift */,
+				27251D4B20D03AF800F85DD7 /* DashedView.swift */,
+				2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */,
+				27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2781CE8D20D19A760050C8A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9AE65DC9298BF79B90644CAC /* Frameworks */ = {
@@ -216,6 +283,7 @@
 				TargetAttributes = {
 					2704490D20CEAD5C001C4004 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					2704492120CEAD5D001C4004 = {
 						CreatedOnToolsVersion = 9.4;
@@ -270,11 +338,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ping/Pods-ping-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftPing/SwiftPing.framework",
+				"${BUILT_PRODUCTS_DIR}/QNNetDiag/QNNetDiag.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QNNetDiag.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -324,9 +392,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */,
+				2781CE8420D12BB70050C8A7 /* QNNPingManager.swift in Sources */,
+				278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */,
 				2704491420CEAD5C001C4004 /* PingViewController.swift in Sources */,
+				278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */,
+				27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */,
 				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
+				27251D4D20D03AF800F85DD7 /* DashedView.swift in Sources */,
+				278A6CA020D077470007322A /* PingDelegate.swift in Sources */,
+				278A6C9620D05E990007322A /* Host.swift in Sources */,
+				278A6C9420D05E600007322A /* PingResult.swift in Sources */,
+				278A6C9C20D067280007322A /* Injection.swift in Sources */,
+				2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */,
+				278A6C9A20D063F90007322A /* UDTHostHistoryRepository.swift in Sources */,
+				27251D4E20D03AF800F85DD7 /* AnimatedTextField.swift in Sources */,
 				2704491220CEAD5C001C4004 /* AppDelegate.swift in Sources */,
+				27EB1E4B20D1250D00B64536 /* PingManager.swift in Sources */,
+				2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */,
+				278A6C9020D04F0D0007322A /* HistoryViewController.swift in Sources */,
+				2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,15 +573,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8739VU9P7E;
 				INFOPLIST_FILE = ping/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.frhlch.ios.test.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,15 +599,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8739VU9P7E;
 				INFOPLIST_FILE = ping/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.frhlch.ios.test.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

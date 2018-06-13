@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0569B196BD4254B4273EDAEF8C0039DF /* PingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */; };
-		1659586459AC5A7353172D60BD6CFA4E /* Pods-ping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */; };
-		22E32C473E953CD1E0CDB7176D468783 /* SwiftPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */; };
-		29B5288A68D28C31E43AE872970F8882 /* ICMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */; };
-		457732EFC2F916A7D9D8D7F0D5394C73 /* SwiftPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55931361102D2AADC9C674A197D31666 /* SwiftPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */; };
+		12B0A32F86BB039C4C9CCACA5FE850A0 /* QNNExternalIp.h in Headers */ = {isa = PBXBuildFile; fileRef = D15D154B4F31C202D21F00A7A9DC05E8 /* QNNExternalIp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2237B4D58CB394C37096383205D2F7BF /* QNNUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9E6461AC6B09A0BEF1BD042EC19F22 /* QNNUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27A7A80236A9EF676CF4BA6B2457CD4B /* QNNHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF156191E10A0311E428CD5EF0C9885 /* QNNHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CBD969263F8195DEED2AA0B827F1894 /* QNNProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D86283A67EB5940ECE9C3447B2CF0A5 /* QNNProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		496A796C1F025DCEAC500DF594A75E07 /* QNNPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A36BFD831855CAC24B2A8B3CD62288F /* QNNPing.m */; };
+		4D3E21AE60DB69AC1A4DDF010DFBA722 /* QNNTcpPing.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B85CA26888C23CBDCCFD8D0B740BE7 /* QNNTcpPing.m */; };
+		592F8B0C37295D2DACFE386F3467B52D /* QNNQue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8238E865E2E3BA4697B51C23FB2EA1C4 /* QNNQue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A9D7FFE02C1913B1F5FC6FCD927B898 /* QNNExternalIp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8835B5349115A9B85C706A82F8D67336 /* QNNExternalIp.m */; };
+		5AC44A26EAFC4438B41F1163466D8234 /* QNNetDiag-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 949723E6BA5C6F3BB25D096D4EDE3F12 /* QNNetDiag-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D9AE6049C58C37090ED503ACA778702 /* Pods-pingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		780792D33FE0526E3A89699BE681E4A0 /* Pods-ping-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		980307190098F7DC645E5ED317043E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		A698103A2A5E8365E3620E37E6B97519 /* PingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */; };
-		BE5A57B3166347DE0839DB16C9FADFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		BFE811401BA3346B8F5809200A87FB1D /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */; };
-		D5925437FFFB7E798C8195EAB26DD74F /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE150D4D2C586B100A420E81209F15EE /* Shared.swift */; };
+		6365425ADD337BCE1840204AAD15B6AD /* Pods-ping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */; };
+		6A6FB1626DF438A0097D98BB27C11728 /* QNNNslookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 0019F088521437A59FCDFA72D50E554F /* QNNNslookup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88F2F288C741F11BF67C50EC82A6C08B /* Pods-ping-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99604B4DDB47459507F11787F0404079 /* QNNHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = F199F2AE16EAE11B911B712CBFED45FC /* QNNHttp.m */; };
+		998FB12012E6A85BB99A1F4A4AB9D25B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		9F7CB0253C066597F1EB9A4EE2A08A60 /* QNNetDiag-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EC70A5CEF624FCB5C060AE0B2AAD5 /* QNNetDiag-dummy.m */; };
+		B61AEB8A9747935BF5C76FF8FAE3B912 /* QNNRtmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3743AB2D6DC77F47487F84599C2843 /* QNNRtmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9C39BD06CF66396F626BBCEF7231945 /* QNNTcpPing.h in Headers */ = {isa = PBXBuildFile; fileRef = 044938AD873E82CD2CAFDF4ED29E16C5 /* QNNTcpPing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD153EA2B2884701ABD628310D19B1CB /* QNNQue.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DF22511CDFFE58863F883A358B7E0 /* QNNQue.m */; };
+		CFCE4FA2E07D661E428D390FF1EBF2BC /* QNNTraceRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51015749B7F807A909C283D04055D5 /* QNNTraceRoute.m */; };
+		D443B54488C516028EC4919E6FFDAAFB /* QNNetDiag.h in Headers */ = {isa = PBXBuildFile; fileRef = F576F10694398D3BDDD055CCE4E7A3F4 /* QNNetDiag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D993AC33BE568CB0E98E78DB38E6F73D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		DDB4C2C5FDDED5209372F988B69FB6F6 /* QNNUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC6C19A64151A41416478F3AC89C654 /* QNNUtil.m */; };
+		E26EE5FDD8381C8E32FF896CBD589F6B /* QNNPing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3110CF0023C8DC77D93741FD1D358228 /* QNNPing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E74909438E41102CF66370DF760A6DB0 /* QNNNslookup.m in Sources */ = {isa = PBXBuildFile; fileRef = E19B0BDCDC58ADE07BDF988DD945E63C /* QNNNslookup.m */; };
+		E7F1812C08097F4BFA484EE517C6FCB7 /* QNNTraceRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 063C6B41E64B68FCA8D435238B250D4D /* QNNTraceRoute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5990559F6F8D4FC6992CEEF0F08B033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		F85A940926F257523AD11A7DC0192945 /* QNNRtmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B6BFED9F7DA230F8A6BBF66BA516C7 /* QNNRtmp.m */; };
 		FC89BE5FA2355B6B328777D69ED8C803 /* Pods-pingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -29,72 +43,86 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 864D2BC428A3FAB7951DD07A8C643AD2;
+			remoteGlobalIDString = AAEF4E3B6A10B88EA0D345538BB7BDC6;
 			remoteInfo = "Pods-ping";
 		};
-		B53830E0477AFF98D2F2C20598275963 /* PBXContainerItemProxy */ = {
+		F60733CC128A66440064115C4902BD7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CFF481D600DD182A2251FDEFB549BF17;
-			remoteInfo = SwiftPing;
+			remoteGlobalIDString = C86EE1BD7CABEE02D0223A2B6680AAAD;
+			remoteInfo = QNNetDiag;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ping.framework; path = "Pods-ping.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftPing.xcconfig; sourceTree = "<group>"; };
-		046EE1259E691341B0F04C04F576ACAA /* SwiftPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftPing-prefix.pch"; sourceTree = "<group>"; };
+		0019F088521437A59FCDFA72D50E554F /* QNNNslookup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNNslookup.h; path = NetDiag/QNNNslookup.h; sourceTree = "<group>"; };
+		044938AD873E82CD2CAFDF4ED29E16C5 /* QNNTcpPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNTcpPing.h; path = NetDiag/QNNTcpPing.h; sourceTree = "<group>"; };
+		0506577713EB31ED42496E7C13C0C95F /* QNNetDiag.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QNNetDiag.xcconfig; sourceTree = "<group>"; };
+		063C6B41E64B68FCA8D435238B250D4D /* QNNTraceRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNTraceRoute.h; path = NetDiag/QNNTraceRoute.h; sourceTree = "<group>"; };
+		0A9EC70A5CEF624FCB5C060AE0B2AAD5 /* QNNetDiag-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QNNetDiag-dummy.m"; sourceTree = "<group>"; };
 		0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
 		11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pingTests-dummy.m"; sourceTree = "<group>"; };
-		131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPing.swift; path = Sources/Shared/SwiftPing.swift; sourceTree = "<group>"; };
 		1A8180E78CBD3D237D8325B21564FDA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ping-dummy.m"; sourceTree = "<group>"; };
 		1C46D3985A142756D848E7455C087371 /* Pods-ping.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ping.modulemap"; sourceTree = "<group>"; };
-		53BFD58AE2EB087154CC8780919BF117 /* SwiftPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftPing.modulemap; sourceTree = "<group>"; };
+		1F51015749B7F807A909C283D04055D5 /* QNNTraceRoute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNTraceRoute.m; path = NetDiag/QNNTraceRoute.m; sourceTree = "<group>"; };
+		2A36BFD831855CAC24B2A8B3CD62288F /* QNNPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNPing.m; path = NetDiag/QNNPing.m; sourceTree = "<group>"; };
+		2D75963CDAC33A90B7791E1A0125AE87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3110CF0023C8DC77D93741FD1D358228 /* QNNPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNPing.h; path = NetDiag/QNNPing.h; sourceTree = "<group>"; };
+		39B6BFED9F7DA230F8A6BBF66BA516C7 /* QNNRtmp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNRtmp.m; path = NetDiag/QNNRtmp.m; sourceTree = "<group>"; };
+		4F9624618B938524CBFB0C7CEFDACEC5 /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ping.framework; path = "Pods-ping.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A3743AB2D6DC77F47487F84599C2843 /* QNNRtmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNRtmp.h; path = NetDiag/QNNRtmp.h; sourceTree = "<group>"; };
 		5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftPing-umbrella.h"; sourceTree = "<group>"; };
 		5D081B743627257DCC46614DB4E79F72 /* Pods-ping-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-resources.sh"; sourceTree = "<group>"; };
 		66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pingTests-umbrella.h"; sourceTree = "<group>"; };
-		6FF3075C1C31736483FDE4A4076F99F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ICMP.swift; path = Sources/Shared/ICMP.swift; sourceTree = "<group>"; };
+		6B7C7796800F3D0EC64746BE44745236 /* QNNetDiag.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QNNetDiag.modulemap; sourceTree = "<group>"; };
+		6BEB58BC37A3B9D47498CF1F2F344E73 /* Pods_pingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pingTests.framework; path = "Pods-pingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C90364EF5CFB9D32056CE44B44EEA69 /* QNNetDiag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QNNetDiag.framework; path = QNNetDiag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8238E865E2E3BA4697B51C23FB2EA1C4 /* QNNQue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNQue.h; path = NetDiag/QNNQue.h; sourceTree = "<group>"; };
+		8835B5349115A9B85C706A82F8D67336 /* QNNExternalIp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNExternalIp.m; path = NetDiag/QNNExternalIp.m; sourceTree = "<group>"; };
+		8D86283A67EB5940ECE9C3447B2CF0A5 /* QNNProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNProtocols.h; path = NetDiag/QNNProtocols.h; sourceTree = "<group>"; };
 		8EF9903C7CEDC1D97174751EC167E88A /* Pods-pingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pingTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949723E6BA5C6F3BB25D096D4EDE3F12 /* QNNetDiag-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QNNetDiag-umbrella.h"; sourceTree = "<group>"; };
 		98D62C04D34B9B70A8F11F34321D29ED /* Pods-pingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-frameworks.sh"; sourceTree = "<group>"; };
-		A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pingTests.framework; path = "Pods-pingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PingResponse.swift; path = Sources/Shared/PingResponse.swift; sourceTree = "<group>"; };
+		9DF156191E10A0311E428CD5EF0C9885 /* QNNHttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNHttp.h; path = NetDiag/QNNHttp.h; sourceTree = "<group>"; };
 		ABC3DD52D4CF4BFCEA441BDF19C1A1CD /* Pods-ping-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ping-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftPing-dummy.m"; sourceTree = "<group>"; };
-		AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftPing.framework; path = SwiftPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B411BF6688B2F035FEE7F0DA0E594BF4 /* Pods-pingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pingTests.modulemap"; sourceTree = "<group>"; };
+		BC4DF22511CDFFE58863F883A358B7E0 /* QNNQue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNQue.m; path = NetDiag/QNNQue.m; sourceTree = "<group>"; };
+		C0B85CA26888C23CBDCCFD8D0B740BE7 /* QNNTcpPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNTcpPing.m; path = NetDiag/QNNTcpPing.m; sourceTree = "<group>"; };
 		C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE9E6461AC6B09A0BEF1BD042EC19F22 /* QNNUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNUtil.h; path = NetDiag/QNNUtil.h; sourceTree = "<group>"; };
+		D15D154B4F31C202D21F00A7A9DC05E8 /* QNNExternalIp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNExternalIp.h; path = NetDiag/QNNExternalIp.h; sourceTree = "<group>"; };
 		D79ABE28B8766771ECCB299B8A0431DF /* Pods-ping-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-frameworks.sh"; sourceTree = "<group>"; };
-		DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PingConfiguration.swift; path = Sources/Shared/PingConfiguration.swift; sourceTree = "<group>"; };
 		E0167A59AEF114AA1BAA2570E606AE2D /* Pods-pingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-resources.sh"; sourceTree = "<group>"; };
+		E19B0BDCDC58ADE07BDF988DD945E63C /* QNNNslookup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNNslookup.m; path = NetDiag/QNNNslookup.m; sourceTree = "<group>"; };
 		E70132A8BF6D9702E3AC2681C3B87FB6 /* Pods-pingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ping-umbrella.h"; sourceTree = "<group>"; };
 		EBCF7D3CCF80824984E5769112D8AB89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE150D4D2C586B100A420E81209F15EE /* Shared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = Sources/Shared/Shared.swift; sourceTree = "<group>"; };
-		F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOS.swift; path = Sources/iOS/iOS.swift; sourceTree = "<group>"; };
+		F199F2AE16EAE11B911B712CBFED45FC /* QNNHttp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNHttp.m; path = NetDiag/QNNHttp.m; sourceTree = "<group>"; };
+		F576F10694398D3BDDD055CCE4E7A3F4 /* QNNetDiag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNetDiag.h; path = NetDiag/QNNetDiag.h; sourceTree = "<group>"; };
 		F73438897BC0B6134B6259E2B69CD983 /* Pods-ping-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ping-acknowledgements.plist"; sourceTree = "<group>"; };
+		F8600F65071BA1B1842E099C473011A3 /* QNNetDiag-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QNNetDiag-prefix.pch"; sourceTree = "<group>"; };
 		FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.debug.xcconfig"; sourceTree = "<group>"; };
+		FFC6C19A64151A41416478F3AC89C654 /* QNNUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNUtil.m; path = NetDiag/QNNUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		10A8CDB571612AC3FBB3B9F5032A46EC /* Frameworks */ = {
+		0B2CE1CBAE2A9CAEBC78227440A94483 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				980307190098F7DC645E5ED317043E78 /* Foundation.framework in Frameworks */,
+				F5990559F6F8D4FC6992CEEF0F08B033 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7063AD9C0864C2C07F959F96E5A330BE /* Frameworks */ = {
+		2123E3AD099CF25EF062EE993A6D8FE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE5A57B3166347DE0839DB16C9FADFA7 /* Foundation.framework in Frameworks */,
+				998FB12012E6A85BB99A1F4A4AB9D25B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +137,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B7F033BDFAABB96FDE5E11D385DCB8A /* Pods */ = {
+		0E1E9333D67F116D5D45207B3A6CCB46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFBB02477FF74AAD3237BCD291DB1235 /* SwiftPing */,
+				4F9624618B938524CBFB0C7CEFDACEC5 /* Pods_ping.framework */,
+				6BEB58BC37A3B9D47498CF1F2F344E73 /* Pods_pingTests.framework */,
+				7C90364EF5CFB9D32056CE44B44EEA69 /* QNNetDiag.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45FC39B2A5C018A0F5BF8ABBCE95BE16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71C0CA930E23E3699102EAFCC085A632 /* QNNetDiag */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -153,16 +191,6 @@
 			path = "Target Support Files/Pods-ping";
 			sourceTree = "<group>";
 		};
-		4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */,
-				A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */,
-				AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,44 +199,58 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		71C0CA930E23E3699102EAFCC085A632 /* QNNetDiag */ = {
+			isa = PBXGroup;
+			children = (
+				F576F10694398D3BDDD055CCE4E7A3F4 /* QNNetDiag.h */,
+				D15D154B4F31C202D21F00A7A9DC05E8 /* QNNExternalIp.h */,
+				8835B5349115A9B85C706A82F8D67336 /* QNNExternalIp.m */,
+				9DF156191E10A0311E428CD5EF0C9885 /* QNNHttp.h */,
+				F199F2AE16EAE11B911B712CBFED45FC /* QNNHttp.m */,
+				0019F088521437A59FCDFA72D50E554F /* QNNNslookup.h */,
+				E19B0BDCDC58ADE07BDF988DD945E63C /* QNNNslookup.m */,
+				3110CF0023C8DC77D93741FD1D358228 /* QNNPing.h */,
+				2A36BFD831855CAC24B2A8B3CD62288F /* QNNPing.m */,
+				8D86283A67EB5940ECE9C3447B2CF0A5 /* QNNProtocols.h */,
+				8238E865E2E3BA4697B51C23FB2EA1C4 /* QNNQue.h */,
+				BC4DF22511CDFFE58863F883A358B7E0 /* QNNQue.m */,
+				5A3743AB2D6DC77F47487F84599C2843 /* QNNRtmp.h */,
+				39B6BFED9F7DA230F8A6BBF66BA516C7 /* QNNRtmp.m */,
+				044938AD873E82CD2CAFDF4ED29E16C5 /* QNNTcpPing.h */,
+				C0B85CA26888C23CBDCCFD8D0B740BE7 /* QNNTcpPing.m */,
+				063C6B41E64B68FCA8D435238B250D4D /* QNNTraceRoute.h */,
+				1F51015749B7F807A909C283D04055D5 /* QNNTraceRoute.m */,
+				CE9E6461AC6B09A0BEF1BD042EC19F22 /* QNNUtil.h */,
+				FFC6C19A64151A41416478F3AC89C654 /* QNNUtil.m */,
+				BADD9E47B2E261F8242E8964C60195AF /* Support Files */,
+			);
+			name = QNNetDiag;
+			path = QNNetDiag;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				0B7F033BDFAABB96FDE5E11D385DCB8A /* Pods */,
-				4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */,
+				45FC39B2A5C018A0F5BF8ABBCE95BE16 /* Pods */,
+				0E1E9333D67F116D5D45207B3A6CCB46 /* Products */,
 				DF38BBC805350A2D8B801EF906D7AE78 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		90A9DB65177768DBADE46CE75414FF25 /* Support Files */ = {
+		BADD9E47B2E261F8242E8964C60195AF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6FF3075C1C31736483FDE4A4076F99F1 /* Info.plist */,
-				53BFD58AE2EB087154CC8780919BF117 /* SwiftPing.modulemap */,
-				02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */,
-				ACC6D1A7B99CE84A119CAF483778C97A /* SwiftPing-dummy.m */,
-				046EE1259E691341B0F04C04F576ACAA /* SwiftPing-prefix.pch */,
-				5B7F5429AFFE5C47BB016AE24D351564 /* SwiftPing-umbrella.h */,
+				2D75963CDAC33A90B7791E1A0125AE87 /* Info.plist */,
+				6B7C7796800F3D0EC64746BE44745236 /* QNNetDiag.modulemap */,
+				0506577713EB31ED42496E7C13C0C95F /* QNNetDiag.xcconfig */,
+				0A9EC70A5CEF624FCB5C060AE0B2AAD5 /* QNNetDiag-dummy.m */,
+				F8600F65071BA1B1842E099C473011A3 /* QNNetDiag-prefix.pch */,
+				949723E6BA5C6F3BB25D096D4EDE3F12 /* QNNetDiag-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftPing";
-			sourceTree = "<group>";
-		};
-		AFBB02477FF74AAD3237BCD291DB1235 /* SwiftPing */ = {
-			isa = PBXGroup;
-			children = (
-				87FD70B8939D6D8FA61FB5C90DBBC13B /* ICMP.swift */,
-				F2EB0F15B0381ECDE6AF9C85F57B7563 /* iOS.swift */,
-				DD0E0336026D18E4C59A7EA89AF76E54 /* PingConfiguration.swift */,
-				A9CAB81F81332939F42F55F5E2C45F8E /* PingResponse.swift */,
-				EE150D4D2C586B100A420E81209F15EE /* Shared.swift */,
-				131E1A0E0058F84CF3E859A7C6EC9FC9 /* SwiftPing.swift */,
-				90A9DB65177768DBADE46CE75414FF25 /* Support Files */,
-			);
-			name = SwiftPing;
-			path = SwiftPing;
+			path = "../Target Support Files/QNNetDiag";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -239,41 +281,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CE8050FA6E4DA16536875E882089349 /* Headers */ = {
+		BAAC3C0F8D1F64848B2ADDF8693A79CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780792D33FE0526E3A89699BE681E4A0 /* Pods-ping-umbrella.h in Headers */,
+				5AC44A26EAFC4438B41F1163466D8234 /* QNNetDiag-umbrella.h in Headers */,
+				D443B54488C516028EC4919E6FFDAAFB /* QNNetDiag.h in Headers */,
+				12B0A32F86BB039C4C9CCACA5FE850A0 /* QNNExternalIp.h in Headers */,
+				27A7A80236A9EF676CF4BA6B2457CD4B /* QNNHttp.h in Headers */,
+				6A6FB1626DF438A0097D98BB27C11728 /* QNNNslookup.h in Headers */,
+				E26EE5FDD8381C8E32FF896CBD589F6B /* QNNPing.h in Headers */,
+				2CBD969263F8195DEED2AA0B827F1894 /* QNNProtocols.h in Headers */,
+				592F8B0C37295D2DACFE386F3467B52D /* QNNQue.h in Headers */,
+				B61AEB8A9747935BF5C76FF8FAE3B912 /* QNNRtmp.h in Headers */,
+				C9C39BD06CF66396F626BBCEF7231945 /* QNNTcpPing.h in Headers */,
+				E7F1812C08097F4BFA484EE517C6FCB7 /* QNNTraceRoute.h in Headers */,
+				2237B4D58CB394C37096383205D2F7BF /* QNNUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5303144D12ABACED29F541C20106377 /* Headers */ = {
+		F63D3D574ADD11DDFE42CC523508CC0F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457732EFC2F916A7D9D8D7F0D5394C73 /* SwiftPing-umbrella.h in Headers */,
+				88F2F288C741F11BF67C50EC82A6C08B /* Pods-ping-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */ = {
+		AAEF4E3B6A10B88EA0D345538BB7BDC6 /* Pods-ping */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D895E2C96B0B3FE35E142D8371030776 /* Build configuration list for PBXNativeTarget "Pods-ping" */;
+			buildConfigurationList = 4B47BA7DEA3DB4FFF29D2270B6C2FC2F /* Build configuration list for PBXNativeTarget "Pods-ping" */;
 			buildPhases = (
-				0EA6E36FDCD2F069D828A6E2D91AB890 /* Sources */,
-				10A8CDB571612AC3FBB3B9F5032A46EC /* Frameworks */,
-				5CE8050FA6E4DA16536875E882089349 /* Headers */,
+				34B262D853756BC64A118B2BD635F0F1 /* Sources */,
+				2123E3AD099CF25EF062EE993A6D8FE1 /* Frameworks */,
+				F63D3D574ADD11DDFE42CC523508CC0F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				575973D2881031F7164E0B2FFDAD9A7A /* PBXTargetDependency */,
+				ACD0CEE6F38C88E0EC59E0714703449A /* PBXTargetDependency */,
 			);
 			name = "Pods-ping";
 			productName = "Pods-ping";
-			productReference = 015E39A6DF47FBF7C21F0347C4BF060B /* Pods_ping.framework */;
+			productReference = 4F9624618B938524CBFB0C7CEFDACEC5 /* Pods_ping.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */ = {
@@ -291,24 +344,24 @@
 			);
 			name = "Pods-pingTests";
 			productName = "Pods-pingTests";
-			productReference = A308D85E2EACE9AC63E628B52F6F4832 /* Pods_pingTests.framework */;
+			productReference = 6BEB58BC37A3B9D47498CF1F2F344E73 /* Pods_pingTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */ = {
+		C86EE1BD7CABEE02D0223A2B6680AAAD /* QNNetDiag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2208C691B228196C3DE62E2B56398C3 /* Build configuration list for PBXNativeTarget "SwiftPing" */;
+			buildConfigurationList = C449A3CA83CF9D126A0C414C6ECE3033 /* Build configuration list for PBXNativeTarget "QNNetDiag" */;
 			buildPhases = (
-				89CB04908A9DE73820E2FFF198A30FCA /* Sources */,
-				7063AD9C0864C2C07F959F96E5A330BE /* Frameworks */,
-				A5303144D12ABACED29F541C20106377 /* Headers */,
+				0688A74E112196DC4AE49F24ECEBEBFF /* Sources */,
+				0B2CE1CBAE2A9CAEBC78227440A94483 /* Frameworks */,
+				BAAC3C0F8D1F64848B2ADDF8693A79CD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftPing;
-			productName = SwiftPing;
-			productReference = AFFDF0864E81B4D1FB4DA583B0E361C5 /* SwiftPing.framework */;
+			name = QNNetDiag;
+			productName = QNNetDiag;
+			productReference = 7C90364EF5CFB9D32056CE44B44EEA69 /* QNNetDiag.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -328,23 +381,40 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4C1FAA5924F733E3DBF9E3AB4DCB547C /* Products */;
+			productRefGroup = 0E1E9333D67F116D5D45207B3A6CCB46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */,
+				AAEF4E3B6A10B88EA0D345538BB7BDC6 /* Pods-ping */,
 				AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */,
-				CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */,
+				C86EE1BD7CABEE02D0223A2B6680AAAD /* QNNetDiag */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0EA6E36FDCD2F069D828A6E2D91AB890 /* Sources */ = {
+		0688A74E112196DC4AE49F24ECEBEBFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1659586459AC5A7353172D60BD6CFA4E /* Pods-ping-dummy.m in Sources */,
+				9F7CB0253C066597F1EB9A4EE2A08A60 /* QNNetDiag-dummy.m in Sources */,
+				5A9D7FFE02C1913B1F5FC6FCD927B898 /* QNNExternalIp.m in Sources */,
+				99604B4DDB47459507F11787F0404079 /* QNNHttp.m in Sources */,
+				E74909438E41102CF66370DF760A6DB0 /* QNNNslookup.m in Sources */,
+				496A796C1F025DCEAC500DF594A75E07 /* QNNPing.m in Sources */,
+				CD153EA2B2884701ABD628310D19B1CB /* QNNQue.m in Sources */,
+				F85A940926F257523AD11A7DC0192945 /* QNNRtmp.m in Sources */,
+				4D3E21AE60DB69AC1A4DDF010DFBA722 /* QNNTcpPing.m in Sources */,
+				CFCE4FA2E07D661E428D390FF1EBF2BC /* QNNTraceRoute.m in Sources */,
+				DDB4C2C5FDDED5209372F988B69FB6F6 /* QNNUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34B262D853756BC64A118B2BD635F0F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6365425ADD337BCE1840204AAD15B6AD /* Pods-ping-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,41 +426,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89CB04908A9DE73820E2FFF198A30FCA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29B5288A68D28C31E43AE872970F8882 /* ICMP.swift in Sources */,
-				BFE811401BA3346B8F5809200A87FB1D /* iOS.swift in Sources */,
-				0569B196BD4254B4273EDAEF8C0039DF /* PingConfiguration.swift in Sources */,
-				A698103A2A5E8365E3620E37E6B97519 /* PingResponse.swift in Sources */,
-				D5925437FFFB7E798C8195EAB26DD74F /* Shared.swift in Sources */,
-				22E32C473E953CD1E0CDB7176D468783 /* SwiftPing-dummy.m in Sources */,
-				55931361102D2AADC9C674A197D31666 /* SwiftPing.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		575973D2881031F7164E0B2FFDAD9A7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftPing;
-			target = CFF481D600DD182A2251FDEFB549BF17 /* SwiftPing */;
-			targetProxy = B53830E0477AFF98D2F2C20598275963 /* PBXContainerItemProxy */;
-		};
 		66879116489CB14BDCB3625DC7947E17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ping";
-			target = 864D2BC428A3FAB7951DD07A8C643AD2 /* Pods-ping */;
+			target = AAEF4E3B6A10B88EA0D345538BB7BDC6 /* Pods-ping */;
 			targetProxy = 4C4287CF4E9A8453FDFC6CBD496A0C98 /* PBXContainerItemProxy */;
+		};
+		ACD0CEE6F38C88E0EC59E0714703449A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QNNetDiag;
+			target = C86EE1BD7CABEE02D0223A2B6680AAAD /* QNNetDiag */;
+			targetProxy = F60733CC128A66440064115C4902BD7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		174561006CEBE1206B7227C36A8761C9 /* Debug */ = {
+		000036E5855295E1EDB078C7C713228A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */;
+			baseConfigurationReference = 0506577713EB31ED42496E7C13C0C95F /* QNNetDiag.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -401,8 +457,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftPing/SwiftPing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftPing/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QNNetDiag/QNNetDiag-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QNNetDiag/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,13 +466,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwiftPing/SwiftPing.modulemap";
-				PRODUCT_MODULE_NAME = SwiftPing;
-				PRODUCT_NAME = SwiftPing;
+				MODULEMAP_FILE = "Target Support Files/QNNetDiag/QNNetDiag.modulemap";
+				PRODUCT_MODULE_NAME = QNNetDiag;
+				PRODUCT_NAME = QNNetDiag;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -424,7 +479,7 @@
 			};
 			name = Debug;
 		};
-		25155BE473B811590DB7BAFB2D352509 /* Debug */ = {
+		063D98FA82720F87B27D1A3FCDE5F899 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */;
 			buildSettings = {
@@ -441,7 +496,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-pingTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,9 +517,45 @@
 			};
 			name = Debug;
 		};
-		30CDE8F82A95253EE39BD8744D845869 /* Release */ = {
+		18D5DA2FC2800F26B6DD1D03D2A24F5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */;
+			baseConfigurationReference = 0506577713EB31ED42496E7C13C0C95F /* QNNetDiag.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QNNetDiag/QNNetDiag-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QNNetDiag/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QNNetDiag/QNNetDiag.modulemap";
+				PRODUCT_MODULE_NAME = QNNetDiag;
+				PRODUCT_NAME = QNNetDiag;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2EB5C01112F7677A8529903F6230FFEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -479,7 +570,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,15 +585,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -555,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,7 +654,7 @@
 			};
 			name = Debug;
 		};
-		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+		58CE816B060A41D32CEC095441D0E3E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -615,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -623,7 +712,7 @@
 			};
 			name = Release;
 		};
-		B7A0293C91E129AFAEFF021A6E0822A8 /* Release */ = {
+		B80591DD6B27DD55747C073216408CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */;
 			buildSettings = {
@@ -640,7 +729,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-pingTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,46 +751,9 @@
 			};
 			name = Release;
 		};
-		E5568000EF22F88A0A1CC3EBFFBF4254 /* Release */ = {
+		C1B4710BBA2B71CA6A27059DDA1662C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02E441AF0A89FA05D4A3DB03C1370C7F /* SwiftPing.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftPing/SwiftPing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftPing/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftPing/SwiftPing.modulemap";
-				PRODUCT_MODULE_NAME = SwiftPing;
-				PRODUCT_NAME = SwiftPing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E59BC1731178DD3F100E6E0B08EB9729 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */;
+			baseConfigurationReference = 0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -716,7 +768,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -731,13 +783,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -745,8 +796,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
-				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+				553022A828EE1991F07D2D73F565AEF8 /* Debug */,
+				58CE816B060A41D32CEC095441D0E3E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B47BA7DEA3DB4FFF29D2270B6C2FC2F /* Build configuration list for PBXNativeTarget "Pods-ping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB5C01112F7677A8529903F6230FFEF /* Debug */,
+				C1B4710BBA2B71CA6A27059DDA1662C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -754,26 +814,17 @@
 		880BBEDB3C2A2C7761CE6CF29A91C0DC /* Build configuration list for PBXNativeTarget "Pods-pingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25155BE473B811590DB7BAFB2D352509 /* Debug */,
-				B7A0293C91E129AFAEFF021A6E0822A8 /* Release */,
+				063D98FA82720F87B27D1A3FCDE5F899 /* Debug */,
+				B80591DD6B27DD55747C073216408CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D895E2C96B0B3FE35E142D8371030776 /* Build configuration list for PBXNativeTarget "Pods-ping" */ = {
+		C449A3CA83CF9D126A0C414C6ECE3033 /* Build configuration list for PBXNativeTarget "QNNetDiag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E59BC1731178DD3F100E6E0B08EB9729 /* Debug */,
-				30CDE8F82A95253EE39BD8744D845869 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2208C691B228196C3DE62E2B56398C3 /* Build configuration list for PBXNativeTarget "SwiftPing" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				174561006CEBE1206B7227C36A8761C9 /* Debug */,
-				E5568000EF22F88A0A1CC3EBFFBF4254 /* Release */,
+				000036E5855295E1EDB078C7C713228A /* Debug */,
+				18D5DA2FC2800F26B6DD1D03D2A24F5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

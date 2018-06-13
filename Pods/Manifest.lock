@@ -1,21 +1,21 @@
 PODS:
-  - SwiftPing (1.1.1)
+  - QNNetDiag (0.0.7)
 
 DEPENDENCIES:
-  - SwiftPing (from `https://github.com/FroeMic/SwiftPing.git`)
+  - QNNetDiag (from `https://github.com/FroeMic/iOS-netdiag.git`)
 
 EXTERNAL SOURCES:
-  SwiftPing:
-    :git: https://github.com/FroeMic/SwiftPing.git
+  QNNetDiag:
+    :git: https://github.com/FroeMic/iOS-netdiag.git
 
 CHECKOUT OPTIONS:
-  SwiftPing:
-    :commit: 8ced83517e33a32a0d73d385af0aded26d9b93d9
-    :git: https://github.com/FroeMic/SwiftPing.git
+  QNNetDiag:
+    :commit: 34a9ddac9dd4596d84dcd8d5875998467952768b
+    :git: https://github.com/FroeMic/iOS-netdiag.git
 
 SPEC CHECKSUMS:
-  SwiftPing: 9b444bde61c3f9272a51fabc1aa08eee03c986d1
+  QNNetDiag: d115f58d294bdbeecb139e5f681bc5a8bc2a4181
 
-PODFILE CHECKSUM: 4d9754c191be2840c52c70fd9b77576b218b2806
+PODFILE CHECKSUM: 871d530a29ae2c75bfa436b6bc8940e2e90f95bb
 
 COCOAPODS: 1.5.3
