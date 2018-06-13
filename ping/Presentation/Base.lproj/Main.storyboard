@@ -104,7 +104,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="pingTableViewCell" rowHeight="50" id="MgA-4Q-lyA" customClass="PingTableViewCell" customModule="ping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="315" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MgA-4Q-lyA" id="b9A-fD-Leq" customClass="PingTableView" customModule="ping" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MgA-4Q-lyA" id="b9A-fD-Leq">
                                             <rect key="frame" x="0.0" y="0.0" width="315" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
