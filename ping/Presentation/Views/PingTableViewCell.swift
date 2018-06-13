@@ -41,6 +41,7 @@ class PingTableViewCell: UITableViewCell {
         
         msLabel.textColor = .white
         msLabel.font = primaryFont
+        msLabel.adjustsFontSizeToFitWidth = true
         placeholderLabel.font = secondaryFont
         placeholderLabel.adjustsFontSizeToFitWidth = true
         placeholderLabel.text = " "
