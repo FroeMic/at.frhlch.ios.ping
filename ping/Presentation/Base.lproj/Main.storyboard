@@ -76,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PING 1.1.1.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLm-85-8Sd">
-                                        <rect key="frame" x="0.0" y="20" width="305" height="20"/>
+                                        <rect key="frame" x="0.0" y="20" width="280" height="20"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NZe-8p-Fg4" secondAttribute="trailing" constant="10" id="Clc-T1-vjM"/>
                                     <constraint firstAttribute="bottom" secondItem="sLm-85-8Sd" secondAttribute="bottom" constant="10" id="IZO-h8-iI7"/>
-                                    <constraint firstAttribute="trailing" secondItem="sLm-85-8Sd" secondAttribute="trailing" constant="10" id="Q9c-Yk-Iaz"/>
+                                    <constraint firstAttribute="trailing" secondItem="sLm-85-8Sd" secondAttribute="trailing" constant="35" id="Q9c-Yk-Iaz"/>
                                     <constraint firstItem="sLm-85-8Sd" firstAttribute="leading" secondItem="vKm-T8-lSn" secondAttribute="leading" id="g34-3V-oJQ"/>
                                     <constraint firstAttribute="height" constant="50" id="qWx-3a-msJ"/>
                                     <constraint firstItem="NZe-8p-Fg4" firstAttribute="centerY" secondItem="sLm-85-8Sd" secondAttribute="centerY" id="tbg-QZ-HXa"/>

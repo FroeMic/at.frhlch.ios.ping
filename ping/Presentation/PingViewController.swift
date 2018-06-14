@@ -89,6 +89,7 @@ class PingViewController: UIViewController {
         hostViewLabel.textColor = .white
         hostViewLabel.font = UIFont(name: "Menlo-Bold", size: 16.0)
         hostViewLabel.text = ""
+        hostViewLabel.adjustsFontSizeToFitWidth = true
         stopButton.isHidden = true
     }
     
