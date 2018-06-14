@@ -122,11 +122,22 @@ class PingViewController: UIViewController {
     
     private func startPingIfNecessary() {
         if let hostName = hostTextField.textWithoutPrefix, hostName != "" {
-            pingManager.startPing(hostName: hostName, addressStyle: .auto)
-            hostViewLabel.text = "PING \(hostName)"
+            resetPingManager()
+            updateStatisticView()
             pingResults = []
             tableView.reloadData()
+            hostViewLabel.text = "pinging \(hostName) ..."
+            pingIsActive = true
+            pingManager.startPing(hostName: hostName, addressStyle: .auto)
+            updateStopButton()
         }
+    }
+    
+    private func resetPingManager() {
+        pingManager.delegate = nil
+        pingManager.stopPing()
+        pingManager = QNNPingManager()
+        pingManager.delegate = self
     }
     
     
@@ -274,7 +285,6 @@ extension PingViewController: HostHistoryViewDelegate {
 extension PingViewController: PingDelegate {
     func didStartWithAddress(host: Host) {
         Injection.hostRepository.store(host: host)
-        pingIsActive = true
         updateStopButton()
     }
     

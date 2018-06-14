@@ -125,16 +125,17 @@ extension AnimatedTextField: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let beginning: UITextPosition = textField.beginningOfDocument
-        let cursorLocation: UITextPosition? = textField.position(from: beginning, offset: range.location + string.count)
-        
+    
         let typeCasteToStringFirst = (textWithoutPrefix ?? "") as NSString
-        var updatedLocation = range.location - prefix.count - 1
+        var updatedLocation =  range.location - prefix.count - (prefix.count > 0 ? 1 : 0)
         updatedLocation = updatedLocation < 0 ? 0 : updatedLocation
         let updatedLength = (updatedLocation + range.length) > typeCasteToStringFirst.length ? typeCasteToStringFirst.length : range.length
         let updatedRange = NSRange(location: updatedLocation, length: updatedLength)
         textWithoutPrefix = typeCasteToStringFirst.replacingCharacters(in: updatedRange, with: string)
+        
+        let locationDifference = range.location - updatedRange.location
+        let beginning: UITextPosition = textField.position(from: textField.beginningOfDocument, offset: locationDifference) ?? textField.beginningOfDocument
+        let newCursorLocation = textField.position(from: beginning, offset: updatedRange.location + string.count)
         
         let replacementText = textWithoutPrefix ?? ""
         if replacementText == "" {
@@ -145,8 +146,9 @@ extension AnimatedTextField: UITextFieldDelegate {
             textField.text = "\(prefix) \(replacementText)"
         }
         
-        if let cursorLocation = cursorLocation {
-            textField.selectedTextRange = textField.textRange(from: cursorLocation, to: cursorLocation)
+        if let newCursorLocation = newCursorLocation
+        {
+            textField.selectedTextRange = textField.textRange(from: newCursorLocation, to: newCursorLocation)
         }
         
         return false

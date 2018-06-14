@@ -13,7 +13,10 @@ class FailedToResolveHostError: Error {
     var localizedDescription: String = "Failed to resolve host"
 }
 class InvalidResponseCodeError: Error {
-    var localizedDescription: String = "Invalid response code"
+    var localizedDescription: String = "Invalid ping response code"
+}
+class InvalidResponseContentError: Error {
+    var localizedDescription: String = "Invalid ping response "
 }
 class RequestTimedOutError: Error {
     
@@ -31,6 +34,7 @@ class RequestTimedOutError: Error {
 class QNNPingManager: NSObject {
     
     static private let successResponseCode = 0
+    static private let iDontKnowAboutThisCode = 35
     static private let requestDidStopCode = -2
     static private let couldNotResolveHostErrorCode = -1006
     static private let timeOutCode = 65
@@ -41,8 +45,11 @@ class QNNPingManager: NSObject {
     private var sendTimer: Timer?
     private var lastSendTime: TimeInterval = 0.0
     private var running: Bool = false
+    private var readyForNextPing: Bool = true
+    
     private var currentHost: String = ""
     private var endpoint: String?
+    private var host: Host?
     
     private var count: Int = 0
     private var pingResults: [PingResult] = []
@@ -54,20 +61,32 @@ class QNNPingManager: NSObject {
         return pingResults.filter { $0.error == nil }.map{ $0.timeInMs }
     }
     
+    private func didEstablishConnection(success: Bool) {
+        let shouldUpdate = (host == nil) || (host!.success != (successfullRTTs.count > 0))
+        if shouldUpdate {
+            let host = Host(name: currentHost, success: success || successfullRTTs.count > 0)
+            self.host = host
+            delegate?.didStartWithAddress(host: host)
+        }
+    }
+    
     @objc func handleUpdatedPing(_ pingResponse: QNNPingResponse, _ pingResult: QNNPingResult) {
-        var error: String? = nil
+        guard running else {
+            return
+        }
         
+        readyForNextPing = true
+        
+        var error: String? = nil
         switch pingResponse.code {
         case QNNPingManager.successResponseCode:
-            if pingResults.count == 0 {
-                let host = Host(name: currentHost, success: true)
-                delegate?.didStartWithAddress(host: host)
-                endpoint = pingResponse.ip
-            }
+            endpoint = pingResponse.ip
         case QNNPingManager.timeOutCode:
             error = RequestTimedOutError(seq: self.count).localizedDescription
         case QNNPingManager.couldNotResolveHostErrorCode:
             error = FailedToResolveHostError().localizedDescription
+        case QNNPingManager.iDontKnowAboutThisCode:
+            error = InvalidResponseContentError().localizedDescription
         case QNNPingManager.invalidPingResponseCode:
             error = InvalidResponseCodeError().localizedDescription
         case QNNPingManager.requestDidStopCode:
@@ -83,6 +102,8 @@ class QNNPingManager: NSObject {
                                     timeInMs: pingResponse.rtt,
                                     error: error)
         
+        didEstablishConnection(success: pingResult.error != nil)
+        
         if running {
             pingResults.append(pingResult)
         }
@@ -91,7 +112,11 @@ class QNNPingManager: NSObject {
     }
     
     @objc func handleCompletedPing(_ pingResult: QNNPingResult) {
-        if pingResult.code == QNNPingManager.successResponseCode {
+        guard running else {
+            return
+        }
+        
+        guard pingResult.code != QNNPingManager.successResponseCode else {
             return
         }
         
@@ -100,13 +125,27 @@ class QNNPingManager: NSObject {
             delegate?.didFailWithAddress(host: host, error: FailedToResolveHostError().localizedDescription)
             stopPing()
         }
+        
+        if pingResult.code == QNNPingManager.iDontKnowAboutThisCode {
+            let host = Host(name: currentHost, success: false)
+            delegate?.didFailWithAddress(host: host, error: InvalidResponseContentError().localizedDescription)
+            stopPing()
+        }
     
     }
     
     @objc func sendPing() {
-        if running {
-            self.count += 1
+        guard running else {
+            return
         }
+        
+        guard readyForNextPing else {
+            return
+        }
+        
+        self.readyForNextPing = false
+        self.count += 1
+        
         
         let endpoint = self.endpoint ?? currentHost
         QNNPing.start(endpoint, size: 56, output: self, update: { (qnnPingResponse, qnnPingResult) in
@@ -122,6 +161,7 @@ class QNNPingManager: NSObject {
             }
             
         }, interval: 1, count: 1)
+        
     }
     
 }
@@ -138,7 +178,7 @@ extension QNNPingManager: PingManager {
         return sentPackages - receivedPackages
     }
     var packagesLoss: Double {
-        return Double(lostPackages) / Double(sentPackages)
+        return Double(lostPackages) / Double(sentPackages == 0 ? 1 : sentPackages)
     }
     var minRTT: Double {
         return successfullRTTs.min() ?? 0.0
@@ -147,7 +187,8 @@ extension QNNPingManager: PingManager {
         return successfullRTTs.max() ?? 0.0
     }
     var avgRTT: Double {
-        return successfullRTTs.mean
+        let avg = successfullRTTs.mean
+        return avg == .nan ? avg : 0.0
     }
     var stdevRTT: Double {
         return successfullRTTs.stdev ?? 0.0
@@ -172,6 +213,7 @@ extension QNNPingManager: PingManager {
     
     func stopPing() {
         running = false
+        readyForNextPing = true
         sendTimer?.invalidate()
         sendTimer = nil
         endpoint = nil
@@ -191,7 +233,7 @@ extension QNNPingManager: PingManager {
 
 extension QNNPingManager: QNNOutputDelegate {
     func write(_ line: String!) {
-        // print(line)
+        
     }
 }
 
