@@ -129,8 +129,12 @@ extension AnimatedTextField: UITextFieldDelegate {
         let beginning: UITextPosition = textField.beginningOfDocument
         let cursorLocation: UITextPosition? = textField.position(from: beginning, offset: range.location + string.count)
         
-        let typeCasteToStringFirst = textField.text as NSString?
-        textWithoutPrefix = typeCasteToStringFirst?.replacingCharacters(in: range, with: string)
+        let typeCasteToStringFirst = (textWithoutPrefix ?? "") as NSString
+        var updatedLocation = range.location - prefix.count - 1
+        updatedLocation = updatedLocation < 0 ? 0 : updatedLocation
+        let updatedLength = (updatedLocation + range.length) > typeCasteToStringFirst.length ? typeCasteToStringFirst.length : range.length
+        let updatedRange = NSRange(location: updatedLocation, length: updatedLength)
+        textWithoutPrefix = typeCasteToStringFirst.replacingCharacters(in: updatedRange, with: string)
         
         let replacementText = textWithoutPrefix ?? ""
         if replacementText == "" {
