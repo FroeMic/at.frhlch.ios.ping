@@ -28,6 +28,7 @@
 		278A6C9C20D067280007322A /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9B20D067280007322A /* Injection.swift */; };
 		278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */; };
 		278A6CA020D077470007322A /* PingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9F20D077470007322A /* PingDelegate.swift */; };
+		278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A710A20DE890500DC3A16 /* RatingManager.swift */; };
 		27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */; };
 		27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */; };
 		27EB1E4B20D1250D00B64536 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB1E4A20D1250D00B64536 /* PingManager.swift */; };
@@ -72,6 +73,7 @@
 		278A6C9B20D067280007322A /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryPublisher.swift; sourceTree = "<group>"; };
 		278A6C9F20D077470007322A /* PingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingDelegate.swift; sourceTree = "<group>"; };
+		278A710A20DE890500DC3A16 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressStyle.swift; sourceTree = "<group>"; };
 		27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTableViewCell.swift; sourceTree = "<group>"; };
 		27EB1E4A20D1250D00B64536 /* PingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				2781CE8D20D19A760050C8A7 /* Extension */,
 				2704491120CEAD5C001C4004 /* AppDelegate.swift */,
 				278A6C9B20D067280007322A /* Injection.swift */,
+				278A710A20DE890500DC3A16 /* RatingManager.swift */,
 				2704491820CEAD5D001C4004 /* Assets.xcassets */,
 			);
 			path = Base;
@@ -396,6 +399,7 @@
 			files = (
 				27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */,
 				2781CE8420D12BB70050C8A7 /* QNNPingManager.swift in Sources */,
+				278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */,
 				278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */,
 				2704491420CEAD5C001C4004 /* PingViewController.swift in Sources */,
 				278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */,
