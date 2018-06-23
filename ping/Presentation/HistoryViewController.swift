@@ -51,13 +51,14 @@ extension HistoryViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            hostHistory.remove(at: indexPath.row)
+            let host = hostHistory.remove(at: indexPath.row)
             
             // use async to avoid showing white background.
             DispatchQueue.main.async {
                 self.historyTableView.deleteRows(at: [indexPath], with: .fade)
             }
             
+            Injection.hostRepository.remove(host: host)
             
         }
     }
