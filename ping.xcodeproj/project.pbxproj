@@ -29,7 +29,10 @@
 		278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */; };
 		278A6CA020D077470007322A /* PingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A6C9F20D077470007322A /* PingDelegate.swift */; };
 		278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278A710A20DE890500DC3A16 /* RatingManager.swift */; };
+		278A711F20DE8D7A00DC3A16 /* PEIcmpPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A711B20DE8D7A00DC3A16 /* PEIcmpPing.m */; };
+		278A712020DE8D7A00DC3A16 /* PEQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 278A711E20DE8D7A00DC3A16 /* PEQueue.m */; };
 		27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */; };
+		27D583E520DE968B0073F0C8 /* PEPingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D583E420DE968A0073F0C8 /* PEPingManager.swift */; };
 		27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */; };
 		27EB1E4B20D1250D00B64536 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EB1E4A20D1250D00B64536 /* PingManager.swift */; };
 		483E67CA1A67BC8D44691FD0 /* Pods_ping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B4A680256749F30D6138B /* Pods_ping.framework */; };
@@ -74,7 +77,16 @@
 		278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryPublisher.swift; sourceTree = "<group>"; };
 		278A6C9F20D077470007322A /* PingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingDelegate.swift; sourceTree = "<group>"; };
 		278A710A20DE890500DC3A16 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
+		278A711620DE8D3F00DC3A16 /* ping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ping-Bridging-Header.h"; sourceTree = "<group>"; };
+		278A711A20DE8D7A00DC3A16 /* PEPingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEPingEngine.h; sourceTree = "<group>"; };
+		278A711B20DE8D7A00DC3A16 /* PEIcmpPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEIcmpPing.m; sourceTree = "<group>"; };
+		278A711C20DE8D7A00DC3A16 /* PEIcmpPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEIcmpPing.h; sourceTree = "<group>"; };
+		278A711D20DE8D7A00DC3A16 /* PEQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEQueue.h; sourceTree = "<group>"; };
+		278A711E20DE8D7A00DC3A16 /* PEQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEQueue.m; sourceTree = "<group>"; };
+		278A712120DE8DDA00DC3A16 /* PEStopDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEStopDelegate.h; sourceTree = "<group>"; };
+		278A712220DE8DF100DC3A16 /* PEOutputDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEOutputDelegate.h; sourceTree = "<group>"; };
 		27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressStyle.swift; sourceTree = "<group>"; };
+		27D583E420DE968A0073F0C8 /* PEPingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEPingManager.swift; sourceTree = "<group>"; };
 		27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTableViewCell.swift; sourceTree = "<group>"; };
 		27EB1E4A20D1250D00B64536 /* PingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
 		6F8B4A680256749F30D6138B /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,10 +175,12 @@
 			isa = PBXGroup;
 			children = (
 				2781CE8D20D19A760050C8A7 /* Extension */,
+				278A711920DE8D6400DC3A16 /* Ping Engine */,
 				2704491120CEAD5C001C4004 /* AppDelegate.swift */,
 				278A6C9B20D067280007322A /* Injection.swift */,
 				278A710A20DE890500DC3A16 /* RatingManager.swift */,
 				2704491820CEAD5D001C4004 /* Assets.xcassets */,
+				278A711620DE8D3F00DC3A16 /* ping-Bridging-Header.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 				27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */,
 				278A6C9F20D077470007322A /* PingDelegate.swift */,
 				278A6C9320D05E600007322A /* PingResult.swift */,
+				27D583E420DE968A0073F0C8 /* PEPingManager.swift */,
 				2781CE8320D12BB70050C8A7 /* QNNPingManager.swift */,
 			);
 			path = Model;
@@ -211,6 +226,20 @@
 				2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		278A711920DE8D6400DC3A16 /* Ping Engine */ = {
+			isa = PBXGroup;
+			children = (
+				278A711A20DE8D7A00DC3A16 /* PEPingEngine.h */,
+				278A712120DE8DDA00DC3A16 /* PEStopDelegate.h */,
+				278A712220DE8DF100DC3A16 /* PEOutputDelegate.h */,
+				278A711C20DE8D7A00DC3A16 /* PEIcmpPing.h */,
+				278A711B20DE8D7A00DC3A16 /* PEIcmpPing.m */,
+				278A711D20DE8D7A00DC3A16 /* PEQueue.h */,
+				278A711E20DE8D7A00DC3A16 /* PEQueue.m */,
+			);
+			path = "Ping Engine";
 			sourceTree = "<group>";
 		};
 		9AE65DC9298BF79B90644CAC /* Frameworks */ = {
@@ -410,9 +439,12 @@
 				278A6C9620D05E990007322A /* Host.swift in Sources */,
 				278A6C9420D05E600007322A /* PingResult.swift in Sources */,
 				278A6C9C20D067280007322A /* Injection.swift in Sources */,
+				27D583E520DE968B0073F0C8 /* PEPingManager.swift in Sources */,
 				2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */,
+				278A712020DE8D7A00DC3A16 /* PEQueue.m in Sources */,
 				278A6C9A20D063F90007322A /* UDTHostHistoryRepository.swift in Sources */,
 				27251D4E20D03AF800F85DD7 /* AnimatedTextField.swift in Sources */,
+				278A711F20DE8D7A00DC3A16 /* PEIcmpPing.m in Sources */,
 				2704491220CEAD5C001C4004 /* AppDelegate.swift in Sources */,
 				27EB1E4B20D1250D00B64536 /* PingManager.swift in Sources */,
 				2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */,
@@ -591,7 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.frhlch.ios.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ping/Base/ping-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
@@ -617,7 +649,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.frhlch.ios.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ping/Base/ping-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
