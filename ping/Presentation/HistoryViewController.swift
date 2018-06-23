@@ -49,6 +49,20 @@ extension HistoryViewController: UITableViewDelegate {
         historyViewDelegate?.didSelectHost(host: host)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let host = hostHistory.remove(at: indexPath.row)
+            
+            // use async to avoid showing white background.
+            DispatchQueue.main.async {
+                self.historyTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
+            Injection.hostRepository.remove(host: host)
+            
+        }
+    }
+    
 }
 
 // MARK: UITableViewDataSource
@@ -59,15 +73,11 @@ extension HistoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let host = hostHistory[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: HistoryViewController.hostCellReuseIdentifier, for: indexPath)
         
         if let hostCell = cell as? HostTableViewCell {
             hostCell.host = hostHistory[indexPath.row]
         }
-////        cell.backgroundColor = .black
-//        cell.textLabel?.text = host.name
-//        cell.tintColor = .white
         
         return cell
     }

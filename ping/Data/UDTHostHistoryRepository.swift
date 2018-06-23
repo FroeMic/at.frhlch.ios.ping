@@ -70,11 +70,9 @@ extension UDTHostHistoryRepository: HostHistoryRepository {
 
         var newHosts: [Host] = []
         for currentHost in hosts {
-            if host.name == currentHost.name {
-                continue
-            }
-
-            newHosts.append(currentHost)
+            if host.name != currentHost.name {
+                newHosts.append(currentHost)
+            } 
         }
 
         store(hosts: newHosts)
