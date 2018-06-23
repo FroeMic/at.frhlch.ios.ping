@@ -57,6 +57,8 @@ extension HistoryViewController: UITableViewDelegate {
             DispatchQueue.main.async {
                 self.historyTableView.deleteRows(at: [indexPath], with: .fade)
             }
+            
+            
         }
     }
     
@@ -70,15 +72,11 @@ extension HistoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        let host = hostHistory[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: HistoryViewController.hostCellReuseIdentifier, for: indexPath)
         
         if let hostCell = cell as? HostTableViewCell {
             hostCell.host = hostHistory[indexPath.row]
         }
-////        cell.backgroundColor = .black
-//        cell.textLabel?.text = host.name
-//        cell.tintColor = .white
         
         return cell
     }
