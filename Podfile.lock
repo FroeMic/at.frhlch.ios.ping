@@ -1,8 +1,14 @@
 PODS:
+  - Appirater (2.3.1)
   - QNNetDiag (0.0.7)
 
 DEPENDENCIES:
+  - Appirater
   - QNNetDiag (from `https://github.com/FroeMic/iOS-netdiag.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Appirater
 
 EXTERNAL SOURCES:
   QNNetDiag:
@@ -14,8 +20,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/FroeMic/iOS-netdiag.git
 
 SPEC CHECKSUMS:
+  Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
   QNNetDiag: d115f58d294bdbeecb139e5f681bc5a8bc2a4181
 
-PODFILE CHECKSUM: 871d530a29ae2c75bfa436b6bc8940e2e90f95bb
+PODFILE CHECKSUM: cfe5fa60e26d69884997d08929173990b95832b4
 
 COCOAPODS: 1.5.3
