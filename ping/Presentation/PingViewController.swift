@@ -123,6 +123,9 @@ class PingViewController: UIViewController {
     
     private func startPingIfNecessary() {
         if let hostName = hostTextField.textWithoutPrefix, hostName != "" {
+            // count how often the user pings
+            RatingManager.didSignificantEvent()
+            
             resetPingManager()
             updateStatisticView()
             pingResults = []
