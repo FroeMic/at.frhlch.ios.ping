@@ -75,14 +75,18 @@ public class SwiftPingEngine : NSObject {
             (socket, type, address, data, info ) in
             
             let _self = unsafeBitCast(info, to: SwiftPingEngine.self)
-            
+        
             if (type as CFSocketCallBackType) == CFSocketCallBackType.dataCallBack {
                 print("CFSocketCallBackType.dataCallBack ")
+
+                print("\(data.length)")
                 
                 let fData = data?.assumingMemoryBound(to: UInt8.self)
                 let bytes = UnsafeBufferPointer<UInt8>(start: fData, count: MemoryLayout<UInt8>.size)
                 let cfdata = Data(buffer: bytes)
                 _self.socket(socket: socket!, didReadData: cfdata)
+            } else {
+                print("Other")
             }
 
         }, &context)
@@ -216,17 +220,17 @@ extension SwiftPingEngine {
 //        guard let ipv4Address = self.ipv4address as? CFData else {
 //            print("failed \(self.ipv4address))"
 //        }
-        print(">>> Socket")
-        print(socket!)
-        print(">>> ipv4address")
-        print(self.ipv4address as! CFData)
+//        print(">>> Socket")
+//        print(socket!)
+//        print(">>> ipv4address")
+//        print(self.ipv4address as! CFData)
         
 //        let sourceAddr: [UInt8] = self.ipv4address!
 //        let ipAddressBlock = ("\(sourceAddr[0]).\(sourceAddr[1]).\(sourceAddr[2]).\(sourceAddr[3])"
 //        print(ipAddressBlock)
-//
-        print(">>> icmpPackage")
-        print(icmpPackage as CFData)
+////
+//        print(">>> icmpPackage")
+//        print(icmpPackage as CFData)
         
         let socketError: CFSocketError = CFSocketSendData(socket!, self.ipv4address as! CFData, icmpPackage as CFData, self.configuration!.timeOutInterval)
 //        let socketError: CFSocketError = CFSocketSendData(socket!, nil, icmpPackage as CFData, self.configuration!.timeOutInterval)
@@ -259,17 +263,18 @@ extension SwiftPingEngine {
 
             self.timeoutBlock = nil
             let error = NSError(domain: NSURLErrorDomain, code:NSURLErrorTimedOut, userInfo: [:])
+            // TODO: why is the ip address nil here?
             let response = PingResponse(id: self.identifier!, ipAddress: nil, sequenceNumber: Int64(self.currentSequenceNumber), duration: Date().timeIntervalSince(self.currentStartDate!), error: error)
 
             self.pingEngineDelegate?.receivedPingResponse(self, response: response)
             self.scheduleNextPing()
         }
 
-        if let configuration = self.configuration {
-            self.currentQueue?.asyncAfter(deadline: .now() + configuration.pingInterval, execute: {
-                self.timeoutBlock?()
-            })
-        }
+//        if let configuration = self.configuration {
+//            self.currentQueue?.asyncAfter(deadline: .now() + configuration.pingInterval, execute: {
+//                self.timeoutBlock?()
+//            })
+//        }
     }
     
 }
