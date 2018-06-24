@@ -15,7 +15,7 @@ class PingViewController: UIViewController {
     private static let historyViewSegueIdentifer = "historyViewSegue"
     
     private var hostHistoryVC: HistoryViewController?
-    private var pingManager: PingManager = QNNPingManager()
+    private var pingManager: PingManager = PEIcmpPingManager()
     private var pingResults: [PingResult] = []
 
     private var pingIsActive = false
@@ -42,10 +42,22 @@ class PingViewController: UIViewController {
     @IBOutlet var statisticsAvgRTTLabel: UILabel!
     @IBOutlet var statisticsStdevRTTLabel: UILabel!
     
+    var pingEngine: SwiftPingEngine?
+    
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SwiftPingEngine.createPingEngine(host: "frhlch.at", success: { (pingEngine) in
+            
+            self.pingEngine = pingEngine
+            self.pingEngine?.pingEngineDelegate = self
+            self.pingEngine?.start()
+
+        }, failure: { (error) in
+            print(error)
+        })
         
         pingManager.delegate = self
         
@@ -140,7 +152,7 @@ class PingViewController: UIViewController {
     private func resetPingManager() {
         pingManager.delegate = nil
         pingManager.stopPing()
-        pingManager = QNNPingManager()
+        pingManager = PEIcmpPingManager()
         pingManager.delegate = self
     }
     
@@ -274,6 +286,21 @@ class PingViewController: UIViewController {
     
 }
 
+
+// MARK: SwiftPingEngineDelegate
+extension PingViewController: SwiftPingEngineDelegate {
+    
+    func receivedPingResponse(_ pingEngine: SwiftPingEngine, response: PingResponse) {
+        print(response.error)
+    }
+    
+    func failedWithError(_ pingEngine: SwiftPingEngine, error: NSError) {
+        print(error)
+    }
+    
+    
+}
+
 // MARK: HistoryViewDelegate
 extension PingViewController: HostHistoryViewDelegate {
     
@@ -284,6 +311,7 @@ extension PingViewController: HostHistoryViewDelegate {
     }
     
 }
+
 
 // MARK: PingDelegate
 extension PingViewController: PingDelegate {
@@ -345,7 +373,6 @@ extension PingViewController: UITableViewDataSource {
         return cell
     }
 }
-
 
 // MARK: UITextFieldDelegate
 extension PingViewController: UITextFieldDelegate {

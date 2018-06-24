@@ -8,27 +8,27 @@
 
 import Foundation
 
-//class FailedToResolveHostError: Error {
-//    var localizedDescription: String = "Failed to resolve host"
-//}
-//class InvalidResponseCodeError: Error {
-//    var localizedDescription: String = "Invalid ping response code"
-//}
-//class InvalidResponseContentError: Error {
-//    var localizedDescription: String = "Invalid ping response "
-//}
-//class RequestTimedOutError: Error {
-//
-//    let seq: Int
-//
-//    init(seq: Int) {
-//        self.seq = seq
-//    }
-//
-//    var localizedDescription: String {
-//        return "Request timed out for seq=\(seq)"
-//    }
-//}
+class FailedToResolveHostError: Error {
+    var localizedDescription: String = "Failed to resolve host"
+}
+class InvalidResponseCodeError: Error {
+    var localizedDescription: String = "Invalid ping response code"
+}
+class InvalidResponseContentError: Error {
+    var localizedDescription: String = "Invalid ping response "
+}
+class RequestTimedOutError: Error {
+
+    let seq: Int
+
+    init(seq: Int) {
+        self.seq = seq
+    }
+
+    var localizedDescription: String {
+        return "Request timed out for seq=\(seq)"
+    }
+}
 
 class PEIcmpPingManager: NSObject {
     

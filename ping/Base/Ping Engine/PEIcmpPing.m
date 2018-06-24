@@ -371,8 +371,8 @@ static BOOL isValidResponse(char *buffer, int len, int seq, int identifier) {
             [self.output write:@"Problem accessing the DNS"];
             if (_complete != nil) {
                 [PEQueue async_run_main:^(void) {
-                    PEPingResult *result = [[PEPingResult alloc] init:-1006 ip:nil size:_size max:0 min:0 avg:0 loss:0 count:0 totalTime:0 stddev:0];
-                    _complete(result);
+                    PEPingResult *result = [[PEPingResult alloc] init:-1006 ip:nil size:self->_size max:0 min:0 avg:0 loss:0 count:0 totalTime:0 stddev:0];
+                    self->_complete(result);
                 }];
             }
             return;
@@ -420,7 +420,7 @@ static BOOL isValidResponse(char *buffer, int len, int seq, int identifier) {
                                                      loss:loss
                                                 totalTime:[[NSDate date] timeIntervalSinceDate:begin] * 1000];
                 [PEQueue async_run_main:^(void) {
-                    _update(response, result);
+                    self->_update(response, result);
                 }];
             }
             
@@ -452,7 +452,7 @@ static BOOL isValidResponse(char *buffer, int len, int seq, int identifier) {
                                                           totalTime:[[NSDate date] timeIntervalSinceDate:begin] * 1000
                                                              stddev:0];
                 [PEQueue async_run_main:^(void) {
-                    _update(response, result);
+                    self->_update(response, result);
                 }];
             }
         }
@@ -476,7 +476,7 @@ static BOOL isValidResponse(char *buffer, int len, int seq, int identifier) {
                                         totalTime:[[NSDate date] timeIntervalSinceDate:begin] * 1000];
         [self.output write:result.description];
         [PEQueue async_run_main:^(void) {
-            _complete(result);
+            self->_complete(result);
         }];
     }
     free(durations);

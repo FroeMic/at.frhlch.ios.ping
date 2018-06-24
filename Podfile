@@ -6,7 +6,6 @@ target 'ping' do
   use_frameworks!
 
   # Pods for ping
-  pod 'QNNetDiag', :git => 'https://github.com/FroeMic/iOS-netdiag.git'
   pod 'Appirater'
 
   target 'pingTests' do
