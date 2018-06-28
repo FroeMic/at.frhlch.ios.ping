@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import GPPing
 
-class PingViewController {
+protocol PingController {
     
 }

@@ -42,22 +42,10 @@ class PingViewController: UIViewController {
     @IBOutlet var statisticsAvgRTTLabel: UILabel!
     @IBOutlet var statisticsStdevRTTLabel: UILabel!
     
-    var pingEngine: SwiftPingEngine?
-    
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        SwiftPingEngine.createPingEngine(host: "frhlch.at", success: { (pingEngine) in
-            
-            self.pingEngine = pingEngine
-            self.pingEngine?.pingEngineDelegate = self
-            self.pingEngine?.start()
-
-        }, failure: { (error) in
-            print(error)
-        })
         
         pingManager.delegate = self
         
@@ -283,21 +271,6 @@ class PingViewController: UIViewController {
         statisticsAvgRTTLabel.text = String(format: "%.2f ms", pingManager.avgRTT)
         statisticsStdevRTTLabel.text = String(format: "%.2f ms", pingManager.stdevRTT)
     }
-    
-}
-
-
-// MARK: SwiftPingEngineDelegate
-extension PingViewController: SwiftPingEngineDelegate {
-    
-    func receivedPingResponse(_ pingEngine: SwiftPingEngine, response: PingResponse) {
-        print(response.error)
-    }
-    
-    func failedWithError(_ pingEngine: SwiftPingEngine, error: NSError) {
-        print(error)
-    }
-    
     
 }
 
