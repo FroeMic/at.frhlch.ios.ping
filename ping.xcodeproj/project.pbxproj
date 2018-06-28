@@ -38,6 +38,7 @@
 		278ECA0D20DFDC1700B0601E /* SwiftPingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ECA0C20DFDC1700B0601E /* SwiftPingEngine.swift */; };
 		278ECA1220DFE15D00B0601E /* CFString+SwiftString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ECA1120DFE15D00B0601E /* CFString+SwiftString.swift */; };
 		278ECA1420DFE90A00B0601E /* SwiftPingEngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ECA1320DFE90A00B0601E /* SwiftPingEngineDelegate.swift */; };
+		27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36F6620E4B7FA00EF92BF /* PingController.swift */; };
 		27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */; };
 		27D583E520DE968B0073F0C8 /* PEPingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D583E420DE968A0073F0C8 /* PEPingManager.swift */; };
 		27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */; };
@@ -100,6 +101,7 @@
 		278ECA0C20DFDC1700B0601E /* SwiftPingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPingEngine.swift; sourceTree = "<group>"; };
 		278ECA1120DFE15D00B0601E /* CFString+SwiftString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFString+SwiftString.swift"; sourceTree = "<group>"; };
 		278ECA1320DFE90A00B0601E /* SwiftPingEngineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPingEngineDelegate.swift; sourceTree = "<group>"; };
+		27D36F6620E4B7FA00EF92BF /* PingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingController.swift; sourceTree = "<group>"; };
 		27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressStyle.swift; sourceTree = "<group>"; };
 		27D583E420DE968A0073F0C8 /* PEPingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEPingManager.swift; sourceTree = "<group>"; };
 		27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTableViewCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				278A6C9520D05E990007322A /* Host.swift */,
 				27EB1E4A20D1250D00B64536 /* PingManager.swift */,
+				27D36F6620E4B7FA00EF92BF /* PingController.swift */,
 				27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */,
 				278A6C9F20D077470007322A /* PingDelegate.swift */,
 				278A6C9320D05E600007322A /* PingResult.swift */,
@@ -418,10 +421,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ping/Pods-ping-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Appirater/Appirater.framework",
+				"${BUILT_PRODUCTS_DIR}/GBPing/GBPing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Appirater.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBPing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */,
+				27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */,
 				278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */,
 				278ECA0B20DFDB8E00B0601E /* PingResponse.swift in Sources */,
 				278ECA0D20DFDC1700B0601E /* SwiftPingEngine.swift in Sources */,

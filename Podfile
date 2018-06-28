@@ -7,6 +7,7 @@ target 'ping' do
 
   # Pods for ping
   pod 'Appirater'
+  pod 'GBPing'
 
   target 'pingTests' do
     inherit! :search_paths
