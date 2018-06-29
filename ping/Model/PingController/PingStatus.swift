@@ -1,5 +1,5 @@
 //
-//  PingController.swift
+//  PingStatus.swift
 //  ping
 //
 //  Created by Michael Fröhlich on 28.06.18.
@@ -8,6 +8,11 @@
 
 import Foundation
 
-protocol PingController {
+enum PingStatus {
+    
+    case success
+    case failure
+    case pending
     
 }
+

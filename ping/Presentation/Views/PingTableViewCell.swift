@@ -56,12 +56,15 @@ class PingTableViewCell: UITableViewCell {
     }
     
     private func updateCellContent(_ pingResponse: PingResult) {
-        if let error = pingResponse.error {
-            hostLabel?.text = pingResponse.host
-            detailLabel?.text = error
+
+        // TODO: fix
+        
+        //        if let error = pingResponse.error {
+//            hostLabel?.text = pingResponse.host
+//            detailLabel?.text = error
             msLabel?.text = ""
             statusImageView?.image = UIImage(named: "ic_ping_fail")
-        } else {
+//        } else {
             hostLabel?.text = pingResponse.host
             detailLabel?.text = String(format: "seq=%d ttl=%d bytes=%d",
                                       pingResponse.sequence,
@@ -69,7 +72,7 @@ class PingTableViewCell: UITableViewCell {
                                       pingResponse.sizeInBytes)
             msLabel?.text = String(format: "%.2f ms", pingResponse.timeInMs)
             statusImageView?.image = UIImage(named: "ic_ping_success")
-        }
+//        }
     }
     
     public func reloadCellContent() {
