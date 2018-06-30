@@ -1,21 +1,24 @@
 PODS:
-  - QNNetDiag (0.0.7)
+  - Appirater (2.3.1)
+  - GBPing (1.4.1)
+  - Siren (3.4.1)
 
 DEPENDENCIES:
-  - QNNetDiag (from `https://github.com/FroeMic/iOS-netdiag.git`)
+  - Appirater
+  - GBPing
+  - Siren
 
-EXTERNAL SOURCES:
-  QNNetDiag:
-    :git: https://github.com/FroeMic/iOS-netdiag.git
-
-CHECKOUT OPTIONS:
-  QNNetDiag:
-    :commit: 34a9ddac9dd4596d84dcd8d5875998467952768b
-    :git: https://github.com/FroeMic/iOS-netdiag.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Appirater
+    - GBPing
+    - Siren
 
 SPEC CHECKSUMS:
-  QNNetDiag: d115f58d294bdbeecb139e5f681bc5a8bc2a4181
+  Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
+  GBPing: 3bf8bf81f74da35d3b94d83d0290ba78bbde7e0f
+  Siren: 94e13d40b48d8c0ddac053140d607c36bb487767
 
-PODFILE CHECKSUM: 871d530a29ae2c75bfa436b6bc8940e2e90f95bb
+PODFILE CHECKSUM: a1a7569f7960d6685a7ddd29c7ba23b92e07fa56
 
 COCOAPODS: 1.5.3

@@ -56,13 +56,25 @@ class PingTableViewCell: UITableViewCell {
     }
     
     private func updateCellContent(_ pingResponse: PingResult) {
-        if let error = pingResponse.error {
-            hostLabel?.text = pingResponse.host
-            detailLabel?.text = error
+
+        
+        if pingResponse.status == .failure && pingResponse.host == "" {
+            // Shows a message to the user that the ping was terminated.
+            hostLabel?.text = pingResponse.ip
+            detailLabel?.text = ""
             msLabel?.text = ""
             statusImageView?.image = UIImage(named: "ic_ping_fail")
+        } else if let error = pingResponse.error {
+            hostLabel?.text = pingResponse.ip 
+            if error == .failedToResolveHost {
+                detailLabel?.text = error.localizedDescription
+            } else {
+                detailLabel?.text = error.localizedDescription + String(format: " for seq=%d", pingResponse.sequence)
+            }
+            msLabel?.text = pingResponse.timeInMs > 0 ?  String(format: "%.2f ms", pingResponse.timeInMs) : ""
+            statusImageView?.image = UIImage(named: "ic_ping_fail")
         } else {
-            hostLabel?.text = pingResponse.host
+            hostLabel?.text = pingResponse.ip
             detailLabel?.text = String(format: "seq=%d ttl=%d bytes=%d",
                                       pingResponse.sequence,
                                       pingResponse.ttl,

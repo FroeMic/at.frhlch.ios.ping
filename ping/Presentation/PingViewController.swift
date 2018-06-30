@@ -8,17 +8,38 @@
 
 import UIKit
 
-
 class PingViewController: UIViewController {
     
     private static let pingCellReuseIdentifier = "pingTableViewCell"
     private static let historyViewSegueIdentifer = "historyViewSegue"
     
     private var hostHistoryVC: HistoryViewController?
-    private var pingManager: PingManager = QNNPingManager()
+    private var pingManager: PingController?
     private var pingResults: [PingResult] = []
+    private var host: Host? {
+        willSet (newHost) {
+            
+            guard let newHost = newHost else {
+                return
+            }
+            
+            guard let oldHost = host else {
+                Injection.hostRepository.store(host: newHost)
+                return
+            }
+            
+            guard newHost.name == oldHost.name else {
+                Injection.hostRepository.store(host: newHost)
+                return
+            }
+            
+            guard newHost.success == oldHost.success else {
+                Injection.hostRepository.store(host: newHost)
+                return
+            }
+        }
+    }
 
-    private var pingIsActive = false
     private var historyViewIsVisible = false
     private var cancelButtonIsVisible = false
 
@@ -41,13 +62,12 @@ class PingViewController: UIViewController {
     @IBOutlet var statisticsMaxRTTLabel: UILabel!
     @IBOutlet var statisticsAvgRTTLabel: UILabel!
     @IBOutlet var statisticsStdevRTTLabel: UILabel!
+
     
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pingManager.delegate = self
         
         configureTextField()
         configureHostView()
@@ -58,7 +78,7 @@ class PingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if pingResults.count == 0 {
+        if pingManager == nil {
             hostTextField.becomeFirstResponder()
         }
         
@@ -123,22 +143,73 @@ class PingViewController: UIViewController {
     
     private func startPingIfNecessary() {
         if let hostName = hostTextField.textWithoutPrefix, hostName != "" {
+            // count how often the user pings
+            RatingManager.didSignificantEvent()
+            
             resetPingManager()
             updateStatisticView()
-            pingResults = []
             tableView.reloadData()
             hostViewLabel.text = "pinging \(hostName) ..."
-            pingIsActive = true
-            pingManager.startPing(hostName: hostName, addressStyle: .auto)
             updateStopButton()
+            
+            SPPingController.setupWithHost(host: hostName, success: { (pingController) in
+                
+                self.pingManager = pingController
+                self.pingManager?.delegate = self
+                self.pingManager?.start()
+                self.updateStopButton()
+                self.host = Host(name: hostName, success: true)
+                
+            }) { (error) in
+                
+                let result = PingResult(status: .failure,
+                                        error: error,
+                                        host: hostName,
+                                        ip: hostName,
+                                        sizeInBytes: 0,
+                                        sequence: 0,
+                                        ttl: 0,
+                                        timeInMs: 0)
+                self.pingResults = [ result ]
+                self.tableView.reloadData()
+                self.updateStopButton()
+                self.host = Host(name: hostName, success: false)
+            }
+            
+            
         }
     }
     
+    private func stopPing() {
+        guard let pingManager = pingManager else {
+            return
+        }
+        
+        pingManager.stop()
+        
+        let result = PingResult(status: .failure,
+                                error: nil,
+                                host: "",
+                                ip: "Ping Terminated",
+                                sizeInBytes: 0,
+                                sequence: 0,
+                                ttl: 0,
+                                timeInMs: 0)
+        self.pingResults.insert(result, at: 0)
+        self.tableView.reloadData()
+        self.updateStopButton()
+    }
+    
     private func resetPingManager() {
-        pingManager.delegate = nil
-        pingManager.stopPing()
-        pingManager = QNNPingManager()
-        pingManager.delegate = self
+        if var pingManager = pingManager  {
+            pingManager.stop()
+            pingManager.delegate = nil
+            
+        }
+        
+        self.pingResults = []
+        self.pingManager = nil
+        self.updateStopButton()
     }
     
     
@@ -152,8 +223,13 @@ class PingViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
-        if pingIsActive {
-            pingManager.stopPing()
+        
+        guard let pingManager = pingManager else {
+            return
+        }
+        
+        if pingManager.isPinging {
+            stopPing()
         } else {
             startPingIfNecessary()
         }
@@ -237,7 +313,7 @@ class PingViewController: UIViewController {
         }
         
         stopButton.isHidden = false
-        if pingIsActive {
+        if pingManager?.isPinging ?? false {
             stopButton.setImage(UIImage(named: "ic_stop"), for: .normal)
         } else {
             stopButton.setImage(UIImage(named: "ic_play"), for: .normal)
@@ -258,15 +334,19 @@ class PingViewController: UIViewController {
     }
     
     private func updateStatisticView() {
-        statisticsSentLabel.text = String(format: "%d", pingManager.sentPackages)
-        statisticsReceivedLabel.text = String(format: "%d", pingManager.receivedPackages)
-        statisticsLostLabel.text = String(format: "%d", pingManager.lostPackages)
-        statisticsLossLabel.text = String(format: "%.2f", pingManager.packagesLoss)
+        guard let statistic = pingManager?.statistic else {
+            return
+        }
         
-        statisticsMinRTTLabel.text = String(format: "%.2f ms", pingManager.minRTT)
-        statisticsMaxRTTLabel.text = String(format: "%.2f ms", pingManager.maxRTT)
-        statisticsAvgRTTLabel.text = String(format: "%.2f ms", pingManager.avgRTT)
-        statisticsStdevRTTLabel.text = String(format: "%.2f ms", pingManager.stdevRTT)
+        statisticsSentLabel.text = String(format: "%d", statistic.sentPackages)
+        statisticsReceivedLabel.text = String(format: "%d", statistic.receivedPackages)
+        statisticsLostLabel.text = String(format: "%d", statistic.lostPackages)
+        statisticsLossLabel.text = String(format: "%.2f", statistic.packagesLoss)
+        
+        statisticsMinRTTLabel.text = String(format: "%.2f ms", statistic.minRTT)
+        statisticsMaxRTTLabel.text = String(format: "%.2f ms", statistic.maxRTT)
+        statisticsAvgRTTLabel.text = String(format: "%.2f ms", statistic.avgRTT)
+        statisticsStdevRTTLabel.text = String(format: "%.2f ms", statistic.stdevRTT)
     }
     
 }
@@ -282,44 +362,9 @@ extension PingViewController: HostHistoryViewDelegate {
     
 }
 
-// MARK: PingDelegate
-extension PingViewController: PingDelegate {
-    func didStartWithAddress(host: Host) {
-        Injection.hostRepository.store(host: host)
-        updateStopButton()
-    }
-    
-    func didFailWithAddress(host: Host, error: String) {
-        Injection.hostRepository.store(host: host)
-        
-        let pingResponse = PingResult(host: host.name,
-                   sizeInBytes: 0,
-                   sequence: 0,
-                   ttl: 0,
-                   timeInMs: 0.0,
-                   error: error)
-        
-        pingResults.insert(pingResponse, at: 0)
-        tableView.reloadData()
-        updateStatisticView()
-    }
-    
-    func didReceivePingResponse(_ pingResponse: PingResult) {
-        guard pingIsActive else {
-            return
-        }
-        
-        pingResults.insert(pingResponse, at: 0)
-        tableView.reloadData()
-        updateStatisticView()
-        
-        if pingResponse.host == "Ping Terminated" && pingResponse.ttl == 0 {
-            pingIsActive = false
-            updateStopButton()
-        }
-    }
-    
-}
+
+// MARK: PinginfoDelegate
+
 
 // MARK: UITableViewDelegate
 extension PingViewController: UITableViewDelegate {
@@ -331,18 +376,18 @@ extension PingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pingResults.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PingViewController.pingCellReuseIdentifier, for: indexPath)
-        
-        if let pingCell = cell as? PingTableViewCell {
-            pingCell.pingResponse = pingResults[indexPath.row]
+
+        guard let pingCell = cell as? PingTableViewCell else {
+            return cell
         }
-        
-        return cell
+
+        pingCell.pingResponse = pingResults[indexPath.row]
+        return pingCell
     }
 }
-
 
 // MARK: UITextFieldDelegate
 extension PingViewController: UITextFieldDelegate {
@@ -375,5 +420,39 @@ extension PingViewController: UITextFieldDelegate {
         
         return success
     }
+    
+}
+
+extension PingViewController: PingDelegate {
+    func didSendPing(_ pingController: PingController, result: PingResult) {
+        updateStatisticView()
+    }
+    
+    
+    func didFailWithError(_ pingController: PingController, error: PingError, result: PingResult?) {
+        guard let result = result else {
+            stopPing()
+            return
+        }
+        
+        pingResults.insert(result, at: 0)
+        tableView.reloadData()
+        updateStatisticView()
+        
+        if let host = host {
+            self.host = Host(name: host.name, success: false)
+        }
+    }
+    
+    func didReveivePingReply(_ pingController: PingController, result: PingResult) {
+        pingResults.insert(result, at: 0)
+        tableView.reloadData()
+        updateStatisticView()
+        
+        if let host = host {
+            self.host = Host(name: host.name, success: true)
+        }
+    }
+    
     
 }
