@@ -11,7 +11,7 @@ import Siren
 
 class UpdateManager {
     
-    static func setupUpdateManager() {
+    static func setup() {
         
         /* Siren code should go below window?.makeKeyAndVisible() */
         
