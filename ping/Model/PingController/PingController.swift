@@ -10,7 +10,7 @@ import Foundation
 
 protocol PingController {
     
-    var delegate: PingInfoDelegate? { get set }
+    var delegate: PingDelegate? { get set }
     var configuration: PingConfiguration { get }
     var statistic: PingStatistic { get }
     var pingResults: [PingResult] { get }

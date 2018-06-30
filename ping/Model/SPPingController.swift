@@ -14,7 +14,7 @@ class SPPingController: NSObject, PingController {
     private var ip: String
     private let gpPing: GBPing
     
-    var delegate: PingInfoDelegate?
+    var delegate: PingDelegate?
     var host: String
     var configuration: PingConfiguration
     var isPinging: Bool = false

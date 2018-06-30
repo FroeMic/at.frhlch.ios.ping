@@ -1,5 +1,5 @@
 //
-//  PingInfoDelegate.swift
+//  PingDelegate.swift
 //  ping
 //
 //  Created by Michael Fröhlich on 28.06.18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PingInfoDelegate {
+protocol PingDelegate {
     
     func didFailWithError(_ pingController: PingController, error: PingError, result: PingResult?)
     func didSendPing(_ pingController: PingController, result: PingResult)

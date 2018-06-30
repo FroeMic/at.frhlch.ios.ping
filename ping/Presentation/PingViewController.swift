@@ -423,7 +423,7 @@ extension PingViewController: UITextFieldDelegate {
     
 }
 
-extension PingViewController: PingInfoDelegate {
+extension PingViewController: PingDelegate {
     func didSendPing(_ pingController: PingController, result: PingResult) {
         updateStatisticView()
     }
