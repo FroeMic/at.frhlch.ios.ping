@@ -11,6 +11,7 @@ import Foundation
 struct PingResult {
     
     let status: PingStatus
+    let error: PingError?
     let host: String
     let ip: String
     let sizeInBytes: Int

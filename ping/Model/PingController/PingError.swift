@@ -35,5 +35,20 @@ enum PingError: Error {
      */
     case didTimedOut
     
+    var localizedDescription: String {
+        switch self {
+        case .failedToResolveHost:
+            return "Failed to resolve host"
+        case .failedToSendPing:
+            return "Failed to send ping"
+        case .receivedUnexpectedReply:
+            return "Received unexpected reply"
+        case .didTimedOut:
+            return "Request did time out"
+        default:
+            return "Request failed"
+        }
+    }
+    
     
 }

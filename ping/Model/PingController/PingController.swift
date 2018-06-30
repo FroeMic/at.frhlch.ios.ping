@@ -21,7 +21,7 @@ protocol PingController {
      * If a host could be resolved the initialized PingController is returned.
      * If the host could not be resolved or another issue occured, the failure callback is triggered.
      */
-    static func setupWithHost(host: String, configuration: PingConfiguration, success: (PingController) -> (), failure: (PingError) -> ())
+    static func setupWithHost(host: String, configuration: PingConfiguration, success:  @escaping (PingController) -> (), failure:  @escaping (PingError) -> ())
     
     /**
      * Starts pinging.
@@ -43,7 +43,7 @@ extension PingController {
      * If a host could be resolved the initialized PingController is returned.
      * If the host could not be resolved or another issue occured, the failure callback is triggered.
      */
-    static func setupWithHost(host: String, success: (PingController) -> (), failure: (PingError) -> ()) {
+    static func setupWithHost(host: String, success: @escaping (PingController) -> (), failure: @escaping (PingError) -> ()) {
         setupWithHost(host: host, configuration: PingConfiguration(), success: success, failure: failure)
     }
     

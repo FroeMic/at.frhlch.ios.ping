@@ -11,6 +11,7 @@ import Foundation
 protocol PingInfoDelegate {
     
     func didFailWithError(_ pingController: PingController, error: PingError, result: PingResult?)
+    func didSendPing(_ pingController: PingController, result: PingResult)
     func didReveivePingReply(_ pingController: PingController, result: PingResult)
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 import GBPing
 
-class SPPingController: PingController {
+class SPPingController: NSObject, PingController {
 
     private var ip: String
     private let gpPing: GBPing
@@ -19,24 +19,31 @@ class SPPingController: PingController {
     var configuration: PingConfiguration
     var isPinging: Bool = false
     
-    private (set) var pingResults: [PingResult] = []
+    private var pendingPingResults: [PingResult] = []
+    private var completedPingResults: [PingResult] = []
+    
+    var pingResults: [PingResult] {
+        return completedPingResults + pendingPingResults
+    }
     
     private var sentPackages: [PingResult] {
-        return pingResults.filter { $0.status == .success }
+        return pingResults
     }
     private var receivedPackages: [PingResult] {
-        return pingResults.filter { $0.status == .failure }
+        return completedPingResults.filter { $0.status == .success }
     }
     private var lostPackages: [PingResult] {
-        return pingResults.filter { $0.status == .failure }
+        return completedPingResults.filter { $0.status == .failure }
     }
     
     var statistic: PingStatistic {
-        let packageLoss = sentPackages.count == 0 ? 0 : Double(lostPackages.count) / Double(sentPackages.count)
-        let minRtt: Double = 0 //receivedPackages.min() ?? 0
-        let maxRtt: Double = 0 //receivedPackages.max() ?? 0
-        let avgRTT: Double = 0 //receivedPackages.mean ?? 0
-        let stdevRtt: Double = 0 //receivedPackages.stdev ?? 0
+        let packageLoss = completedPingResults.count == 0 ? 0 : Double(lostPackages.count) / Double(completedPingResults.count)
+        
+        let rtts = receivedPackages.map { $0.timeInMs }
+        let minRtt: Double = rtts.min() ?? 0
+        let maxRtt: Double = rtts.max() ?? 0
+        let avgRTT: Double = rtts.count == 0 ? 0 : rtts.mean
+        let stdevRtt: Double = rtts.stdev ?? 0
         
         return PingStatistic(sentPackages: sentPackages.count,
                              receivedPackages: receivedPackages.count,
@@ -56,6 +63,21 @@ class SPPingController: PingController {
         self.gpPing = ping
     }
     
+    private func updatePingResultStore(with pingResult: PingResult) {
+        if pingResult.status == .pending {
+            
+            pendingPingResults.append(pingResult)
+            
+        } else {
+            
+            if let index = pendingPingResults.index(where: {$0.sequence == pingResult.sequence}) {
+                
+                pendingPingResults.remove(at: index)
+                completedPingResults.append(pingResult)
+            }
+            
+        }
+    }
     
 
     
@@ -80,12 +102,141 @@ extension SPPingController {
         isPinging = false
     }
     
-    static func setupWithHost(host: String, configuration: PingConfiguration, success: (PingController) -> (), failure: (PingError) -> ()) {
+    static func setupWithHost(host: String, configuration: PingConfiguration, success: @escaping (PingController) -> (), failure: @escaping (PingError) -> ()) {
         
+        let ping = GBPing()
+        let pingController = SPPingController(host: host, ip: host, configuration: configuration, ping: ping)
         
-        // TODO:    [1] Try to resolve host to ip
-        //          [2] Init Ping Controller or call failure callback
+        ping.delegate = pingController
+        ping.host = host
+        ping.ttl = UInt(configuration.ttl)
+        ping.timeout = configuration.timeout
+        ping.payloadSize = UInt(configuration.payload)
+        ping.pingPeriod = configuration.frequency
+        
+        ping.setup { (setupWasSuccessful, error) in
+            
+            if setupWasSuccessful {
+                
+                success(pingController)
+                
+            } else {
+                
+                failure(PingError.failedToResolveHost)
+                
+            }
+            
+        }
         
     }
     
+}
+
+extension SPPingController: GBPingDelegate {
+    
+    func ping(_ pinger: GBPing!, didFailWithError error: Error!) {
+        let error = PingError.failedWithError
+        
+        delegate?.didFailWithError(self, error: error, result: nil)
+    }
+    
+    func ping(_ pinger: GBPing!, didSendPingWith summary: GBPingSummary!) {
+        
+        if host != summary.host, summary.host != "" {
+            ip = summary.host
+        }
+        
+        let result = PingResult(status: .pending,
+                                error: nil,
+                                host: host,
+                                ip: ip,
+                                sizeInBytes: Int(summary.payloadSize),
+                                sequence: Int(summary.sequenceNumber),
+                                ttl: Int(summary.ttl),
+                                timeInMs: 0)
+        
+        updatePingResultStore(with: result)
+        delegate?.didSendPing(self, result: result)
+
+    }
+    
+    func ping(_ pinger: GBPing!, didReceiveReplyWith summary: GBPingSummary!) {
+        
+        if host != summary.host, summary.host != "" {
+            ip = summary.host
+        }
+        
+        let result = PingResult(status: .success,
+                                error: nil,
+                                host: host,
+                                ip: ip,
+                                sizeInBytes: Int(summary.payloadSize),
+                                sequence: Int(summary.sequenceNumber),
+                                ttl: Int(summary.ttl),
+                                timeInMs: summary.receiveDate.timeIntervalSince(summary.sendDate) * 1000)
+        
+        updatePingResultStore(with: result)
+        delegate?.didReveivePingReply(self, result: result)
+    }
+    
+    func ping(_ pinger: GBPing!, didTimeoutWith summary: GBPingSummary!) {
+        
+        if host != summary.host, summary.host != "" {
+            ip = summary.host
+        }
+        
+        let error = PingError.didTimedOut
+        let result = PingResult(status: .failure,
+                                error: error,
+                                host: host,
+                                ip: ip,
+                                sizeInBytes: Int(summary.payloadSize),
+                                sequence: Int(summary.sequenceNumber),
+                                ttl: Int(summary.ttl),
+                                timeInMs: self.configuration.timeout * 1000)
+
+        updatePingResultStore(with: result)
+        delegate?.didFailWithError(self, error: error, result: result)
+    }
+    
+
+    func ping(_ pinger: GBPing!, didReceiveUnexpectedReplyWith summary: GBPingSummary!) {
+        
+        if host != summary.host, summary.host != "" {
+            ip = summary.host
+        }
+        
+        let error = PingError.receivedUnexpectedReply
+        let result = PingResult(status: .failure,
+                                error: error,
+                                host: host,
+                                ip: ip,
+                                sizeInBytes: Int(summary.payloadSize),
+                                sequence: Int(summary.sequenceNumber),
+                                ttl: Int(summary.ttl),
+                                timeInMs: 0)
+
+        updatePingResultStore(with: result)
+        delegate?.didFailWithError(self, error: error, result: result)
+    }
+    
+    func ping(_ pinger: GBPing!, didFailToSendPingWith summary: GBPingSummary!, error: Error!) {
+        
+        if host != summary.host, summary.host != "" {
+            ip = summary.host
+        }
+        
+        let error = PingError.failedToSendPing
+        let result = PingResult(status: .failure,
+                                error: error,
+                                host: host,
+                                ip: ip,
+                                sizeInBytes: Int(summary.payloadSize),
+                                sequence: Int(summary.sequenceNumber),
+                                ttl: Int(summary.ttl),
+                                timeInMs: 0)
+
+        updatePingResultStore(with: result)
+        delegate?.didFailWithError(self, error: error, result: result)
+    }
 }

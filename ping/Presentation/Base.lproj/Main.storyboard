@@ -492,7 +492,7 @@
                         <outlet property="statisticsStdevRTTLabel" destination="iZI-Cj-doW" id="lzy-Ls-N96"/>
                         <outlet property="stopButton" destination="NZe-8p-Fg4" id="klo-aq-9JV"/>
                         <outlet property="suggestionView" destination="Szt-vR-NzT" id="ObL-Zy-YtY"/>
-                        <outlet property="tableView" destination="6oP-2x-eKJ" id="t7K-Xz-Pby"/>
+                        <outlet property="tableView" destination="6oP-2x-eKJ" id="lW3-bn-7aP"/>
                         <outlet property="zeroHeightConstraint" destination="wGN-sN-ucx" id="r9t-gZ-x3f"/>
                         <outlet property="zeroWidthButtonConstraint" destination="uLi-8O-321" id="whg-5d-Iv8"/>
                     </connections>

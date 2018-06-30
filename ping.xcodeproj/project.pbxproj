@@ -35,7 +35,7 @@
 		27B7939B20E4BFB40081884A /* PingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7939A20E4BFB40081884A /* PingConfiguration.swift */; };
 		27B7939E20E605390081884A /* SPPingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7939D20E605390081884A /* SPPingController.swift */; };
 		27B793A020E606CE0081884A /* PingStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B7939F20E606CE0081884A /* PingStatistic.swift */; };
-		27B793A220E6BB6E0081884A /* PingViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B793A120E6BB6E0081884A /* PingViewControllerNew.swift */; };
+		27B793A220E6BB6E0081884A /* PingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B793A120E6BB6E0081884A /* PingViewController.swift */; };
 		27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D36F6620E4B7FA00EF92BF /* PingController.swift */; };
 		27D4653220CEBF3000A37B3D /* IPAddressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */; };
 		27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */; };
@@ -58,7 +58,6 @@
 		1A84247AD96723AA6D1D5671 /* Pods-pingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pingTests/Pods-pingTests.release.xcconfig"; sourceTree = "<group>"; };
 		2704490E20CEAD5C001C4004 /* ping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2704491120CEAD5C001C4004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2704491320CEAD5C001C4004 /* PingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingViewController.swift; sourceTree = "<group>"; };
 		2704491620CEAD5C001C4004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2704491820CEAD5D001C4004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2704491B20CEAD5D001C4004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +94,7 @@
 		27B7939A20E4BFB40081884A /* PingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingConfiguration.swift; sourceTree = "<group>"; };
 		27B7939D20E605390081884A /* SPPingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPingController.swift; sourceTree = "<group>"; };
 		27B7939F20E606CE0081884A /* PingStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingStatistic.swift; sourceTree = "<group>"; };
-		27B793A120E6BB6E0081884A /* PingViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingViewControllerNew.swift; sourceTree = "<group>"; };
+		27B793A120E6BB6E0081884A /* PingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingViewController.swift; sourceTree = "<group>"; };
 		27D36F6620E4B7FA00EF92BF /* PingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingController.swift; sourceTree = "<group>"; };
 		27D4653120CEBF3000A37B3D /* IPAddressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressStyle.swift; sourceTree = "<group>"; };
 		27D583E420DE968A0073F0C8 /* PEPingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEPingManager.swift; sourceTree = "<group>"; };
@@ -176,8 +175,7 @@
 				2704491520CEAD5C001C4004 /* Main.storyboard */,
 				2704491A20CEAD5D001C4004 /* LaunchScreen.storyboard */,
 				2704493520CEAFE5001C4004 /* LaunchScreenViewController.swift */,
-				2704491320CEAD5C001C4004 /* PingViewController.swift */,
-				27B793A120E6BB6E0081884A /* PingViewControllerNew.swift */,
+				27B793A120E6BB6E0081884A /* PingViewController.swift */,
 				278A6C8F20D04F0D0007322A /* HistoryViewController.swift */,
 				2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */,
 			);
@@ -460,7 +458,7 @@
 				27B7939720E4BB980081884A /* PingStatus.swift in Sources */,
 				27B7939920E4BCF30081884A /* PingInfoDelegate.swift in Sources */,
 				278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */,
-				27B793A220E6BB6E0081884A /* PingViewControllerNew.swift in Sources */,
+				27B793A220E6BB6E0081884A /* PingViewController.swift in Sources */,
 				27B793A020E606CE0081884A /* PingStatistic.swift in Sources */,
 				27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */,
 				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
