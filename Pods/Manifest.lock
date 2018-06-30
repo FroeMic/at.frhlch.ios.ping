@@ -1,20 +1,24 @@
 PODS:
   - Appirater (2.3.1)
   - GBPing (1.4.1)
+  - Siren (3.4.1)
 
 DEPENDENCIES:
   - Appirater
   - GBPing
+  - Siren
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Appirater
     - GBPing
+    - Siren
 
 SPEC CHECKSUMS:
   Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
   GBPing: 3bf8bf81f74da35d3b94d83d0290ba78bbde7e0f
+  Siren: 94e13d40b48d8c0ddac053140d607c36bb487767
 
-PODFILE CHECKSUM: 167540fd91dd7a68b9188310148b0390840040e6
+PODFILE CHECKSUM: a1a7569f7960d6685a7ddd29c7ba23b92e07fa56
 
 COCOAPODS: 1.5.3
