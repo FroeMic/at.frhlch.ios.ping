@@ -74,6 +74,7 @@ class PingViewController: UIViewController {
         configureTableView()
         configureSuggestionView()
         configureStatisticsView()
+        applyTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +83,7 @@ class PingViewController: UIViewController {
             hostTextField.becomeFirstResponder()
         }
         
+        applyTheme()
         super.viewWillAppear(animated)
     }
     
@@ -139,6 +141,25 @@ class PingViewController: UIViewController {
         statisticsMaxRTTLabel.adjustsFontSizeToFitWidth = true
         statisticsAvgRTTLabel.adjustsFontSizeToFitWidth = true
         statisticsStdevRTTLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    func applyTheme() {
+        let theme = Injection.theme
+        
+        view.backgroundColor = theme.backgroundColor
+        
+        hostTextField.backgroundColor = theme.backgroundColor
+        hostTextField.dashColor = theme.textColor
+        hostTextField.textColor = theme.textColor
+        hostTextField.tintColor = theme.tintColor
+        
+        goButton.tintColor = theme.tintColor
+        goButton.backgroundColor = theme.backgroundColor
+        goButton.setTitleColor(theme.textColor, for: .normal)
+        
+        tableView.backgroundColor = theme.backgroundColor
+        
+        
     }
     
     private func startPingIfNecessary() {
