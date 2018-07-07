@@ -157,6 +157,22 @@ class PingViewController: UIViewController {
         goButton.backgroundColor = theme.backgroundColor
         goButton.setTitleColor(theme.textColor, for: .normal)
         
+        hostViewContainer.backgroundColor = theme.backgroundColor
+        hostViewLabel.backgroundColor = theme.backgroundColor
+        hostViewLabel.textColor = theme.textColor
+        
+        if let image = cancelButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            cancelButton.setImage(coloredImage, for: .normal)
+            cancelButton.tintColor = theme.textColor
+        }
+        
+        if let image = stopButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            stopButton.setImage(coloredImage, for: .normal)
+            stopButton.tintColor = theme.textColor
+        }
+        
         tableView.backgroundColor = theme.backgroundColor
     }
     
@@ -333,9 +349,9 @@ class PingViewController: UIViewController {
         
         stopButton.isHidden = false
         if pingManager?.isPinging ?? false {
-            stopButton.setImage(UIImage(named: "ic_stop"), for: .normal)
+            stopButton.setImage(UIImage(named: "ic_stop")?.withRenderingMode(.alwaysTemplate), for: .normal)
         } else {
-            stopButton.setImage(UIImage(named: "ic_play"), for: .normal)
+            stopButton.setImage(UIImage(named: "ic_play")?.withRenderingMode(.alwaysTemplate), for: .normal)
         }
     }
     
