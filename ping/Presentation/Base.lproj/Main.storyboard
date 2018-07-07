@@ -545,7 +545,6 @@
                                 <view key="tableFooterView" contentMode="scaleToFill" id="VRs-yr-ZBp">
                                     <rect key="frame" x="0.0" y="78" width="335" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hostTableViewCell" rowHeight="50" id="etM-il-M48" customClass="HostTableViewCell" customModule="ping" customModuleProvider="target">
@@ -617,6 +616,7 @@
                     <size key="freeformSize" width="375" height="587"/>
                     <connections>
                         <outlet property="historyTableView" destination="BP9-Ve-Ndv" id="ijg-NF-ObY"/>
+                        <outlet property="recentHostsLabel" destination="knM-Ki-dyM" id="ZeT-2a-1cl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdB-zc-cjA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -158,8 +158,6 @@ class PingViewController: UIViewController {
         goButton.setTitleColor(theme.textColor, for: .normal)
         
         tableView.backgroundColor = theme.backgroundColor
-        
-        
     }
     
     private func startPingIfNecessary() {

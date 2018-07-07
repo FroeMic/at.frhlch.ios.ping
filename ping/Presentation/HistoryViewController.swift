@@ -13,6 +13,7 @@ class HistoryViewController: UIViewController {
     private static let hostCellReuseIdentifier = "hostTableViewCell"
     
     @IBOutlet var historyTableView: UITableView!
+    @IBOutlet var recentHostsLabel: UILabel!
     
     var historyViewDelegate: HostHistoryViewDelegate?
     
@@ -33,11 +34,25 @@ class HistoryViewController: UIViewController {
         historyTableView.backgroundColor = .black
         historyTableView.backgroundView?.backgroundColor = .black
         historyTableView.separatorStyle = .none
+        
+        applyTheme() 
     }
     
     func reloadHostHistory() {
         hostHistory = Injection.hostRepository.get()
         historyTableView?.reloadData()
+    }
+    
+    func applyTheme() {
+        let theme = Injection.theme
+        
+        view.backgroundColor = theme.backgroundColor
+        
+        historyTableView.backgroundColor = theme.backgroundColor
+        
+        recentHostsLabel.textColor = theme.textColor
+        recentHostsLabel.backgroundColor = theme.backgroundColor
+        
     }
 }
 
