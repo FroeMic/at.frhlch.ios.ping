@@ -12,6 +12,7 @@ class PingViewController: UIViewController {
     
     private static let pingCellReuseIdentifier = "pingTableViewCell"
     private static let historyViewSegueIdentifer = "historyViewSegue"
+    private static let settingsViewSegueIdentifer = "showSettingsScene"
     
     private var hostHistoryVC: HistoryViewController?
     private var pingManager: PingController?
@@ -156,6 +157,7 @@ class PingViewController: UIViewController {
         
         goButton.tintColor = theme.tintColor
         goButton.backgroundColor = theme.backgroundColor
+        goButton.contentHorizontalAlignment = .right
         goButton.setTitleColor(theme.textColor, for: .normal)
         
         hostViewContainer.backgroundColor = theme.backgroundColor
@@ -264,6 +266,7 @@ class PingViewController: UIViewController {
         dismissTextField()
     }
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        showSettingsView()
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
@@ -281,6 +284,10 @@ class PingViewController: UIViewController {
     
     private func dismissTextField() {
         view.endEditing(true)
+    }
+    
+    private func showSettingsView() {
+        performSegue(withIdentifier: PingViewController.settingsViewSegueIdentifer, sender: self)
     }
     
     private func showHistoryView() {
