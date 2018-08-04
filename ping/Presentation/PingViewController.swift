@@ -46,6 +46,7 @@ class PingViewController: UIViewController {
     @IBOutlet var hostTextField: AnimatedTextField!
     @IBOutlet var goButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var settingsButton: UIButton!
     @IBOutlet var stopButton: UIButton!
     @IBOutlet var hostViewContainer: UIView!
     @IBOutlet var hostViewLabel: UILabel!
@@ -173,6 +174,12 @@ class PingViewController: UIViewController {
             stopButton.tintColor = theme.textColor
         }
         
+        if let image = settingsButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            settingsButton.setImage(coloredImage, for: .normal)
+            settingsButton.tintColor = theme.textColor
+        }
+        
         tableView.backgroundColor = theme.backgroundColor
     }
     
@@ -255,6 +262,8 @@ class PingViewController: UIViewController {
     }
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismissTextField()
+    }
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
     }
     
     @IBAction func stopButtonPressed(_ sender: Any) {

@@ -18,8 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gta-l0-z60" userLabel="Settings Button">
+                                <rect key="frame" x="305" y="44" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4L2-ZT-Kps"/>
+                                    <constraint firstAttribute="height" constant="30" id="yLs-Xc-CSi"/>
+                                </constraints>
+                                <state key="normal" image="ic_settings"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iv-OI-Unb"/>
+                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEe-Vp-1WE"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-No-gwQ" userLabel="InputContainerView">
-                                <rect key="frame" x="30" y="40" width="315" height="40"/>
+                                <rect key="frame" x="30" y="74" width="315" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="8.8.8.8" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Baq-3c-npH" customClass="AnimatedTextField" customModule="ping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
@@ -61,7 +73,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-T8-lSn" userLabel="HostView">
-                                <rect key="frame" x="30" y="90" width="315" height="50"/>
+                                <rect key="frame" x="30" y="124" width="315" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZe-8p-Fg4" userLabel="Stop Button">
                                         <rect key="frame" x="285" y="20" width="20" height="20"/>
@@ -92,7 +104,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6oP-2x-eKJ">
-                                <rect key="frame" x="30" y="150" width="315" height="386"/>
+                                <rect key="frame" x="30" y="184" width="315" height="352"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="elH-bP-U0L">
                                     <rect key="frame" x="0.0" y="78" width="315" height="44"/>
@@ -408,7 +420,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szt-vR-NzT" userLabel="ServerView">
-                                <rect key="frame" x="0.0" y="80" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="0.0"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HlK-qY-eVK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
@@ -427,7 +439,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aak-57-edZ">
-                                <rect key="frame" x="311" y="110" width="24" height="24"/>
+                                <rect key="frame" x="311" y="144" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="B1I-9b-Yei"/>
                                     <constraint firstAttribute="height" constant="24" id="kAx-al-2f8"/>
@@ -441,7 +453,6 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6oP-2x-eKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="15I-VZ-J6a"/>
-                            <constraint firstItem="iq8-No-gwQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="3m1-fd-aw2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vKm-T8-lSn" secondAttribute="trailing" constant="30" id="9WO-Cu-Pnc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szt-vR-NzT" secondAttribute="trailing" id="A50-5g-b8q"/>
                             <constraint firstItem="vKm-T8-lSn" firstAttribute="top" secondItem="iq8-No-gwQ" secondAttribute="bottom" constant="10" id="EHe-4M-ATY"/>
@@ -453,14 +464,17 @@
                             <constraint firstItem="aak-57-edZ" firstAttribute="top" secondItem="Szt-vR-NzT" secondAttribute="top" constant="30" id="Nyk-2A-H2W"/>
                             <constraint firstItem="HtM-FZ-8TL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ryk-R4-Vwu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GRE-a7-d5k" secondAttribute="bottom" constant="15" id="TgQ-YE-vfe"/>
+                            <constraint firstItem="gta-l0-z60" firstAttribute="bottom" secondItem="iq8-No-gwQ" secondAttribute="top" id="VIq-jP-ATh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iq8-No-gwQ" secondAttribute="trailing" constant="30" id="Vcf-C4-BGn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Szt-vR-NzT" secondAttribute="bottom" priority="999" id="dAc-1F-A06"/>
                             <constraint firstItem="iq8-No-gwQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ddE-m2-kXc"/>
                             <constraint firstItem="vKm-T8-lSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ef7-SK-FW6"/>
+                            <constraint firstItem="gta-l0-z60" firstAttribute="trailing" secondItem="Szt-vR-NzT" secondAttribute="trailing" constant="-40" id="hWQ-q9-I7U"/>
                             <constraint firstItem="GRE-a7-d5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j0I-CA-g8s"/>
                             <constraint firstItem="Szt-vR-NzT" firstAttribute="top" secondItem="iq8-No-gwQ" secondAttribute="bottom" id="jgj-jj-dKE"/>
                             <constraint firstItem="aak-57-edZ" firstAttribute="trailing" secondItem="Szt-vR-NzT" secondAttribute="trailing" constant="-40" id="kNH-UY-jYQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6oP-2x-eKJ" secondAttribute="trailing" constant="30" id="trP-Hy-iz3"/>
+                            <constraint firstItem="gta-l0-z60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="u7d-WZ-c9H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GRE-a7-d5k" secondAttribute="trailing" constant="20" id="yTt-a3-EZ1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -471,6 +485,7 @@
                         <outlet property="hostTextField" destination="Baq-3c-npH" id="Jqw-6c-Mju"/>
                         <outlet property="hostViewContainer" destination="vKm-T8-lSn" id="JB8-yy-K3b"/>
                         <outlet property="hostViewLabel" destination="sLm-85-8Sd" id="uEw-zG-HJg"/>
+                        <outlet property="settingsButton" destination="gta-l0-z60" id="56S-G2-AcB"/>
                         <outlet property="statisticsAvgRTTLabel" destination="1st-F4-H2Y" id="jTh-4a-GZj"/>
                         <outlet property="statisticsLossLabel" destination="mjL-E3-nKg" id="I49-pl-2ed"/>
                         <outlet property="statisticsLostLabel" destination="1k5-11-cxE" id="NnK-3F-mCe"/>
@@ -625,6 +640,7 @@
     </scenes>
     <resources>
         <image name="ic_delete" width="33" height="33"/>
+        <image name="ic_settings" width="33" height="33"/>
         <image name="ic_stop" width="33" height="33"/>
         <image name="ping" width="1024" height="1024"/>
     </resources>
