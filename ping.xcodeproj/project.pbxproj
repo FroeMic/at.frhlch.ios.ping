@@ -25,9 +25,10 @@
 		272636FB211715240002B2F1 /* LicenseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FA211715240002B2F1 /* LicenseProvider.swift */; };
 		272636FD211715410002B2F1 /* HardCodedLicenseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */; };
 		272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FE211716760002B2F1 /* LicenseDetailViewController.swift */; };
+		2726370121178B380002B2F1 /* PingConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370021178B380002B2F1 /* PingConfigurationProvider.swift */; };
+		2726370321178B8E0002B2F1 /* UDPingConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */; };
 		27579BC32115E79D00B76130 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC22115E79D00B76130 /* SettingViewController.swift */; };
 		27579BC52115E95B00B76130 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC42115E95B00B76130 /* DarkTheme.swift */; };
-		27579BC72115ED8800B76130 /* ThemeSelectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */; };
 		2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */; };
 		2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */; };
 		2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */; };
@@ -87,9 +88,10 @@
 		272636FA211715240002B2F1 /* LicenseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseProvider.swift; sourceTree = "<group>"; };
 		272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedLicenseProvider.swift; sourceTree = "<group>"; };
 		272636FE211716760002B2F1 /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
+		2726370021178B380002B2F1 /* PingConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingConfigurationProvider.swift; sourceTree = "<group>"; };
+		2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPingConfigurationRepository.swift; sourceTree = "<group>"; };
 		27579BC22115E79D00B76130 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		27579BC42115E95B00B76130 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
-		27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewCell.swift; sourceTree = "<group>"; };
 		2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+stdev.swift"; sourceTree = "<group>"; };
 		2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewDelegate.swift; sourceTree = "<group>"; };
 		2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,12 +224,14 @@
 			children = (
 				278A6C9D20D068D90007322A /* HostHistoryPublisher.swift */,
 				278A6C9720D062FF0007322A /* HostHistoryRepository.swift */,
-				278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */,
+				2726370021178B380002B2F1 /* PingConfigurationProvider.swift */,
+				272636FA211715240002B2F1 /* LicenseProvider.swift */,
 				270B11B320E9F201002B6829 /* ThemeProvider.swift */,
+				278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */,
+				2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */,
+				272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */,
 				270B11B520E9F279002B6829 /* LightTheme.swift */,
 				27579BC42115E95B00B76130 /* DarkTheme.swift */,
-				272636FA211715240002B2F1 /* LicenseProvider.swift */,
-				272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -239,7 +243,6 @@
 				27251D4B20D03AF800F85DD7 /* DashedView.swift */,
 				2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */,
 				27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */,
-				27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */,
 				272636F6211713EB0002B2F1 /* LicenseTableViewCell.swift */,
 			);
 			path = Views;
@@ -487,6 +490,7 @@
 				278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */,
 				27B793A220E6BB6E0081884A /* PingViewController.swift in Sources */,
 				27B793A020E606CE0081884A /* PingStatistic.swift in Sources */,
+				2726370121178B380002B2F1 /* PingConfigurationProvider.swift in Sources */,
 				27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */,
 				272636FD211715410002B2F1 /* HardCodedLicenseProvider.swift in Sources */,
 				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
@@ -495,7 +499,6 @@
 				278A6C9420D05E600007322A /* PingResult.swift in Sources */,
 				270B11B620E9F279002B6829 /* LightTheme.swift in Sources */,
 				278A6C9C20D067280007322A /* Injection.swift in Sources */,
-				27579BC72115ED8800B76130 /* ThemeSelectionViewCell.swift in Sources */,
 				27B7939B20E4BFB40081884A /* PingConfiguration.swift in Sources */,
 				27579BC52115E95B00B76130 /* DarkTheme.swift in Sources */,
 				2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */,
@@ -512,6 +515,7 @@
 				272636F92117140F0002B2F1 /* License.swift in Sources */,
 				27B7939E20E605390081884A /* SPPingController.swift in Sources */,
 				27F848CC20E7EB2F004DEA0C /* UpdateManager.swift in Sources */,
+				2726370321178B8E0002B2F1 /* UDPingConfigurationRepository.swift in Sources */,
 				270B11B420E9F201002B6829 /* ThemeProvider.swift in Sources */,
 				2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */,
 			);

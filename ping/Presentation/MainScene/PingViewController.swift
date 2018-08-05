@@ -206,7 +206,8 @@ class PingViewController: UIViewController {
             hostViewLabel.text = "pinging \(hostName) ..."
             updateStopButton()
             
-            SPPingController.setupWithHost(host: hostName, success: { (pingController) in
+            let configuration = Injection.pingConfigurationRepository.get()
+            SPPingController.setupWithHost(host: hostName, configuration: configuration, success: { (pingController) in
                 
                 self.pingManager = pingController
                 self.pingManager?.delegate = self

@@ -65,12 +65,7 @@ extension ThemeSelectionViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "" ,
             for: indexPath)
-        
-        if let themeCell = cell as? ThemeSelectionViewCell {
-            let theme = themes[indexPath.row]
-            themeCell.theme = theme
-            themeCell.isSelectedTheme
-        }
+
         
         return cell
     }
