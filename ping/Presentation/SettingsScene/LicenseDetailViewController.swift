@@ -63,6 +63,9 @@ class LicenseDetailViewController: UIViewController {
             return
         }
         
+        
+        title = license.title
+        
         licenseTitleLabel?.text = license.title
         licenseUrlTextView?.text = license.url
         licenseTextView?.text = license.license
