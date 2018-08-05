@@ -11,6 +11,8 @@ import Foundation
 class Injection {
 
     static let hostRepository: HostHistoryRepository = UDTHostHistoryRepository()
+    static let licenseRepository: LicenseProvider = HardCodedLicenseProvider()
     static let theme: ThemeProvider = DarkTheme()
+    
     
 }

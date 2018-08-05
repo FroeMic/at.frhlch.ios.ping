@@ -20,6 +20,11 @@
 		272636EF211705710002B2F1 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636EE211705710002B2F1 /* ThemeSelectionViewController.swift */; };
 		272636F321170EDA0002B2F1 /* AcknowledgmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636F221170EDA0002B2F1 /* AcknowledgmentsViewController.swift */; };
 		272636F521170EEA0002B2F1 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636F421170EEA0002B2F1 /* ConfigurationViewController.swift */; };
+		272636F7211713EB0002B2F1 /* LicenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636F6211713EB0002B2F1 /* LicenseTableViewCell.swift */; };
+		272636F92117140F0002B2F1 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636F82117140F0002B2F1 /* License.swift */; };
+		272636FB211715240002B2F1 /* LicenseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FA211715240002B2F1 /* LicenseProvider.swift */; };
+		272636FD211715410002B2F1 /* HardCodedLicenseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */; };
+		272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FE211716760002B2F1 /* LicenseDetailViewController.swift */; };
 		27579BC32115E79D00B76130 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC22115E79D00B76130 /* SettingViewController.swift */; };
 		27579BC52115E95B00B76130 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC42115E95B00B76130 /* DarkTheme.swift */; };
 		27579BC72115ED8800B76130 /* ThemeSelectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */; };
@@ -77,6 +82,11 @@
 		272636EE211705710002B2F1 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		272636F221170EDA0002B2F1 /* AcknowledgmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsViewController.swift; sourceTree = "<group>"; };
 		272636F421170EEA0002B2F1 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		272636F6211713EB0002B2F1 /* LicenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseTableViewCell.swift; sourceTree = "<group>"; };
+		272636F82117140F0002B2F1 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		272636FA211715240002B2F1 /* LicenseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseProvider.swift; sourceTree = "<group>"; };
+		272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedLicenseProvider.swift; sourceTree = "<group>"; };
+		272636FE211716760002B2F1 /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		27579BC22115E79D00B76130 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		27579BC42115E95B00B76130 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +212,7 @@
 				27B7939D20E605390081884A /* SPPingController.swift */,
 				27B7939C20E605100081884A /* PingController */,
 				278A6C9520D05E990007322A /* Host.swift */,
+				272636F82117140F0002B2F1 /* License.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +226,8 @@
 				270B11B320E9F201002B6829 /* ThemeProvider.swift */,
 				270B11B520E9F279002B6829 /* LightTheme.swift */,
 				27579BC42115E95B00B76130 /* DarkTheme.swift */,
+				272636FA211715240002B2F1 /* LicenseProvider.swift */,
+				272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 				2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */,
 				27E9BF1120D110FB00E1FFED /* PingTableViewCell.swift */,
 				27579BC62115ED8800B76130 /* ThemeSelectionViewCell.swift */,
+				272636F6211713EB0002B2F1 /* LicenseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,8 +250,9 @@
 			children = (
 				27579BC22115E79D00B76130 /* SettingViewController.swift */,
 				272636EE211705710002B2F1 /* ThemeSelectionViewController.swift */,
-				272636F221170EDA0002B2F1 /* AcknowledgmentsViewController.swift */,
 				272636F421170EEA0002B2F1 /* ConfigurationViewController.swift */,
+				272636F221170EDA0002B2F1 /* AcknowledgmentsViewController.swift */,
+				272636FE211716760002B2F1 /* LicenseDetailViewController.swift */,
 			);
 			path = SettingsScene;
 			sourceTree = "<group>";
@@ -462,7 +477,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */,
+				272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */,
 				278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */,
+				272636FB211715240002B2F1 /* LicenseProvider.swift in Sources */,
 				272636F521170EEA0002B2F1 /* ConfigurationViewController.swift in Sources */,
 				278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */,
 				27B7939720E4BB980081884A /* PingStatus.swift in Sources */,
@@ -471,6 +488,7 @@
 				27B793A220E6BB6E0081884A /* PingViewController.swift in Sources */,
 				27B793A020E606CE0081884A /* PingStatistic.swift in Sources */,
 				27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */,
+				272636FD211715410002B2F1 /* HardCodedLicenseProvider.swift in Sources */,
 				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
 				27251D4D20D03AF800F85DD7 /* DashedView.swift in Sources */,
 				278A6C9620D05E990007322A /* Host.swift in Sources */,
@@ -490,6 +508,8 @@
 				278A6C9020D04F0D0007322A /* HistoryViewController.swift in Sources */,
 				272636EF211705710002B2F1 /* ThemeSelectionViewController.swift in Sources */,
 				272636F321170EDA0002B2F1 /* AcknowledgmentsViewController.swift in Sources */,
+				272636F7211713EB0002B2F1 /* LicenseTableViewCell.swift in Sources */,
+				272636F92117140F0002B2F1 /* License.swift in Sources */,
 				27B7939E20E605390081884A /* SPPingController.swift in Sources */,
 				27F848CC20E7EB2F004DEA0C /* UpdateManager.swift in Sources */,
 				270B11B420E9F201002B6829 /* ThemeProvider.swift in Sources */,
