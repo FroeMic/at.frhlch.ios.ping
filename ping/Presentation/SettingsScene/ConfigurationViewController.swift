@@ -44,8 +44,8 @@ class ConfigurationViewController: UITableViewController {
         let pingConfiguration = self.pingConfiguration
         valueTextFields[0].text = String(format:"%u bytes", pingConfiguration.payload)
         valueTextFields[1].text = String(format:"%u", pingConfiguration.ttl)
-        valueTextFields[2].text = String(format:"%i seconds", pingConfiguration.frequency)
-        valueTextFields[3].text = String(format:"%i seconds", pingConfiguration.timeout)
+        valueTextFields[2].text = String(format:"%.1f seconds", pingConfiguration.frequency)
+        valueTextFields[3].text = String(format:"%.1f seconds", pingConfiguration.timeout)
     }
     
     
@@ -83,12 +83,6 @@ class ConfigurationViewController: UITableViewController {
         for pickerView in pickerViews {
             pickerView.backgroundColor = theme.backgroundColor
             pickerView.tintColor = theme.tintColor
-        }
-    }
-    
-    func hidePickerViews() {
-        for heightConstraint in pickerHeightConstraints {
-            heightConstraint.constant = 0
         }
     }
     
