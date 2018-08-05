@@ -20,7 +20,6 @@ class LicenseDetailViewController: UIViewController {
     @IBOutlet var licenseUrlTextView: UITextView!
     @IBOutlet var licenseTextView: UITextView!
     @IBOutlet var licenseUrlTextViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet var licenseTextViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -39,7 +38,7 @@ class LicenseDetailViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         licenseUrlTextViewHeightConstraint.constant = licenseUrlTextView.intrinsicContentSize.height
-        licenseTextViewHeightConstraint.constant = licenseTextView.intrinsicContentSize.height
+        licenseTextView?.setContentOffset(.zero, animated: false)
         
         super.viewWillLayoutSubviews()
     }
@@ -67,6 +66,8 @@ class LicenseDetailViewController: UIViewController {
         licenseTitleLabel?.text = license.title
         licenseUrlTextView?.text = license.url
         licenseTextView?.text = license.license
+        
+        licenseTextView?.setContentOffset(.zero, animated: false)
     }
     
 }
