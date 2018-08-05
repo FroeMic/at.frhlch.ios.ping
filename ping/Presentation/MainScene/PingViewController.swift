@@ -56,6 +56,8 @@ class PingViewController: UIViewController {
     @IBOutlet var zeroHeightConstraint: NSLayoutConstraint!
     @IBOutlet var zeroWidthButtonConstraint: NSLayoutConstraint!
     
+    @IBOutlet var statisticsSeperateView: UIView!
+    @IBOutlet var statisticTitleLabels: [UILabel]!
     @IBOutlet var statisticsSentLabel: UILabel!
     @IBOutlet var statisticsReceivedLabel: UILabel!
     @IBOutlet var statisticsLostLabel: UILabel!
@@ -193,6 +195,22 @@ class PingViewController: UIViewController {
         }
         
         tableView.backgroundColor = theme.backgroundColor
+        
+        
+        statisticsSeperateView.backgroundColor = theme.textColor
+        statisticsSentLabel.textColor = theme.textColor
+        statisticsReceivedLabel.textColor = theme.textColor
+        statisticsLostLabel.textColor = theme.textColor
+        statisticsLossLabel.textColor = theme.textColor
+        statisticsMinRTTLabel.textColor = theme.textColor
+        statisticsMaxRTTLabel.textColor = theme.textColor
+        statisticsAvgRTTLabel.textColor = theme.textColor
+        statisticsStdevRTTLabel.textColor = theme.textColor
+        
+        for label in statisticTitleLabels {
+            label.textColor = theme.textColor
+        }
+        
     }
     
     private func startPingIfNecessary() {

@@ -27,8 +27,15 @@
 		272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272636FE211716760002B2F1 /* LicenseDetailViewController.swift */; };
 		2726370121178B380002B2F1 /* PingConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370021178B380002B2F1 /* PingConfigurationProvider.swift */; };
 		2726370321178B8E0002B2F1 /* UDPingConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */; };
+		27263705211798B20002B2F1 /* BrutalRustTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27263704211798B20002B2F1 /* BrutalRustTheme.swift */; };
+		27263707211799D30002B2F1 /* SolarBlueTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27263706211799D20002B2F1 /* SolarBlueTheme.swift */; };
+		2726370921179AC00002B2F1 /* LavenderChillTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370821179AC00002B2F1 /* LavenderChillTheme.swift */; };
+		2726370C21179EB00002B2F1 /* OrchidMildTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370B21179EB00002B2F1 /* OrchidMildTheme.swift */; };
+		2726370E21179F680002B2F1 /* MidnightBlueTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370D21179F680002B2F1 /* MidnightBlueTheme.swift */; };
+		2726371021179FFA0002B2F1 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726370F21179FFA0002B2F1 /* DarkTheme.swift */; };
+		272637122117A1140002B2F1 /* ClassicNeoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272637112117A1140002B2F1 /* ClassicNeoTheme.swift */; };
 		27579BC32115E79D00B76130 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC22115E79D00B76130 /* SettingViewController.swift */; };
-		27579BC52115E95B00B76130 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC42115E95B00B76130 /* DarkTheme.swift */; };
+		27579BC52115E95B00B76130 /* BloodRedTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27579BC42115E95B00B76130 /* BloodRedTheme.swift */; };
 		2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */; };
 		2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */; };
 		2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */; };
@@ -90,8 +97,15 @@
 		272636FE211716760002B2F1 /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		2726370021178B380002B2F1 /* PingConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingConfigurationProvider.swift; sourceTree = "<group>"; };
 		2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPingConfigurationRepository.swift; sourceTree = "<group>"; };
+		27263704211798B20002B2F1 /* BrutalRustTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrutalRustTheme.swift; sourceTree = "<group>"; };
+		27263706211799D20002B2F1 /* SolarBlueTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarBlueTheme.swift; sourceTree = "<group>"; };
+		2726370821179AC00002B2F1 /* LavenderChillTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavenderChillTheme.swift; sourceTree = "<group>"; };
+		2726370B21179EB00002B2F1 /* OrchidMildTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchidMildTheme.swift; sourceTree = "<group>"; };
+		2726370D21179F680002B2F1 /* MidnightBlueTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidnightBlueTheme.swift; sourceTree = "<group>"; };
+		2726370F21179FFA0002B2F1 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		272637112117A1140002B2F1 /* ClassicNeoTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicNeoTheme.swift; sourceTree = "<group>"; };
 		27579BC22115E79D00B76130 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		27579BC42115E95B00B76130 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		27579BC42115E95B00B76130 /* BloodRedTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodRedTheme.swift; sourceTree = "<group>"; };
 		2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+stdev.swift"; sourceTree = "<group>"; };
 		2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewDelegate.swift; sourceTree = "<group>"; };
 		2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTableViewCell.swift; sourceTree = "<group>"; };
@@ -230,8 +244,7 @@
 				278A6C9820D062FF0007322A /* UDTHostHistoryRepository.swift */,
 				2726370221178B8E0002B2F1 /* UDPingConfigurationRepository.swift */,
 				272636FC211715410002B2F1 /* HardCodedLicenseProvider.swift */,
-				270B11B520E9F279002B6829 /* LightTheme.swift */,
-				27579BC42115E95B00B76130 /* DarkTheme.swift */,
+				2726370A21179C370002B2F1 /* Themes */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -269,6 +282,22 @@
 				2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */,
 			);
 			path = MainScene;
+			sourceTree = "<group>";
+		};
+		2726370A21179C370002B2F1 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				270B11B520E9F279002B6829 /* LightTheme.swift */,
+				2726370F21179FFA0002B2F1 /* DarkTheme.swift */,
+				272637112117A1140002B2F1 /* ClassicNeoTheme.swift */,
+				2726370821179AC00002B2F1 /* LavenderChillTheme.swift */,
+				2726370B21179EB00002B2F1 /* OrchidMildTheme.swift */,
+				27579BC42115E95B00B76130 /* BloodRedTheme.swift */,
+				27263706211799D20002B2F1 /* SolarBlueTheme.swift */,
+				2726370D21179F680002B2F1 /* MidnightBlueTheme.swift */,
+				27263704211798B20002B2F1 /* BrutalRustTheme.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		2781CE8D20D19A760050C8A7 /* Extension */ = {
@@ -481,10 +510,12 @@
 			files = (
 				27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */,
 				272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */,
+				2726370921179AC00002B2F1 /* LavenderChillTheme.swift in Sources */,
 				278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */,
 				272636FB211715240002B2F1 /* LicenseProvider.swift in Sources */,
 				272636F521170EEA0002B2F1 /* ConfigurationViewController.swift in Sources */,
 				278A6C9E20D068D90007322A /* HostHistoryPublisher.swift in Sources */,
+				272637122117A1140002B2F1 /* ClassicNeoTheme.swift in Sources */,
 				27B7939720E4BB980081884A /* PingStatus.swift in Sources */,
 				27B7939920E4BCF30081884A /* PingDelegate.swift in Sources */,
 				278A6C9920D063F60007322A /* HostHistoryRepository.swift in Sources */,
@@ -493,19 +524,24 @@
 				2726370121178B380002B2F1 /* PingConfigurationProvider.swift in Sources */,
 				27E9BF1220D110FB00E1FFED /* PingTableViewCell.swift in Sources */,
 				272636FD211715410002B2F1 /* HardCodedLicenseProvider.swift in Sources */,
+				27263705211798B20002B2F1 /* BrutalRustTheme.swift in Sources */,
 				2704493620CEAFE5001C4004 /* LaunchScreenViewController.swift in Sources */,
 				27251D4D20D03AF800F85DD7 /* DashedView.swift in Sources */,
+				27263707211799D30002B2F1 /* SolarBlueTheme.swift in Sources */,
 				278A6C9620D05E990007322A /* Host.swift in Sources */,
+				2726371021179FFA0002B2F1 /* DarkTheme.swift in Sources */,
 				278A6C9420D05E600007322A /* PingResult.swift in Sources */,
 				270B11B620E9F279002B6829 /* LightTheme.swift in Sources */,
+				2726370C21179EB00002B2F1 /* OrchidMildTheme.swift in Sources */,
 				278A6C9C20D067280007322A /* Injection.swift in Sources */,
 				27B7939B20E4BFB40081884A /* PingConfiguration.swift in Sources */,
-				27579BC52115E95B00B76130 /* DarkTheme.swift in Sources */,
+				27579BC52115E95B00B76130 /* BloodRedTheme.swift in Sources */,
 				2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */,
 				278A6C9A20D063F90007322A /* UDTHostHistoryRepository.swift in Sources */,
 				27251D4E20D03AF800F85DD7 /* AnimatedTextField.swift in Sources */,
 				27579BC32115E79D00B76130 /* SettingViewController.swift in Sources */,
 				2704491220CEAD5C001C4004 /* AppDelegate.swift in Sources */,
+				2726370E21179F680002B2F1 /* MidnightBlueTheme.swift in Sources */,
 				27B7939520E4B9680081884A /* PingError.swift in Sources */,
 				2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */,
 				278A6C9020D04F0D0007322A /* HistoryViewController.swift in Sources */,

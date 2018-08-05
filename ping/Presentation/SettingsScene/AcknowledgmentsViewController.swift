@@ -67,7 +67,8 @@ class AcknowledgmentsViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle
         navigationController?.navigationBar.tintColor = theme.textColor
-        
+        navigationController?.navigationBar.barTintColor = theme.backgroundColor
+
         view.backgroundColor = theme.backgroundColor
 
         tableView.backgroundColor = theme.backgroundColor
