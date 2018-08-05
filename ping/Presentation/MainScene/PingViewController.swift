@@ -65,11 +65,19 @@ class PingViewController: UIViewController {
     @IBOutlet var statisticsAvgRTTLabel: UILabel!
     @IBOutlet var statisticsStdevRTTLabel: UILabel!
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
         configureTextField()
         configureHostView()
@@ -86,6 +94,8 @@ class PingViewController: UIViewController {
         }
         
         applyTheme()
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
     }
     

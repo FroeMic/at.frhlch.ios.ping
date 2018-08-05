@@ -10,10 +10,12 @@ import UIKit
 
 protocol ThemeProvider {
     
+    var name: String { get }
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
     var tintColor: UIColor { get }
     
+    var navigationBarStyle: UIBarStyle { get }
     var statusBarStyle: UIStatusBarStyle { get }
     
 }
