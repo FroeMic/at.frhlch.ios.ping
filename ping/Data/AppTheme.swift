@@ -19,3 +19,18 @@ protocol AppTheme {
     var statusBarStyle: UIStatusBarStyle { get }
     
 }
+
+extension AppTheme {
+    
+    var isPremiumTheme: Bool {
+        
+        let freeThemes: [String] = ["Dark", "Light"]
+        
+        if let _ = freeThemes.index(where: {$0 == name }) {
+            return false
+        }
+        
+        return true
+    }
+    
+}
