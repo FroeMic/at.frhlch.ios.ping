@@ -158,7 +158,7 @@ class PingViewController: UIViewController {
     }
     
     func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         view.backgroundColor = theme.backgroundColor
         

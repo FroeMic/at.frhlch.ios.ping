@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DarkTheme: ThemeProvider {
+class DarkTheme: AppTheme {
     
     let name: String = "Dark"
     let backgroundColor: UIColor = .black

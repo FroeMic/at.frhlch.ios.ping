@@ -47,7 +47,7 @@ class SettingViewController: UITableViewController {
     }
     
     func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle
@@ -60,7 +60,7 @@ class SettingViewController: UITableViewController {
         themeTableViewCell.backgroundColor = theme.backgroundColor
         themeLabel.textColor = theme.textColor
         
-        selectedThemeLabel.text = Injection.theme.name
+        selectedThemeLabel.text = theme.name
         selectedThemeLabel.textColor = theme.textColor.withAlphaComponent(0.7)
         
         if let image = themeChevronImageView.image {

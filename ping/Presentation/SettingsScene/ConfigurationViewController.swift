@@ -60,7 +60,7 @@ class ConfigurationViewController: UITableViewController {
     }
     
     func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle
@@ -106,29 +106,31 @@ class ConfigurationViewController: UITableViewController {
 extension ConfigurationViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let theme = Injection.themeRepository.selectedTheme
+        
         if indexPath.row % 2 == 0 {
-            
             for textField in valueTextFields {
-                textField.textColor = Injection.theme.textColor
+                textField.textColor = theme.textColor
             }
             
             if indexPath.row == 0 {
-                valueTextFields[0].textColor = Injection.theme.tintColor
+                valueTextFields[0].textColor = theme.tintColor
                 if let row = payloadSizes.index(where: { $0 == pingConfiguration.payload }) {
                     pickerViews[0].selectRow(row, inComponent: 0, animated: false)
                 }
             } else if indexPath.row == 2 {
-                valueTextFields[1].textColor = Injection.theme.tintColor
+                valueTextFields[1].textColor = theme.tintColor
                 if let row = ttlValues.index(where: { $0 == pingConfiguration.ttl }) {
                     pickerViews[1].selectRow(row, inComponent: 0, animated: false)
                 }
             } else if indexPath.row == 4 {
-                valueTextFields[2].textColor = Injection.theme.tintColor
+                valueTextFields[2].textColor = theme.tintColor
                 if let row = frequencyValues.index(where: { $0 == pingConfiguration.frequency }) {
                     pickerViews[2].selectRow(row, inComponent: 0, animated: false)
                 }
             } else if indexPath.row == 6 {
-                valueTextFields[3].textColor = Injection.theme.tintColor
+                valueTextFields[3].textColor = theme.tintColor
                 if let row = timeoutValues.index(where: { $0 == pingConfiguration.timeout }) {
                     pickerViews[3].selectRow(row, inComponent: 0, animated: false)
                 }
@@ -192,7 +194,7 @@ extension ConfigurationViewController: UIPickerViewDataSource {
         default:
             string = ""
         }
-        return NSAttributedString(string: string, attributes: [.foregroundColor: Injection.theme.textColor])
+        return NSAttributedString(string: string, attributes: [.foregroundColor: Injection.themeRepository.selectedTheme.textColor])
     }
     
 }

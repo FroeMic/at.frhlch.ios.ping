@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrchidMildTheme: ThemeProvider {
+class OrchidMildTheme: AppTheme {
     
     let name: String = "Orchid Mild" 
     let backgroundColor: UIColor = UIColor(red:0.99, green:0.97, blue:0.90, alpha:1.00)

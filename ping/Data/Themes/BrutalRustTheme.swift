@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrutalRustTheme: ThemeProvider {
+class BrutalRustTheme: AppTheme {
     
     let name: String = "Brutal Rust"
     let backgroundColor: UIColor = .black

@@ -34,8 +34,11 @@ class HistoryViewController: UIViewController {
         historyTableView.backgroundColor = .black
         historyTableView.backgroundView?.backgroundColor = .black
         historyTableView.separatorStyle = .none
-        
-        applyTheme() 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        applyTheme()
+        super.viewWillAppear(animated)
     }
     
     func reloadHostHistory() {
@@ -44,7 +47,7 @@ class HistoryViewController: UIViewController {
     }
     
     func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         view.backgroundColor = theme.backgroundColor
         

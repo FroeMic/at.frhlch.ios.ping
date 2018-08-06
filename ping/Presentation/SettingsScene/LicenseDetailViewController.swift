@@ -44,7 +44,7 @@ class LicenseDetailViewController: UIViewController {
     }
     
     func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LightTheme: ThemeProvider {
+class LightTheme: AppTheme {
     
     let name: String = "Light" 
     let backgroundColor: UIColor = .white

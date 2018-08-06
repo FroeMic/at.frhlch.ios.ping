@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MidnightBlueTheme: ThemeProvider {
+class MidnightBlueTheme: AppTheme {
     
     let name: String = "Midnight Blue"
     let backgroundColor: UIColor = UIColor(red:0.00, green:0.16, blue:0.36, alpha:1.00)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassicNeoTheme: ThemeProvider {
+class ClassicNeoTheme: AppTheme {
     
     let name: String = "Classic Neo"
     let backgroundColor: UIColor = .black

@@ -35,7 +35,7 @@ class LicenseTableViewCell: UITableViewCell {
     }
     
     private func applyTheme() {
-        let theme = Injection.theme
+        let theme = Injection.themeRepository.selectedTheme
         
         backgroundColor = theme.backgroundColor
         

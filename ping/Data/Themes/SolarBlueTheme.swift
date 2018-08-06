@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SolarBlueTheme: ThemeProvider {
+class SolarBlueTheme: AppTheme {
     
     let name: String = "Solar Blue"
     let backgroundColor: UIColor = UIColor(red: 0.00, green: 0.29, blue: 0.36, alpha: 1.00)

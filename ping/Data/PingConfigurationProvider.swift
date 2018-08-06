@@ -10,7 +10,6 @@ import Foundation
 
 protocol PingConfigurationProvider {
     
-    
     func get() -> PingConfiguration
     
     func store(pingConfiguration: PingConfiguration)

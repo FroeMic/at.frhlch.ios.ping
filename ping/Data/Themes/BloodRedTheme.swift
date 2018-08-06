@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BloodRedTheme: ThemeProvider {
+class BloodRedTheme: AppTheme {
     
     let name: String = "Blood Red"
     let backgroundColor: UIColor = UIColor(red:0.48, green:0.00, blue:0.00, alpha:1.00)
