@@ -85,7 +85,7 @@ extension ThemeSelectionViewController: UITableViewDelegate {
             if didBuyPremium {
                 selectTheme(theme: premiumThemes[indexPath.row], permanent: true)
             } else {
-                let alertView = UIAlertController(title: "", message: "This theme is available once you have bought Ping Premium. It will be reset after you leave this screen.", preferredStyle: .alert)
+                let alertView = UIAlertController(title: "", message: "This theme will be available once you have bought Ping Premium. It will be reset after you leave this screen.", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                     DispatchQueue.main.async {
                         self.selectTheme(theme: self.premiumThemes[indexPath.row], permanent: false)
