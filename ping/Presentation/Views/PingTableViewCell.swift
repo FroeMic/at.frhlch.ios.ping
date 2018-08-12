@@ -53,6 +53,19 @@ class PingTableViewCell: UITableViewCell {
         detailLabel.adjustsFontSizeToFitWidth = true
         
         statusImageView.contentMode = .scaleAspectFit
+        
+        applyTheme()
+    }
+    
+    private func applyTheme() {
+        let theme = Injection.themeRepository.selectedTheme
+        
+        backgroundColor = theme.backgroundColor
+        
+        msLabel.textColor = theme.textColor
+        placeholderLabel.textColor = theme.textColor
+        hostLabel.textColor = theme.textColor
+        detailLabel.textColor = theme.textColor
     }
     
     private func updateCellContent(_ pingResponse: PingResult) {

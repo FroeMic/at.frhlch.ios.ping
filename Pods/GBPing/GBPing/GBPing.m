@@ -410,6 +410,14 @@ static NSTimeInterval const kDefaultTimeout =           2.0;
                     // IP can't be read from header for ICMPv6
                     if (sin->sin_family == AF_INET) {
                         pingSummary.host = [[self class] sourceAddressInPacket:packet];
+                        
+                        // TODO: Manual Fix to correctly set TTL
+                        const struct IPHeader   *ipPtr;
+                        if ([packet length] >= sizeof(IPHeader)) {
+                            ipPtr = (const IPHeader *)[packet bytes];
+                            
+                            pingSummary.ttl = ipPtr->timeToLive;
+                        }
                     }
 
                     pingSummary.status = GBPingStatusSuccess;

@@ -8,16 +8,6 @@
 
 import Foundation
 
-//
-//  DiceHistoryUserDefaultsRepository.swift
-//  Dice
-//
-//  Created by Michael Fröhlich on 06.06.18.
-//  Copyright © 2018 Michael Fröhlich. All rights reserved.
-//
-
-import Foundation
-
 class UDTHostHistoryRepository {
 
     fileprivate let savedHostHistoryKey = "hostHistoryRepository"

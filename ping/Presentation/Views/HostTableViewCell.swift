@@ -51,6 +51,17 @@ class HostTableViewCell: UITableViewCell {
         dateLabel.textColor = .white
 
         statusImageView?.contentMode = .scaleAspectFit
+        
+        applyTheme()
+    }
+    
+    private func applyTheme() {
+        let theme = Injection.themeRepository.selectedTheme
+        
+        backgroundColor = theme.backgroundColor
+        
+        hostLabel.textColor = theme.textColor
+        dateLabel.textColor = theme.textColor
     }
     
     private func updateCellContent(_ host: Host) {
