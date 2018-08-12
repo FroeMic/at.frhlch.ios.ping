@@ -16,7 +16,13 @@ class IAPHandler: NSObject {
     
     fileprivate var productID = ""
     fileprivate var productsRequest = SKProductsRequest()
-    fileprivate var iapProducts = [SKProduct]()
+    fileprivate var iapProducts = [SKProduct]() {
+        didSet {
+            // TODO: check for all products whether they were bought already
+            // at the moment one user can login with his / her AppStore Id, restore a purchase
+            // and logout again, and the purchase will stay on the device
+        }
+    }
     
     var purchaseStatusBlock: ((IAPHandlerAlertType) -> Void)?
     
@@ -31,8 +37,6 @@ class IAPHandler: NSObject {
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(self)
             SKPaymentQueue.default().add(payment)
-            
-            print("PRODUCT TO PURCHASE: \(product.productIdentifier)")
             productID = product.productIdentifier
         } else {
             purchaseStatusBlock?(.disabled)
@@ -66,14 +70,6 @@ extension IAPHandler: SKProductsRequestDelegate, SKPaymentTransactionObserver{
         
         if (response.products.count > 0) {
             iapProducts = response.products
-            for product in iapProducts{
-                let numberFormatter = NumberFormatter()
-                numberFormatter.formatterBehavior = .behavior10_4
-                numberFormatter.numberStyle = .currency
-                numberFormatter.locale = product.priceLocale
-                let price1Str = numberFormatter.string(from: product.price)
-                print(product.localizedDescription + "\nfor just \(price1Str!)")
-            }
         }
     }
     
@@ -83,25 +79,48 @@ extension IAPHandler: SKProductsRequestDelegate, SKPaymentTransactionObserver{
     
     // MARK:- IAP PAYMENT QUEUE
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction:AnyObject in transactions {
-            if let trans = transaction as? SKPaymentTransaction {
-                switch trans.transactionState {
-                case .purchased:
-                    print("purchased")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    purchaseStatusBlock?(.purchased)
-                    break
-                    
-                case .failed:
-                    print("failed")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    break
-                case .restored:
-                    print("restored")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    break
-                    
-                default: break
-                }}}
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                didBuyProduct(id: transaction.payment.productIdentifier)
+                purchaseStatusBlock?(.purchased)
+                break
+            case .failed:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                purchaseStatusBlock?(.failed)
+                break
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                didBuyProduct(id: transaction.payment.productIdentifier)
+                purchaseStatusBlock?(.failed)
+                break
+            default:
+                break
+            }
+        }
     }
+}
+
+extension IAPHandler {
+    
+    func doesOwnProduct(id: String) -> Bool {
+        let boughtProductKey = "IABoughtProducts"
+        let defaults = UserDefaults.standard
+        let boughtProducts = defaults.dictionary(forKey: boughtProductKey) as? Dictionary<String, Bool> ?? [:]
+        return boughtProducts[id] ?? false
+    }
+    
+    func didBuyProduct(id: String) {
+        let boughtProductKey = "IABoughtProducts"
+        let defaults = UserDefaults.standard
+        
+        var boughtProducts = defaults.dictionary(forKey: boughtProductKey) as? Dictionary<String, Bool> ?? [:]
+        boughtProducts[id] = true
+        
+        defaults.set(boughtProducts, forKey: boughtProductKey)
+
+        
+    }
+    
 }

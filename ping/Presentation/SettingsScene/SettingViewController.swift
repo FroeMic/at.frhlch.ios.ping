@@ -37,7 +37,6 @@ class SettingViewController: UITableViewController {
         
         title = "Settings"
         getPremiumImageView.alpha = 0
-        
     }
     
     
@@ -45,13 +44,41 @@ class SettingViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         applyTheme()
+        tableView.reloadData()
+        
+        if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+            DispatchQueue.main.async {
+                self.getPremiumImageView.alpha = 1.0
+                self.getPremiumTableViewCell.alpha = 0.5
+            }
+        }
         
         // Show the Navigation Bar
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
+            guard let strongSelf = self else { return }
+            
+            if type == .purchased || type == .restored {
+                DispatchQueue.main.async {
+                    strongSelf.getPremiumImageView.alpha = 1.0
+                    strongSelf.getPremiumTableViewCell.alpha = 0.5
+                }
+            }
+            
+        }
+        
+    }
+    
     func applyTheme() {
         let theme = Injection.themeRepository.selectedTheme
+        
+        UIApplication.shared.statusBarStyle = theme.statusBarStyle
         
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle
@@ -117,17 +144,32 @@ extension SettingViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            performSegue(withIdentifier: SettingViewController.showThemeSegueIdentifier, sender: nil)
-        case 1:
-            performSegue(withIdentifier: SettingViewController.showConfigurationSegueIdentifier, sender: nil)
-        case 2:
-            performSegue(withIdentifier: SettingViewController.showAcknowledgementSegueIdentifier, sender: nil)
-        default:
-            return
-            // do nothing
+        
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: SettingViewController.showThemeSegueIdentifier, sender: nil)
+            case 1:
+                performSegue(withIdentifier: SettingViewController.showConfigurationSegueIdentifier, sender: nil)
+            case 2:
+                performSegue(withIdentifier: SettingViewController.showAcknowledgementSegueIdentifier, sender: nil)
+            default:
+                return
+                // do nothing
+            }
+        } else {
+            if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+                let alertView = UIAlertController(title: "", message: "You have already bought Ping Premium.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                    
+                })
+                alertView.addAction(action)
+                present(alertView, animated: true, completion: nil)
+            } else {
+                IAPHandler.shared.purchaseMyProduct(index: 0)
+            }
         }
+
     }
     
 }

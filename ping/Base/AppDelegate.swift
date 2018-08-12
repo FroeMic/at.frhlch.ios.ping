@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         RatingManager.setup()
         UpdateManager.setup()
+        IAPHandler.shared.fetchAvailableProducts()
         
         return true
     }
@@ -39,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         RatingManager.didEnterForeground()
         UpdateManager.checkVersionImmediately()
+        IAPHandler.shared.fetchAvailableProducts()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

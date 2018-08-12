@@ -48,8 +48,11 @@ class ThemeSelectionViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    
     func applyTheme() {
-        let theme = Injection.themeRepository.selectedTheme
+        let theme = selectedTheme
+        
+        UIApplication.shared.statusBarStyle = theme.statusBarStyle
         
         navigationController?.navigationBar.backgroundColor = theme.backgroundColor
         navigationController?.navigationBar.barStyle = theme.navigationBarStyle
@@ -57,13 +60,14 @@ class ThemeSelectionViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = theme.backgroundColor
         
         view.backgroundColor = theme.backgroundColor
-        tableView.backgroundColor =  theme.backgroundColor
+        tableView.backgroundColor = theme.backgroundColor
     }
     
-    func selectTheme(theme: AppTheme) {
-        Injection.themeRepository.select(theme: theme)
+    func selectTheme(theme: AppTheme, permanent: Bool) {
+        if permanent {
+            Injection.themeRepository.select(theme: theme)
+        }
         selectedTheme = theme
-        UIApplication.shared.statusBarStyle = theme.statusBarStyle
         applyTheme()
     }
 }
@@ -74,9 +78,24 @@ extension ThemeSelectionViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            selectTheme(theme: freeThemes[indexPath.row])
+            selectTheme(theme: freeThemes[indexPath.row], permanent: true)
         } else {
-            selectTheme(theme: premiumThemes[indexPath.row])
+            let didBuyPremium = IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID)
+            
+            if didBuyPremium {
+                selectTheme(theme: premiumThemes[indexPath.row], permanent: true)
+            } else {
+                let alertView = UIAlertController(title: "", message: "This theme is available for once you buy Ping Premium. It will be reset after you leave this screen.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                    DispatchQueue.main.async {
+                        self.selectTheme(theme: self.premiumThemes[indexPath.row], permanent: false)
+                        self.tableView.reloadData()
+                    }
+                })
+                alertView.addAction(action)
+                present(alertView, animated: true, completion: nil)
+            }
+            
         }
         
         tableView.reloadData()
@@ -134,7 +153,7 @@ extension ThemeSelectionViewController: UITableViewDataSource {
         if let themeSelectionTableViewCell = cell as? SelectThemeTableViewCell {
             
             themeSelectionTableViewCell.theme = theme
-            themeSelectionTableViewCell.isSelectedTheme = theme.name == selectedTheme.name
+            themeSelectionTableViewCell.selectedTheme = selectedTheme
             
         }
         
