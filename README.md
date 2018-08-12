@@ -1,6 +1,6 @@
 ### Ping
 
-![Tip App Banner](ping_wallpaper.png)
+![Ping App Banner](ping_wallpaper.png)
 
 ### Ping is a sleek network analysis tool to check host reachability on the go.
 
