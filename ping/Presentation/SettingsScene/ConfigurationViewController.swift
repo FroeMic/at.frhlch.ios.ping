@@ -59,6 +59,19 @@ class ConfigurationViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+            let alertView = UIAlertController(title: "", message: "Configuration options will be available once you have bought Ping Premium.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                
+            })
+            alertView.addAction(action)
+            present(alertView, animated: true, completion: nil)
+        }
+    }
+    
     func applyTheme() {
         let theme = Injection.themeRepository.selectedTheme
         
@@ -106,6 +119,10 @@ class ConfigurationViewController: UITableViewController {
 extension ConfigurationViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+            return
+        }
         
         let theme = Injection.themeRepository.selectedTheme
         

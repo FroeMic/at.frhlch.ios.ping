@@ -17,10 +17,17 @@ class SelectThemeTableViewCell: UITableViewCell {
             }
         }
     }
-    var isSelectedTheme: Bool = false {
+    var selectedTheme: AppTheme = Injection.themeRepository.selectedTheme {
         didSet {
             checkmarkImageView?.alpha = isSelectedTheme ? 1.0 : 0.0
         }
+    }
+    
+    var isSelectedTheme: Bool {
+        guard let theme = theme else {
+            return false
+        }
+        return theme.name == selectedTheme.name
     }
     
     @IBOutlet var themeNameLabel: UILabel!
@@ -40,7 +47,7 @@ class SelectThemeTableViewCell: UITableViewCell {
     }
     
     private func applyTheme() {
-        let theme = Injection.themeRepository.selectedTheme
+        let theme = selectedTheme
         
         backgroundColor = theme.backgroundColor
         
