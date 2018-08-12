@@ -106,7 +106,6 @@ extension ThemeSelectionViewController: UITableViewDataSource {
         if let headerView = view as? UITableViewHeaderFooterView {
             headerView.textLabel?.textColor =  selectedTheme.textColor.withAlphaComponent(0.65)
             headerView.tintColor = selectedTheme.backgroundColor
-            
         }
     }
     

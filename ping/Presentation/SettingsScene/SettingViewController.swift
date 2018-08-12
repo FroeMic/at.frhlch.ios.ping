@@ -27,12 +27,16 @@ class SettingViewController: UITableViewController {
     @IBOutlet var acknowledgmentsLabel: UILabel!
     @IBOutlet var acknowledgmentsChevronImageView: UIImageView!
     
+    @IBOutlet var getPremiumTableViewCell: UITableViewCell!
+    @IBOutlet var getPremiumLabel: UILabel!
+    @IBOutlet var getPremiumImageView: UIImageView!
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Settings"
+        getPremiumImageView.alpha = 0
         
     }
     
@@ -88,11 +92,29 @@ class SettingViewController: UITableViewController {
             acknowledgmentsChevronImageView.image = coloredImage
             acknowledgmentsChevronImageView.tintColor = theme.textColor
         }
+        
+        getPremiumTableViewCell.selectionStyle = .none
+        getPremiumTableViewCell.backgroundColor = theme.backgroundColor
+        getPremiumLabel.textColor = theme.textColor
+        
+        if let image = getPremiumImageView.image {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            getPremiumImageView.image = coloredImage
+            getPremiumImageView.tintColor = theme.textColor
+        }
     }
     
 }
 
 extension SettingViewController {
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let selectedTheme = Injection.themeRepository.selectedTheme
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.textLabel?.textColor =  selectedTheme.textColor.withAlphaComponent(0.65)
+            headerView.tintColor = selectedTheme.backgroundColor
+        }
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
