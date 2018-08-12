@@ -12,6 +12,7 @@ class PingViewController: UIViewController {
     
     private static let pingCellReuseIdentifier = "pingTableViewCell"
     private static let historyViewSegueIdentifer = "historyViewSegue"
+    private static let settingsViewSegueIdentifer = "showSettingsScene"
     
     private var hostHistoryVC: HistoryViewController?
     private var pingManager: PingController?
@@ -46,6 +47,7 @@ class PingViewController: UIViewController {
     @IBOutlet var hostTextField: AnimatedTextField!
     @IBOutlet var goButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var settingsButton: UIButton!
     @IBOutlet var stopButton: UIButton!
     @IBOutlet var hostViewContainer: UIView!
     @IBOutlet var hostViewLabel: UILabel!
@@ -54,6 +56,8 @@ class PingViewController: UIViewController {
     @IBOutlet var zeroHeightConstraint: NSLayoutConstraint!
     @IBOutlet var zeroWidthButtonConstraint: NSLayoutConstraint!
     
+    @IBOutlet var statisticsSeperateView: UIView!
+    @IBOutlet var statisticTitleLabels: [UILabel]!
     @IBOutlet var statisticsSentLabel: UILabel!
     @IBOutlet var statisticsReceivedLabel: UILabel!
     @IBOutlet var statisticsLostLabel: UILabel!
@@ -63,17 +67,26 @@ class PingViewController: UIViewController {
     @IBOutlet var statisticsAvgRTTLabel: UILabel!
     @IBOutlet var statisticsStdevRTTLabel: UILabel!
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
         configureTextField()
         configureHostView()
         configureTableView()
         configureSuggestionView()
         configureStatisticsView()
+        applyTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +95,9 @@ class PingViewController: UIViewController {
             hostTextField.becomeFirstResponder()
         }
         
+        applyTheme()
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
     }
     
@@ -141,6 +157,62 @@ class PingViewController: UIViewController {
         statisticsStdevRTTLabel.adjustsFontSizeToFitWidth = true
     }
     
+    func applyTheme() {
+        let theme = Injection.themeRepository.selectedTheme
+        
+        view.backgroundColor = theme.backgroundColor
+        
+        hostTextField.backgroundColor = theme.backgroundColor
+        hostTextField.dashColor = theme.textColor
+        hostTextField.textColor = theme.textColor
+        hostTextField.tintColor = theme.tintColor
+        
+        goButton.tintColor = theme.tintColor
+        goButton.backgroundColor = theme.backgroundColor
+        goButton.contentHorizontalAlignment = .right
+        goButton.setTitleColor(theme.textColor, for: .normal)
+        
+        hostViewContainer.backgroundColor = theme.backgroundColor
+        hostViewLabel.backgroundColor = theme.backgroundColor
+        hostViewLabel.textColor = theme.textColor
+        
+        if let image = cancelButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            cancelButton.setImage(coloredImage, for: .normal)
+            cancelButton.tintColor = theme.textColor
+        }
+        
+        if let image = stopButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            stopButton.setImage(coloredImage, for: .normal)
+            stopButton.tintColor = theme.textColor
+        }
+        
+        if let image = settingsButton.image(for: .normal) {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            settingsButton.setImage(coloredImage, for: .normal)
+            settingsButton.tintColor = theme.textColor
+        }
+        
+        tableView.backgroundColor = theme.backgroundColor
+        
+        
+        statisticsSeperateView.backgroundColor = theme.textColor
+        statisticsSentLabel.textColor = theme.textColor
+        statisticsReceivedLabel.textColor = theme.textColor
+        statisticsLostLabel.textColor = theme.textColor
+        statisticsLossLabel.textColor = theme.textColor
+        statisticsMinRTTLabel.textColor = theme.textColor
+        statisticsMaxRTTLabel.textColor = theme.textColor
+        statisticsAvgRTTLabel.textColor = theme.textColor
+        statisticsStdevRTTLabel.textColor = theme.textColor
+        
+        for label in statisticTitleLabels {
+            label.textColor = theme.textColor
+        }
+        
+    }
+    
     private func startPingIfNecessary() {
         if let hostName = hostTextField.textWithoutPrefix, hostName != "" {
             // count how often the user pings
@@ -152,7 +224,8 @@ class PingViewController: UIViewController {
             hostViewLabel.text = "pinging \(hostName) ..."
             updateStopButton()
             
-            SPPingController.setupWithHost(host: hostName, success: { (pingController) in
+            let configuration = Injection.pingConfigurationRepository.get()
+            SPPingController.setupWithHost(host: hostName, configuration: configuration, success: { (pingController) in
                 
                 self.pingManager = pingController
                 self.pingManager?.delegate = self
@@ -221,6 +294,9 @@ class PingViewController: UIViewController {
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismissTextField()
     }
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        showSettingsView()
+    }
     
     @IBAction func stopButtonPressed(_ sender: Any) {
         
@@ -237,6 +313,10 @@ class PingViewController: UIViewController {
     
     private func dismissTextField() {
         view.endEditing(true)
+    }
+    
+    private func showSettingsView() {
+        performSegue(withIdentifier: PingViewController.settingsViewSegueIdentifer, sender: self)
     }
     
     private func showHistoryView() {
@@ -314,9 +394,9 @@ class PingViewController: UIViewController {
         
         stopButton.isHidden = false
         if pingManager?.isPinging ?? false {
-            stopButton.setImage(UIImage(named: "ic_stop"), for: .normal)
+            stopButton.setImage(UIImage(named: "ic_stop")?.withRenderingMode(.alwaysTemplate), for: .normal)
         } else {
-            stopButton.setImage(UIImage(named: "ic_play"), for: .normal)
+            stopButton.setImage(UIImage(named: "ic_play")?.withRenderingMode(.alwaysTemplate), for: .normal)
         }
     }
     

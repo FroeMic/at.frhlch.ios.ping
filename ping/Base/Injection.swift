@@ -11,5 +11,9 @@ import Foundation
 class Injection {
 
     static let hostRepository: HostHistoryRepository = UDTHostHistoryRepository()
+    static let pingConfigurationRepository: PingConfigurationProvider = UDPingConfigurationRepository()
+    static let licenseRepository: LicenseProvider = HardCodedLicenseProvider()
+    static let themeRepository: ThemeProvider = UDTThemeRepository()
+    
     
 }

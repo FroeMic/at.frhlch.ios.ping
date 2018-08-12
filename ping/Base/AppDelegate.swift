@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        application.statusBarStyle = Injection.themeRepository.selectedTheme.statusBarStyle
+        
         RatingManager.setup()
         UpdateManager.setup()
+        IAPHandler.shared.fetchAvailableProducts()
         
         return true
     }
@@ -37,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         RatingManager.didEnterForeground()
         UpdateManager.checkVersionImmediately()
+        IAPHandler.shared.fetchAvailableProducts()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
