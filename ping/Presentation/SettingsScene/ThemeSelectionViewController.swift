@@ -63,6 +63,7 @@ class ThemeSelectionViewController: UIViewController {
     func selectTheme(theme: AppTheme) {
         Injection.themeRepository.select(theme: theme)
         selectedTheme = theme
+        UIApplication.shared.statusBarStyle = theme.statusBarStyle
         applyTheme()
     }
 }
