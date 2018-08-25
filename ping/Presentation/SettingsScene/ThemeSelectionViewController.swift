@@ -80,7 +80,7 @@ extension ThemeSelectionViewController: UITableViewDelegate {
         if indexPath.section == 0 {
             selectTheme(theme: freeThemes[indexPath.row], permanent: true)
         } else {
-            let didBuyPremium = IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID)
+            let didBuyPremium = StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID)
             
             if didBuyPremium {
                 selectTheme(theme: premiumThemes[indexPath.row], permanent: true)

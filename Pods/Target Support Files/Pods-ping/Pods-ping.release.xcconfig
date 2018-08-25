@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Appirater" "${PODS_CONFIGURATION_BUILD_DIR}/GBPing" "${PODS_CONFIGURATION_BUILD_DIR}/Siren" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Appirater" "${PODS_CONFIGURATION_BUILD_DIR}/DTFoundation" "${PODS_CONFIGURATION_BUILD_DIR}/GBPing" "${PODS_CONFIGURATION_BUILD_DIR}/Kvitto" "${PODS_CONFIGURATION_BUILD_DIR}/Siren" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Appirater/Appirater.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GBPing/GBPing.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Siren/Siren.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Appirater" -framework "GBPing" -framework "Siren" -framework "SwiftyStoreKit"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Appirater/Appirater.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DTFoundation/DTFoundation.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GBPing/GBPing.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kvitto/Kvitto.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Siren/Siren.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Appirater" -framework "DTFoundation" -framework "GBPing" -framework "Kvitto" -framework "Siren" -framework "SwiftyStoreKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

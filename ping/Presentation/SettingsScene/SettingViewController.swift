@@ -46,7 +46,7 @@ class SettingViewController: UITableViewController {
         applyTheme()
         tableView.reloadData()
         
-        if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+        if StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
             DispatchQueue.main.async {
                 self.getPremiumImageView.alpha = 1.0
                 self.getPremiumTableViewCell.alpha = 0.5
@@ -61,17 +61,18 @@ class SettingViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         
-        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
-            guard let strongSelf = self else { return }
-            
-            if type == .purchased || type == .restored {
-                DispatchQueue.main.async {
-                    strongSelf.getPremiumImageView.alpha = 1.0
-                    strongSelf.getPremiumTableViewCell.alpha = 0.5
-                }
-            }
-            
-        }
+        // TODO
+//        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
+//            guard let strongSelf = self else { return }
+//            
+//            if type == .purchased || type == .restored {
+//                DispatchQueue.main.async {
+//                    strongSelf.getPremiumImageView.alpha = 1.0
+//                    strongSelf.getPremiumTableViewCell.alpha = 0.5
+//                }
+//            }
+//            
+//        }
         
     }
     
@@ -158,7 +159,7 @@ extension SettingViewController {
                 // do nothing
             }
         } else {
-            if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+            if StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
                 let alertView = UIAlertController(title: "", message: "You have already bought Ping Premium.", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                     
@@ -166,7 +167,7 @@ extension SettingViewController {
                 alertView.addAction(action)
                 present(alertView, animated: true, completion: nil)
             } else {
-                IAPHandler.shared.purchaseMyProduct(index: 0)
+                StoreKitManager.shared.purchaseProduct(id: Product.PING_PREMIUM_PRODUCT_ID)
             }
         }
 

@@ -40,8 +40,8 @@
 		2763C4322118E99F00B70FF8 /* ThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763C42E2118E55100B70FF8 /* ThemeProvider.swift */; };
 		2763C4342118EC5700B70FF8 /* SelectThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763C4332118EC5700B70FF8 /* SelectThemeTableViewCell.swift */; };
 		276453FD2120218F00E78077 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276453FC2120218F00E78077 /* StoreKit.framework */; };
-		276454002120256B00E78077 /* IAPHandlerAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276453FF2120256B00E78077 /* IAPHandlerAlertType.swift */; };
-		276454022120259000E78077 /* IAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276454012120259000E78077 /* IAPHandler.swift */; };
+		276820DB213153BD00AA96D7 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276820DA213153BD00AA96D7 /* StoreKitManager.swift */; };
+		276820DD21316AA600AA96D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276820DC21316AA600AA96D7 /* Product.swift */; };
 		2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */; };
 		2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */; };
 		2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */; };
@@ -116,8 +116,8 @@
 		2763C4302118E66700B70FF8 /* UDTThemeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDTThemeRepository.swift; sourceTree = "<group>"; };
 		2763C4332118EC5700B70FF8 /* SelectThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectThemeTableViewCell.swift; sourceTree = "<group>"; };
 		276453FC2120218F00E78077 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		276453FF2120256B00E78077 /* IAPHandlerAlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHandlerAlertType.swift; sourceTree = "<group>"; };
-		276454012120259000E78077 /* IAPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHandler.swift; sourceTree = "<group>"; };
+		276820DA213153BD00AA96D7 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		276820DC21316AA600AA96D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+stdev.swift"; sourceTree = "<group>"; };
 		2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewDelegate.swift; sourceTree = "<group>"; };
 		2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTableViewCell.swift; sourceTree = "<group>"; };
@@ -320,8 +320,8 @@
 		276453FE2120254800E78077 /* StoreKitHandler */ = {
 			isa = PBXGroup;
 			children = (
-				276453FF2120256B00E78077 /* IAPHandlerAlertType.swift */,
-				276454012120259000E78077 /* IAPHandler.swift */,
+				276820DA213153BD00AA96D7 /* StoreKitManager.swift */,
+				276820DC21316AA600AA96D7 /* Product.swift */,
 			);
 			path = StoreKitHandler;
 			sourceTree = "<group>";
@@ -483,14 +483,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ping/Pods-ping-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Appirater/Appirater.framework",
+				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/GBPing/GBPing.framework",
+				"${BUILT_PRODUCTS_DIR}/Kvitto/Kvitto.framework",
 				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Appirater.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBPing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kvitto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 			);
@@ -545,7 +549,6 @@
 				27D36F6720E4B7FA00EF92BF /* PingController.swift in Sources */,
 				272636FF211716760002B2F1 /* LicenseDetailViewController.swift in Sources */,
 				2726370921179AC00002B2F1 /* LavenderChillTheme.swift in Sources */,
-				276454022120259000E78077 /* IAPHandler.swift in Sources */,
 				2763C4312118E66700B70FF8 /* UDTThemeRepository.swift in Sources */,
 				2763C4342118EC5700B70FF8 /* SelectThemeTableViewCell.swift in Sources */,
 				278A710B20DE890500DC3A16 /* RatingManager.swift in Sources */,
@@ -567,12 +570,12 @@
 				27263707211799D30002B2F1 /* SolarBlueTheme.swift in Sources */,
 				278A6C9620D05E990007322A /* Host.swift in Sources */,
 				2726371021179FFA0002B2F1 /* DarkTheme.swift in Sources */,
-				276454002120256B00E78077 /* IAPHandlerAlertType.swift in Sources */,
 				278A6C9420D05E600007322A /* PingResult.swift in Sources */,
 				270B11B620E9F279002B6829 /* LightTheme.swift in Sources */,
 				2726370C21179EB00002B2F1 /* OrchidMildTheme.swift in Sources */,
 				278A6C9C20D067280007322A /* Injection.swift in Sources */,
 				27B7939B20E4BFB40081884A /* PingConfiguration.swift in Sources */,
+				276820DD21316AA600AA96D7 /* Product.swift in Sources */,
 				2763C4322118E99F00B70FF8 /* ThemeProvider.swift in Sources */,
 				27579BC52115E95B00B76130 /* BloodRedTheme.swift in Sources */,
 				2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */,
@@ -590,6 +593,7 @@
 				272636F92117140F0002B2F1 /* License.swift in Sources */,
 				27B7939E20E605390081884A /* SPPingController.swift in Sources */,
 				27F848CC20E7EB2F004DEA0C /* UpdateManager.swift in Sources */,
+				276820DB213153BD00AA96D7 /* StoreKitManager.swift in Sources */,
 				2726370321178B8E0002B2F1 /* UDPingConfigurationRepository.swift in Sources */,
 				270B11B420E9F201002B6829 /* AppTheme.swift in Sources */,
 				2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */,

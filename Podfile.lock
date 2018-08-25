@@ -1,28 +1,41 @@
 PODS:
   - Appirater (2.3.1)
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTASN1 (1.7.13):
+    - DTFoundation/Core
   - GBPing (1.4.1)
+  - Kvitto (1.0.3):
+    - DTFoundation/DTASN1 (~> 1.7.13)
+    - Kvitto/Core (= 1.0.3)
+  - Kvitto/Core (1.0.3):
+    - DTFoundation/DTASN1 (~> 1.7.13)
   - Siren (3.4.1)
   - SwiftyStoreKit (0.13.2)
 
 DEPENDENCIES:
   - Appirater
   - GBPing
+  - Kvitto
   - Siren
   - SwiftyStoreKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Appirater
+    - DTFoundation
     - GBPing
+    - Kvitto
     - Siren
     - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   GBPing: 3bf8bf81f74da35d3b94d83d0290ba78bbde7e0f
+  Kvitto: d451f893f84ad669850b7cb7d3f8781363e14232
   Siren: 94e13d40b48d8c0ddac053140d607c36bb487767
   SwiftyStoreKit: b7563505440a68c9d9fa70bc43d8a97015519409
 
-PODFILE CHECKSUM: 09b7f80accc6c60190ea11b7c352f11993d297b2
+PODFILE CHECKSUM: 6bc62ee04cf7d3bd5e8abd930b4476ddf0a8574b
 
 COCOAPODS: 1.5.3
