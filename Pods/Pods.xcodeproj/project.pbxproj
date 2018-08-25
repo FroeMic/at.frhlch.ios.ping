@@ -7,95 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0204F507610C484A9AC1844AA17F98C7 /* SirenDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87D68B3A6DFDB3A6DB114E77C266C1B /* SirenDateExtension.swift */; };
-		033E379B4F7B6D3B20EFBBE297D6C784 /* SirenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA93498EE25EF3F92004B6262C9040 /* SirenDelegate.swift */; };
-		0D5B4AE735F90B2F10B4F9B6D05C01FF /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 67B05DD1B701F86C78585FFD4F11151D /* fa.lproj */; };
-		0F1CE06126D71005AAC5EECED7079440 /* Siren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8975DC73ECB0A8DADD40099F2A78891B /* Siren.swift */; };
-		1758620F1B6B3127DB8E2C639C988F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
-		1EEA0CF51E01FCFC88EE454BBAEEF352 /* GBPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB5E4197E01377064FF6E2310FF2A465 /* GBPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22B7DDB8DA73ED6A63EFAE2CB203FEA3 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 230D9AD90EB5E72D7242BE5957782C2F /* de.lproj */; };
-		2438B0C1C9A1E1F006CA200BA3B6F6A1 /* Siren-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C827A98D68301E42546517C9CFCB45A7 /* Siren-dummy.m */; };
-		25B481D0CEF9F882498CC8C106751AD3 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F07B1F388E88A0B1465360C78C120B /* Appirater.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		086CC8A302BEC1895B600376D72F6680 /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5336388A21C3F2EDBDC16A93F71E67AD /* RestorePurchasesController.swift */; };
+		0D1D9D09A555BE50F5EE5A17D251686C /* Pods-ping-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5B4AE735F90B2F10B4F9B6D05C01FF /* fa.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1BC77AADC5E80D68F8BBE0E60C1F3F89 /* fa.lproj */; };
+		1303DAD21D13E9B69E30084FC4E7446F /* SirenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D56D6F0FB82D002E318D02CB30035 /* SirenDelegate.swift */; };
+		1D2275418A055F741448F44728EC66F2 /* SirenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004E04269BDCBFFD1B2D0447B25C1543 /* SirenViewController.swift */; };
+		1D4D6278F3D61B15AF2370E9CFCF99D3 /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3502A33BBF79D89793208294D8D6061 /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EEA0CF51E01FCFC88EE454BBAEEF352 /* GBPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEB093EB2521C2A323C0690D039F3E7 /* GBPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22B7DDB8DA73ED6A63EFAE2CB203FEA3 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9D49D0E827C1711BCE816076D48AA070 /* de.lproj */; };
+		25B481D0CEF9F882498CC8C106751AD3 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D287CD91CA9D336E1D9F24ABCD29372 /* Appirater.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		26F3CAB4C047B896173AC5105EB03AEF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B5D6CF835CF44CD2770D3F7F40AD27 /* SystemConfiguration.framework */; };
-		27713DA898925D0F8D3A3FBCD243D00B /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C8FDF6A6D80A7FBD67EF686277B741DD /* fi.lproj */; };
-		2898EDEAC13CF9515CF3A8EDD8ACBB63 /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 72C7827F341A6C1EFB0609F6B288BA10 /* ro.lproj */; };
-		2E06EA179A31CB60BD3DAC6ACD0D8B4E /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F325F24C68CB19479F877FC7E42D2950 /* vi.lproj */; };
-		2F88BD69E7A2D2A98626E98A8DDCAA17 /* SirenAlertMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC00BF8BE7A6018281526A1DD13921 /* SirenAlertMessaging.swift */; };
-		34863D3F3C70F6332CAED604F135A641 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FFA1D0021901204F3BB2F09167E0BC22 /* es.lproj */; };
-		359060418B6B6CBBF4AEE26AFEDC0875 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5F29DA4BFF055F5871ECE97CBCD7060C /* pt-BR.lproj */; };
-		36791B025A1B6701886A4F76D6E37148 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBB263355833B6837FD5BB0E5E9D6E /* id.lproj */; };
-		3A17985EB1DB111D7257B12918C4DC1E /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 23F15E7DE6E4A1A88247027659F165D0 /* ko.lproj */; };
-		3FB1E8FB0404827E61447392E2315311 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 35EBDFFE79FC7B2EA6CA21EDF3BE62D6 /* pl.lproj */; };
-		4113152F32729488101F2AB09CB37DDE /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0637BF72314DE245AC1DA6C8EABD6D6E /* ca.lproj */; };
-		494772608F4C99B9DB79187F5B18332B /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D05C349F7626AAA64C5C911FFE0A09B4 /* ja.lproj */; };
-		4BB81B6379B6B721CE16D8B81DD784EA /* Appirater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E77E949E4AD1A430F7A7698EAE6E6933 /* Appirater-dummy.m */; };
-		50574E077671E9E93F7E87B0374B7AD4 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 24D26AEC6FA223C59D3983BAF19D41D9 /* nl.lproj */; };
+		27713DA898925D0F8D3A3FBCD243D00B /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 27732F7FF6CCCCEBC2F81939C2810399 /* fi.lproj */; };
+		287276828D505503AA86CFD4567D9584 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFFC7D3915421C1315C9E0BC33594B /* SKProduct+LocalizedPrice.swift */; };
+		2898EDEAC13CF9515CF3A8EDD8ACBB63 /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 789DD78748870A261DE87D542719FC19 /* ro.lproj */; };
+		2E06EA179A31CB60BD3DAC6ACD0D8B4E /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E497B6A19A90359E040BB6445D679873 /* vi.lproj */; };
+		34863D3F3C70F6332CAED604F135A641 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0C5AA10E6C1339EA67883917D768071C /* es.lproj */; };
+		359060418B6B6CBBF4AEE26AFEDC0875 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BD7671DAA10627E9061B98EDB30F6E31 /* pt-BR.lproj */; };
+		363A6490124691501CFD79BC5C4FC9CC /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA903A8367B86658EAED48D12354784F /* CompleteTransactionsController.swift */; };
+		36791B025A1B6701886A4F76D6E37148 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0BBA55EC5319F81AA86E82A97221F745 /* id.lproj */; };
+		380E20DEAF881ABEF7A6F31C8A4E4545 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6CE927AC28F8B82884E218AB65D0C /* InAppReceiptVerificator.swift */; };
+		383C321DA1CCA983898951E9C3731802 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
+		392BA25BB17712A3189752F5C129F039 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEB8780E1CEDE0B62CEA639AF7B57B /* ProductsInfoController.swift */; };
+		394DEC070CCFFD66F78AC7C4E097D0C0 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582C263D366F7C5609AE203E1AB0DD73 /* PaymentsController.swift */; };
+		3A17985EB1DB111D7257B12918C4DC1E /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D38CFDBF4080213ED67CED53E1A6842B /* ko.lproj */; };
+		3D8D98F3773F51DA43152A7F5D611D37 /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CFFCB0AC2B735405E4EECFE423FDE /* InAppReceiptRefreshRequest.swift */; };
+		3F3A86F901B5B69DA1741BA91D97A517 /* SirenDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069178072E5C278F64DC965E4CD850ED /* SirenDateExtension.swift */; };
+		3FB1E8FB0404827E61447392E2315311 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7C3AEE36B73BCB7893EC4BB99381A96D /* pl.lproj */; };
+		40CE674D945A48E9C9A11CEC0D03B6A2 /* Siren.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1EDB4B69E5C814E07F949B53073D9138 /* Siren.bundle */; };
+		4113152F32729488101F2AB09CB37DDE /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FE211FBD98909327C956D807CC20A2CC /* ca.lproj */; };
+		494772608F4C99B9DB79187F5B18332B /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 27F0FDEC8C0D0D894BF1FFDA38037282 /* ja.lproj */; };
+		4BB81B6379B6B721CE16D8B81DD784EA /* Appirater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB45E2B6F6D7A888B87268E0ADBC22 /* Appirater-dummy.m */; };
+		50574E077671E9E93F7E87B0374B7AD4 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F67C1A4421EACF81D684BA51916B7137 /* nl.lproj */; };
 		5384F0A2668EC9008B435728A0A45F78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
-		54FAF5894411561CB54CE6E440B508F6 /* Pods-ping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */; };
+		54C2019FA39A2279E5C225D069BB0B8A /* SirenAlertMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4617992BB64B30BAEC34A4B9D88B3AE7 /* SirenAlertMessaging.swift */; };
 		5D7F5EACE5D56BA20C3F44D0727A111D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
 		5D9AE6049C58C37090ED503ACA778702 /* Pods-pingTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5EC4C622CBAA507F1561F5D1BCA05A68 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 57C381FAEE7CCD58192CA384809A0EC4 /* da.lproj */; };
-		5EE0E4B9DF69BC9A113D8B6E53D6E0D5 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 06256D9C0CC7F960627D4C725BE58799 /* nb.lproj */; };
-		63FBA4760F28796C173DF7FB301B5689 /* Appirater.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E72EBB7188DFA3D1397E8D84F179334 /* Appirater.bundle */; };
-		654BF82A1108048B9E54CD8F2202B63B /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ACE78FDA77196E3CF4206A54D7CEE8 /* GBPingSummary.m */; };
-		68781A37907F484F60CE73B6160CBCC2 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0CB634FFDE8487CFBAEA2864DA4B4083 /* he.lproj */; };
-		6DBD86FC61810869EE47C737422184BD /* SirenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23DADA090349060682D667CCAC4BF5 /* SirenViewController.swift */; };
-		7188552FBF40FACE7660265F5D46E35B /* hy.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5744019A5967AC2EAFCD7B8A22784 /* hy.lproj */; };
-		745D1E48DFA432EE5A09843D3199798C /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BF36ED2539CC2A119D124A221C7AF9ED /* ar.lproj */; };
-		7477FB10DF55F0004D1F6F4FD8365A1A /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D13A4C394914B13F3A88DCC1002FF6E8 /* sk.lproj */; };
-		76EF058AB04EF6707B53D639DDB58E85 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ACD059160844D833903556D7D5E83DCA /* th.lproj */; };
+		5EC4C622CBAA507F1561F5D1BCA05A68 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2253884343792B0A10B16890164604CA /* da.lproj */; };
+		5EE0E4B9DF69BC9A113D8B6E53D6E0D5 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D8D2BC447FA0F2D8B5068D0B2E93CDCA /* nb.lproj */; };
+		624B4FB355857E2B91DEBAF56F552F9B /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697192F4CD7AD84907B9F6F57EA3DB6 /* SwiftyStoreKit.swift */; };
+		63FBA4760F28796C173DF7FB301B5689 /* Appirater.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FECA04742C296DD565CAA7E63C6F071 /* Appirater.bundle */; };
+		654BF82A1108048B9E54CD8F2202B63B /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD82E9A2D787266932DC7E00E625D0 /* GBPingSummary.m */; };
+		68781A37907F484F60CE73B6160CBCC2 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C4AD8D9B22818AF0A7080835B1AF63AB /* he.lproj */; };
+		7188552FBF40FACE7660265F5D46E35B /* hy.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 20470A0B1E9411F36AB4F262BF2BA8FD /* hy.lproj */; };
+		73353C3097D60949604B92981E8360F7 /* SirenLookupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7719A2B6AB03D654E0EC0A42D9D7D /* SirenLookupModel.swift */; };
+		745D1E48DFA432EE5A09843D3199798C /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A9C0D6A448FB768572C21CB917AB4E50 /* ar.lproj */; };
+		7477FB10DF55F0004D1F6F4FD8365A1A /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 79BD34BA14E325F38946D65FE2417CE7 /* sk.lproj */; };
+		76EF058AB04EF6707B53D639DDB58E85 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 103ACCAA865473743657EC5240652F8E /* th.lproj */; };
 		7C4EB42588F0DAB22AE6A5975D60B52A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AA68B6DB1E567FD8BEE3E55EF9CC99 /* CFNetwork.framework */; };
-		7C5CB3EBC1CBEC64F80E419FCDDC5D0A /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 04789EDE052983DCABFD386AB52750F6 /* tr.lproj */; };
-		7D5211524508F30492C81346C80955D4 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0DC4407B68AB1F17D1F34F6206996992 /* uk.lproj */; };
-		80386505D4677E4E7FBA3E42C0C9BB21 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 356268CD61D57405B84E5856C7BE4488 /* ru.lproj */; };
-		8EE0A1D4B05D1939EB11C05F89B253EC /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AD6B527CF2BB6E1397EA151037DA3313 /* zh-Hant.lproj */; };
-		8FA676E9235371FEE56C034089346548 /* SirenLookupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9495E1076472F275762EAA2C565C9B /* SirenLookupModel.swift */; };
-		8FD443D52C899FD631DD6E3B2CD96444 /* Siren-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60DDC02DF055DBDDA5EAA6AA1AE24D00 /* Siren-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93B097552E2A4186358D20E00E5E2082 /* Siren.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFC3BFDF187747B95A9EBB81ADBC3789 /* Siren.bundle */; };
-		95D1B85F077851CA35399679DA08B488 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9BF25ED29F28369AC8260A8DA1ACBBF8 /* el.lproj */; };
-		99F3DA9AAD18111EF6F81881F9B16A80 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C2968390D6F418A55658A3127571316C /* pt.lproj */; };
-		9B43454E095D9220E6133218B231C337 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 59A2BDD98F1298EE38BB9C3BDA45D0CD /* sv.lproj */; };
-		9F3DB8D3999894A371C9A92F7E316680 /* SirenUIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB648DDFE758E01F84CE6D13264FF33 /* SirenUIAlertControllerExtension.swift */; };
-		A186EB875BBE6BC57EA043F1ABC37FBA /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 161A07EF2C1437342A16D1A8E253B71B /* en.lproj */; };
-		A431632242AB6413745307CB80B9D283 /* AppiraterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B4A4ABBF2CCBEBA0643A90C0FD70F15 /* AppiraterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5CBDC134465B9CBB4C4C18CA383C71E /* SirenTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A0E9D6F7CFE25CE87D537BCD5F59C /* SirenTestHelper.swift */; };
-		A7B60C9537C85DEE1205D83290306031 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5BB1EFF3C579A5C3698AAB0D916D9BB7 /* zh-Hans.lproj */; };
-		AF4199130874A2F6CBE419898983768C /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF984177FA11E5F1F6E96A5D9ADFCEB /* GBPing.m */; };
-		B14F16ECE7E175678C13CA6AC82BE69F /* SirenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A35CDBB8797DD54095F334D63DC8B8 /* SirenError.swift */; };
-		B41B56539E3114E1508DA5E2D9AC71D7 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AC00BCB958DE632BAF5335DCD6AE527D /* fr.lproj */; };
-		B622B79A61972983196CA3D7111A3D6D /* ICMPHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B36171C7A4FB2A1A6BCD053C275D62C3 /* ICMPHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B76D8ADC02F3A663FC4EA9439A9E199E /* GBPingSummary.h in Headers */ = {isa = PBXBuildFile; fileRef = BE9547327A091379AE159BE67C2260CE /* GBPingSummary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA3043A80213DBA6056C810E542771DD /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 63C178C96467B87CB0CC75D035DD76FB /* it.lproj */; };
-		BA5605308DFBC8EA510378FC2EC9C4BE /* Pods-ping-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC3610C916705BB58463BD3771DFBEDC /* GBPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A30D50C91504545F68E500F361C1C02 /* GBPing-dummy.m */; };
-		BF637623A88B6EDAC5885F1C097397B6 /* SirenLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6DCF802F2BAF9B4BE447299512C9 /* SirenLog.swift */; };
-		C03D6C286059D5179382193C70CB56E8 /* GBPing.h in Headers */ = {isa = PBXBuildFile; fileRef = A684411C9788F998AFDDB4D1715FB7D2 /* GBPing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C148FD70D7A734B840EFB5400A9D7905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
-		CCA179AC56A1CB32A359E0F3D1EA7D7E /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FA210191E93B9947A7351000BDE65D37 /* hu.lproj */; };
+		7C5CB3EBC1CBEC64F80E419FCDDC5D0A /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3D51729CF3DC631FB1472ADC0A4C65B0 /* tr.lproj */; };
+		7D5211524508F30492C81346C80955D4 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5F66A0CA26B98F2E95A02470BA46F238 /* uk.lproj */; };
+		7E68AD8535B96E05F992836331966F66 /* SirenLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD95BC55C4C2CB39D4F66DE2834551 /* SirenLog.swift */; };
+		80386505D4677E4E7FBA3E42C0C9BB21 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C060AE24781E43C64D51C78C2A78F407 /* ru.lproj */; };
+		8CA02AB25DC26848BF8CCE9244806C0F /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D655682CC7E2A089046C3B4FBB5B7953 /* SwiftyStoreKit-dummy.m */; };
+		8EE0A1D4B05D1939EB11C05F89B253EC /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FFFB726925ADACA3880F48848C224EC6 /* zh-Hant.lproj */; };
+		95D1B85F077851CA35399679DA08B488 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8C9B4A5D8903554E713F463EEC398226 /* el.lproj */; };
+		96285CF3348B4F60F335B3A54DCBCF0B /* SirenTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075CB390D5459BC1B807D23A8AAFC0E7 /* SirenTestHelper.swift */; };
+		99F3DA9AAD18111EF6F81881F9B16A80 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D798F1E1C0A490600AE5AB3DB74F2594 /* pt.lproj */; };
+		9B43454E095D9220E6133218B231C337 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A79D1E078851CB9CA70AA733F864CCF4 /* sv.lproj */; };
+		9C3151FADF888BF872668BFB3AA80D41 /* Siren-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1BD3A501E5FF4C5CB042D26AAC4A6B /* Siren-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C99833EB0A12BACA0A9E6C475DA98DA /* SirenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4293E09CA3608C39F7DC67FC4FB2062 /* SirenError.swift */; };
+		A186EB875BBE6BC57EA043F1ABC37FBA /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A0099F2AF2CDDA52395D84385E0A49FC /* en.lproj */; };
+		A431632242AB6413745307CB80B9D283 /* AppiraterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DE01B6336C21B49BF399B0A5A3716A1A /* AppiraterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6057DE2C9EEC2426A4A622E86BF5361 /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861071C1DC0423B85851208DAC19261A /* SwiftyStoreKit+Types.swift */; };
+		A7B60C9537C85DEE1205D83290306031 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CAB634C3448094456DD1E737FFCF9886 /* zh-Hans.lproj */; };
+		ACFFC902C45880A566C954E89C4A7CAA /* SirenBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F49B68126D1E0C5E7F698AB4E2921 /* SirenBundleExtension.swift */; };
+		AF4199130874A2F6CBE419898983768C /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 20369373021AF23DA8669D99D7B90293 /* GBPing.m */; };
+		B41B56539E3114E1508DA5E2D9AC71D7 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 01C0BCBAF3ECAABC4AB451E8190B96E2 /* fr.lproj */; };
+		B4C0F5AD2B86361C8C5A878EAF09C540 /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232C8B1E76113528ED0C869308B9CA /* PaymentQueueController.swift */; };
+		B505946D8568927E18FD5A2AEDAA9D41 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5FBF21320E706F4771C25FB118A5D /* OS.swift */; };
+		B622B79A61972983196CA3D7111A3D6D /* ICMPHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0329956607A8560A9B3F0178460CE6D1 /* ICMPHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B76D8ADC02F3A663FC4EA9439A9E199E /* GBPingSummary.h in Headers */ = {isa = PBXBuildFile; fileRef = A46EA5A72D9B51E3D783931EAF83DD72 /* GBPingSummary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA3043A80213DBA6056C810E542771DD /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E7BCE1AA75CB79C557B64E97FDA33289 /* it.lproj */; };
+		BC3610C916705BB58463BD3771DFBEDC /* GBPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6D4D5D650B3F46086819DDF58E734 /* GBPing-dummy.m */; };
+		C03D6C286059D5179382193C70CB56E8 /* GBPing.h in Headers */ = {isa = PBXBuildFile; fileRef = 52141F43FDC3FC4D876AFD137A19486E /* GBPing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C81CE58D60457C6C0AFD1F526966F451 /* Siren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28957C6361C7F541C8FBDE080A50FE6F /* Siren.swift */; };
+		C86E8FD11EDDE4639287F8087B24DEBE /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B984AF5C1F8D3E78AA3252F89AC221E4 /* InAppProductQueryRequest.swift */; };
+		CCA179AC56A1CB32A359E0F3D1EA7D7E /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BEAACC45D13DAF1ABDE65F23C7BF129E /* hu.lproj */; };
+		D4967A3EF0882DB565CCCD9A5BC82A4C /* SirenUIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF2F32B4E12DB8384DD463280F5345 /* SirenUIAlertControllerExtension.swift */; };
+		D614736935A142CB9E8EE060799DA7CE /* Pods-ping-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */; };
+		D63B9B2C86F277DE2A22BBACADFA9CE8 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EABCE99806CA7BE668588C8614E81E /* InAppReceipt.swift */; };
 		D993AC33BE568CB0E98E78DB38E6F73D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
-		E49980ED4FBC1DA1234E360B69A96085 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2E7FD4B0B9B6C5B940E70A61F4610 /* cs.lproj */; };
-		EA4F839A03DAE1AC0FF4548896F4B1F7 /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 34D2B648943F69BB2DA3FAA210C7BCB4 /* ms.lproj */; };
-		F699CA58E3DD13833285F2A8FC610AAE /* Appirater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4118406CE0A0226D8566629FB282EE /* Appirater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDF8759ECB23A7BEC6C631F6F8DC2511 /* Siren-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C04F2C920FD3AD16A4E917616BCC8BD /* Siren-dummy.m */; };
+		E49980ED4FBC1DA1234E360B69A96085 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CB2CD1E0B681A84E9976737D3C1225E4 /* cs.lproj */; };
+		E4D5E9D3DA6BB075DA27D20AE13447D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
+		E9131C5E2ECC0DC83534CC04AA19B6A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */; };
+		EA4F839A03DAE1AC0FF4548896F4B1F7 /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E0C36DB847103B837A6922217DD947DA /* ms.lproj */; };
+		F3CE8284E65442BEF0E4EAB12BAF10C1 /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D0AF7B8F8EA838121B631FFAF3F9D /* AppleReceiptValidator.swift */; };
+		F699CA58E3DD13833285F2A8FC610AAE /* Appirater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31C551690DF743488F8E392F66C4196B /* Appirater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC89BE5FA2355B6B328777D69ED8C803 /* Pods-pingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */; };
-		FDD504C08D0925F7B348E661BED008F7 /* Appirater.h in Headers */ = {isa = PBXBuildFile; fileRef = B49310EDFDC253DAC83F0F1AB52A50E9 /* Appirater.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEA5C5F7CC99EEFB285211A36AF3C8E7 /* SirenBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD147B6C174763703A955E267B4FBD /* SirenBundleExtension.swift */; };
+		FDD504C08D0925F7B348E661BED008F7 /* Appirater.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EB134A849FA142ECB34F95E2BEAF45D /* Appirater.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A49A8730F7EBE52199086F2E63F709D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1E1B23226E09977FC2CE4565A336050;
-			remoteInfo = GBPing;
-		};
-		0B10064746FF064959EA730413BCF3E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4AB126D74EAC2CFD07499D8B84928E7E;
-			remoteInfo = Siren;
-		};
 		1C8FEC82E6192E2EF9DDE1EABE594C19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -107,125 +110,183 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF4C77EE92EAC9032D2F975AAB258618;
+			remoteGlobalIDString = 7D17F7E351935B8A3636CAEAD83BC2DF;
 			remoteInfo = "Pods-ping";
 		};
-		81EE523FF7D47CD4BB30C6A6E1E2D351 /* PBXContainerItemProxy */ = {
+		91FC6919A34BF3CC3DFC79DE7C1431B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6152098808AE4BFCC8DC4002BD5ABBF9;
+			remoteInfo = Siren;
+		};
+		B19A9F943B9599574041309F9CA7B38C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C7E27398B04EB3E1EDDF1AABEAB23112;
 			remoteInfo = Appirater;
 		};
+		B239C711E31EF61C529C234FA8D73CA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847A13B6A8C7AB2BBAA5ECAAEA18AAEE;
+			remoteInfo = SwiftyStoreKit;
+		};
+		C311FC42B89CB671CDF4143DA0214FA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1E1B23226E09977FC2CE4565A336050;
+			remoteInfo = GBPing;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04789EDE052983DCABFD386AB52750F6 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
+		004E04269BDCBFFD1B2D0447B25C1543 /* SirenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenViewController.swift; path = Sources/SirenViewController.swift; sourceTree = "<group>"; };
+		01C0BCBAF3ECAABC4AB451E8190B96E2 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
+		0329956607A8560A9B3F0178460CE6D1 /* ICMPHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICMPHeader.h; path = GBPing/ICMPHeader.h; sourceTree = "<group>"; };
 		04AA68B6DB1E567FD8BEE3E55EF9CC99 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		06256D9C0CC7F960627D4C725BE58799 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nb.lproj; sourceTree = "<group>"; };
-		0637BF72314DE245AC1DA6C8EABD6D6E /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
-		0CB634FFDE8487CFBAEA2864DA4B4083 /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = he.lproj; sourceTree = "<group>"; };
+		05E6D4D5D650B3F46086819DDF58E734 /* GBPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBPing-dummy.m"; sourceTree = "<group>"; };
+		069178072E5C278F64DC965E4CD850ED /* SirenDateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenDateExtension.swift; path = Sources/SirenDateExtension.swift; sourceTree = "<group>"; };
+		075CB390D5459BC1B807D23A8AAFC0E7 /* SirenTestHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenTestHelper.swift; path = Sources/SirenTestHelper.swift; sourceTree = "<group>"; };
+		0A85EB8F4BC7898F4FABBE562EDE8CA0 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
+		0BBA55EC5319F81AA86E82A97221F745 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = id.lproj; sourceTree = "<group>"; };
+		0C5AA10E6C1339EA67883917D768071C /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
+		0D1BD3A501E5FF4C5CB042D26AAC4A6B /* Siren-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Siren-umbrella.h"; sourceTree = "<group>"; };
+		0D287CD91CA9D336E1D9F24ABCD29372 /* Appirater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
-		0DC4407B68AB1F17D1F34F6206996992 /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = uk.lproj; sourceTree = "<group>"; };
-		0E72EBB7188DFA3D1397E8D84F179334 /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Appirater.bundle; path = "Appirater-Appirater.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		103ACCAA865473743657EC5240652F8E /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = th.lproj; sourceTree = "<group>"; };
 		11B14F02383FAD3F52B3BC8C9D6A70A0 /* Pods-pingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pingTests-dummy.m"; sourceTree = "<group>"; };
-		125C7AAAD1E1D4CEB728BEC74D26529C /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ping.framework; path = "Pods-ping.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		161A07EF2C1437342A16D1A8E253B71B /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
+		14BB45E2B6F6D7A888B87268E0ADBC22 /* Appirater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Appirater-dummy.m"; sourceTree = "<group>"; };
+		16DEB8780E1CEDE0B62CEA639AF7B57B /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
 		1A8180E78CBD3D237D8325B21564FDA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B4A4ABBF2CCBEBA0643A90C0FD70F15 /* AppiraterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		1BC255EF38604D4E46C1F0A623423E6E /* Pods-ping-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ping-dummy.m"; sourceTree = "<group>"; };
+		1BC77AADC5E80D68F8BBE0E60C1F3F89 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fa.lproj; sourceTree = "<group>"; };
 		1C46D3985A142756D848E7455C087371 /* Pods-ping.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ping.modulemap"; sourceTree = "<group>"; };
-		230D9AD90EB5E72D7242BE5957782C2F /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
-		23F15E7DE6E4A1A88247027659F165D0 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
-		24D26AEC6FA223C59D3983BAF19D41D9 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
-		29A836DA7D2F83CBDF99E57C11EA7927 /* GBPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-prefix.pch"; sourceTree = "<group>"; };
-		34D2B648943F69BB2DA3FAA210C7BCB4 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ms.lproj; sourceTree = "<group>"; };
-		356268CD61D57405B84E5856C7BE4488 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
-		35EBDFFE79FC7B2EA6CA21EDF3BE62D6 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
-		3AD5744019A5967AC2EAFCD7B8A22784 /* hy.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hy.lproj; sourceTree = "<group>"; };
-		427D85132E66F60315B16BE62ED52749 /* GBPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GBPing.framework; path = GBPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CF984177FA11E5F1F6E96A5D9ADFCEB /* GBPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPing.m; path = GBPing/GBPing.m; sourceTree = "<group>"; };
+		1EDB4B69E5C814E07F949B53073D9138 /* Siren.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Siren.bundle; path = Sources/Siren.bundle; sourceTree = "<group>"; };
+		20369373021AF23DA8669D99D7B90293 /* GBPing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPing.m; path = GBPing/GBPing.m; sourceTree = "<group>"; };
+		20470A0B1E9411F36AB4F262BF2BA8FD /* hy.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hy.lproj; sourceTree = "<group>"; };
+		2253884343792B0A10B16890164604CA /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
+		232438C48E93DF90C5F42D6BF417C537 /* Pods_pingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pingTests.framework; path = "Pods-pingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27732F7FF6CCCCEBC2F81939C2810399 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fi.lproj; sourceTree = "<group>"; };
+		27F0FDEC8C0D0D894BF1FFDA38037282 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
+		28957C6361C7F541C8FBDE080A50FE6F /* Siren.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Siren.swift; path = Sources/Siren.swift; sourceTree = "<group>"; };
+		2FECA04742C296DD565CAA7E63C6F071 /* Appirater.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Appirater.bundle; path = "Appirater-Appirater.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C551690DF743488F8E392F66C4196B /* Appirater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-umbrella.h"; sourceTree = "<group>"; };
+		35499D0F088B93630E0B1316268936BC /* Appirater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Appirater.modulemap; sourceTree = "<group>"; };
+		3D51729CF3DC631FB1472ADC0A4C65B0 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = tr.lproj; sourceTree = "<group>"; };
+		3EB134A849FA142ECB34F95E2BEAF45D /* Appirater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		3EBC4B282CDCBF60303EFD9BD18AEA41 /* GBPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GBPing.framework; path = GBPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4617992BB64B30BAEC34A4B9D88B3AE7 /* SirenAlertMessaging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenAlertMessaging.swift; path = Sources/SirenAlertMessaging.swift; sourceTree = "<group>"; };
+		483F55FC6B9D77527CC61E5C8FEABEB0 /* Appirater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Appirater.framework; path = Appirater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D87242330C0D00E5BB0EA0F94AAB67 /* Appirater-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-prefix.pch"; sourceTree = "<group>"; };
 		4E5BEF1D6ABF83E2C5559FED557788B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4E9495E1076472F275762EAA2C565C9B /* SirenLookupModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenLookupModel.swift; path = Sources/SirenLookupModel.swift; sourceTree = "<group>"; };
-		4F39DF9C278DEF0199A60F57D8161245 /* Appirater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Appirater.modulemap; sourceTree = "<group>"; };
-		57C381FAEE7CCD58192CA384809A0EC4 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = da.lproj; sourceTree = "<group>"; };
-		57D8353207E2C83C074F8AE039D5E805 /* Siren.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Siren.modulemap; sourceTree = "<group>"; };
-		59A2BDD98F1298EE38BB9C3BDA45D0CD /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
+		5089F101EEF4741F4169413351E9E8EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52141F43FDC3FC4D876AFD137A19486E /* GBPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPing.h; path = GBPing/GBPing.h; sourceTree = "<group>"; };
+		5336388A21C3F2EDBDC16A93F71E67AD /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
+		582C263D366F7C5609AE203E1AB0DD73 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
 		5AE80706A5F9B0C8B8C13D8008C1EE75 /* Pods-pingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5BB1EFF3C579A5C3698AAB0D916D9BB7 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
+		5C66222535F3F059503E49B5CCC5B2D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBD95BC55C4C2CB39D4F66DE2834551 /* SirenLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenLog.swift; path = Sources/SirenLog.swift; sourceTree = "<group>"; };
 		5D081B743627257DCC46614DB4E79F72 /* Pods-ping-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-resources.sh"; sourceTree = "<group>"; };
-		5F29DA4BFF055F5871ECE97CBCD7060C /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "pt-BR.lproj"; sourceTree = "<group>"; };
-		60DDC02DF055DBDDA5EAA6AA1AE24D00 /* Siren-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Siren-umbrella.h"; sourceTree = "<group>"; };
-		62F07B1F388E88A0B1465360C78C120B /* Appirater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
-		63C178C96467B87CB0CC75D035DD76FB /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
-		65BF4D0575EB1B200AE1BC6663D9CD77 /* Pods_pingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pingTests.framework; path = "Pods-pingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F66A0CA26B98F2E95A02470BA46F238 /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = uk.lproj; sourceTree = "<group>"; };
 		66840DE7144978017036A8B042571A26 /* Pods-pingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pingTests-umbrella.h"; sourceTree = "<group>"; };
-		67B05DD1B701F86C78585FFD4F11151D /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fa.lproj; sourceTree = "<group>"; };
-		72C7827F341A6C1EFB0609F6B288BA10 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ro.lproj; sourceTree = "<group>"; };
-		73D42979FFC8B40B74EDDCF5B0952E18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A8348CDDE151BA5BAC386A0CD2D2EEA /* Siren-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Siren-prefix.pch"; sourceTree = "<group>"; };
-		7C23DADA090349060682D667CCAC4BF5 /* SirenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenViewController.swift; path = Sources/SirenViewController.swift; sourceTree = "<group>"; };
-		7DDBB263355833B6837FD5BB0E5E9D6E /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = id.lproj; sourceTree = "<group>"; };
-		7DE2E7FD4B0B9B6C5B940E70A61F4610 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
-		859D8D82E25CD3BDB53D6B6026FD206F /* ResourceBundle-Appirater-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Appirater-Info.plist"; sourceTree = "<group>"; };
-		882A0E9D6F7CFE25CE87D537BCD5F59C /* SirenTestHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenTestHelper.swift; path = Sources/SirenTestHelper.swift; sourceTree = "<group>"; };
-		8975DC73ECB0A8DADD40099F2A78891B /* Siren.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Siren.swift; path = Sources/Siren.swift; sourceTree = "<group>"; };
-		8A30D50C91504545F68E500F361C1C02 /* GBPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBPing-dummy.m"; sourceTree = "<group>"; };
+		6B0E2C402BB50EFB7B4F8B2EECAF121B /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B9D56D6F0FB82D002E318D02CB30035 /* SirenDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenDelegate.swift; path = Sources/SirenDelegate.swift; sourceTree = "<group>"; };
+		789DD78748870A261DE87D542719FC19 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ro.lproj; sourceTree = "<group>"; };
+		79BD34BA14E325F38946D65FE2417CE7 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
+		7A156E981BECFDC6832B5D03A0CA5B6F /* GBPing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.xcconfig; sourceTree = "<group>"; };
+		7C3AEE36B73BCB7893EC4BB99381A96D /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pl.lproj; sourceTree = "<group>"; };
+		81CD82E9A2D787266932DC7E00E625D0 /* GBPingSummary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPingSummary.m; path = GBPing/GBPingSummary.m; sourceTree = "<group>"; };
+		83232C8B1E76113528ED0C869308B9CA /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
+		844F49B68126D1E0C5E7F698AB4E2921 /* SirenBundleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenBundleExtension.swift; path = Sources/SirenBundleExtension.swift; sourceTree = "<group>"; };
+		861071C1DC0423B85851208DAC19261A /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
+		8C04F2C920FD3AD16A4E917616BCC8BD /* Siren-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Siren-dummy.m"; sourceTree = "<group>"; };
+		8C9B4A5D8903554E713F463EEC398226 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = el.lproj; sourceTree = "<group>"; };
 		8EF9903C7CEDC1D97174751EC167E88A /* Pods-pingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pingTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9897AA931A71BEACCA0A464C03BDD2B4 /* GBPing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBPing.xcconfig; sourceTree = "<group>"; };
+		9699E9DE8973C5C2AE1A0586337405B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D62C04D34B9B70A8F11F34321D29ED /* Pods-pingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-frameworks.sh"; sourceTree = "<group>"; };
-		9A636F28B2F2C22D3399226157758ACC /* Appirater-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-prefix.pch"; sourceTree = "<group>"; };
-		9BF25ED29F28369AC8260A8DA1ACBBF8 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = el.lproj; sourceTree = "<group>"; };
-		9DF69D02F1C9B897BC77169094F1E8CF /* Siren.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Siren.xcconfig; sourceTree = "<group>"; };
-		A1B470DFF60E5DF99F41696544848800 /* GBPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GBPing.modulemap; sourceTree = "<group>"; };
-		A684411C9788F998AFDDB4D1715FB7D2 /* GBPing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPing.h; path = GBPing/GBPing.h; sourceTree = "<group>"; };
+		9A4046EDE1AF58CDCB28D38189F2F406 /* Siren.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Siren.modulemap; sourceTree = "<group>"; };
+		9D49D0E827C1711BCE816076D48AA070 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = de.lproj; sourceTree = "<group>"; };
+		9E1CFFCB0AC2B735405E4EECFE423FDE /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		9F467634C48A1D7B8EBCFABCFC254702 /* GBPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GBPing.modulemap; sourceTree = "<group>"; };
+		A0099F2AF2CDDA52395D84385E0A49FC /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = en.lproj; sourceTree = "<group>"; };
+		A0EFFC7D3915421C1315C9E0BC33594B /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		A46EA5A72D9B51E3D783931EAF83DD72 /* GBPingSummary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPingSummary.h; path = GBPing/GBPingSummary.h; sourceTree = "<group>"; };
+		A6D5FBF21320E706F4771C25FB118A5D /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
+		A79D1E078851CB9CA70AA733F864CCF4 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sv.lproj; sourceTree = "<group>"; };
+		A83D0AF7B8F8EA838121B631FFAF3F9D /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
+		A9C0D6A448FB768572C21CB917AB4E50 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ar.lproj; sourceTree = "<group>"; };
 		ABC3DD52D4CF4BFCEA441BDF19C1A1CD /* Pods-ping-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ping-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC00BCB958DE632BAF5335DCD6AE527D /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fr.lproj; sourceTree = "<group>"; };
-		ACD059160844D833903556D7D5E83DCA /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = th.lproj; sourceTree = "<group>"; };
-		AD6B527CF2BB6E1397EA151037DA3313 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hant.lproj"; sourceTree = "<group>"; };
-		B36171C7A4FB2A1A6BCD053C275D62C3 /* ICMPHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICMPHeader.h; path = GBPing/ICMPHeader.h; sourceTree = "<group>"; };
+		B306FFBEDD082F4DDD9AC00EC57EBED2 /* Pods_ping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ping.framework; path = "Pods-ping.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B39AF46CD7604726F606222EA576FAB0 /* Siren-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Siren-prefix.pch"; sourceTree = "<group>"; };
 		B3B5D6CF835CF44CD2770D3F7F40AD27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		B411BF6688B2F035FEE7F0DA0E594BF4 /* Pods-pingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-pingTests.modulemap"; sourceTree = "<group>"; };
-		B49310EDFDC253DAC83F0F1AB52A50E9 /* Appirater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
-		B6DD147B6C174763703A955E267B4FBD /* SirenBundleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenBundleExtension.swift; path = Sources/SirenBundleExtension.swift; sourceTree = "<group>"; };
-		B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Appirater.xcconfig; sourceTree = "<group>"; };
-		BE9547327A091379AE159BE67C2260CE /* GBPingSummary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPingSummary.h; path = GBPing/GBPingSummary.h; sourceTree = "<group>"; };
-		BF36ED2539CC2A119D124A221C7AF9ED /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ar.lproj; sourceTree = "<group>"; };
-		BFC3BFDF187747B95A9EBB81ADBC3789 /* Siren.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Siren.bundle; path = Sources/Siren.bundle; sourceTree = "<group>"; };
-		C2968390D6F418A55658A3127571316C /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
-		C378E42012DACA8E9BA475776919CACB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62FF5590105CC9685EAB81E7D06455C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B984AF5C1F8D3E78AA3252F89AC221E4 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
+		BD7671DAA10627E9061B98EDB30F6E31 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "pt-BR.lproj"; sourceTree = "<group>"; };
+		BEAACC45D13DAF1ABDE65F23C7BF129E /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
+		C060AE24781E43C64D51C78C2A78F407 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ru.lproj; sourceTree = "<group>"; };
+		C271F9A1B84704C89663DE3ACCB2BC6A /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
 		C3FD23245414FDE3CC2AA0A805393097 /* Pods-pingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pingTests.release.xcconfig"; sourceTree = "<group>"; };
-		C7ACE78FDA77196E3CF4206A54D7CEE8 /* GBPingSummary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPingSummary.m; path = GBPing/GBPingSummary.m; sourceTree = "<group>"; };
-		C827A98D68301E42546517C9CFCB45A7 /* Siren-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Siren-dummy.m"; sourceTree = "<group>"; };
-		C87D68B3A6DFDB3A6DB114E77C266C1B /* SirenDateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenDateExtension.swift; path = Sources/SirenDateExtension.swift; sourceTree = "<group>"; };
-		C8FDF6A6D80A7FBD67EF686277B741DD /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = fi.lproj; sourceTree = "<group>"; };
-		C9BA93498EE25EF3F92004B6262C9040 /* SirenDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenDelegate.swift; path = Sources/SirenDelegate.swift; sourceTree = "<group>"; };
-		CCCF6DCF802F2BAF9B4BE447299512C9 /* SirenLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenLog.swift; path = Sources/SirenLog.swift; sourceTree = "<group>"; };
-		CF2197D174F8325F4C835D6EB410F270 /* Appirater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Appirater.framework; path = Appirater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05C349F7626AAA64C5C911FFE0A09B4 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ja.lproj; sourceTree = "<group>"; };
-		D13A4C394914B13F3A88DCC1002FF6E8 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = sk.lproj; sourceTree = "<group>"; };
+		C4293E09CA3608C39F7DC67FC4FB2062 /* SirenError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenError.swift; path = Sources/SirenError.swift; sourceTree = "<group>"; };
+		C4AD8D9B22818AF0A7080835B1AF63AB /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = he.lproj; sourceTree = "<group>"; };
+		C697192F4CD7AD84907B9F6F57EA3DB6 /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
+		C8B2CD39CF786AE6B1423D00996DAB3E /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
+		CAB634C3448094456DD1E737FFCF9886 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
+		CB2CD1E0B681A84E9976737D3C1225E4 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = cs.lproj; sourceTree = "<group>"; };
+		CBF6CE927AC28F8B82884E218AB65D0C /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
+		CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Appirater.xcconfig; sourceTree = "<group>"; };
+		CFD3EC9F224BA51C231B521790808480 /* Siren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Siren.framework; path = Siren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2EABCE99806CA7BE668588C8614E81E /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
+		D38CFDBF4080213ED67CED53E1A6842B /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ko.lproj; sourceTree = "<group>"; };
+		D655682CC7E2A089046C3B4FBB5B7953 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
+		D6EFD585D910944ABF3BE35A1A1480E0 /* ResourceBundle-Appirater-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Appirater-Info.plist"; sourceTree = "<group>"; };
+		D798F1E1C0A490600AE5AB3DB74F2594 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = pt.lproj; sourceTree = "<group>"; };
 		D79ABE28B8766771ECCB299B8A0431DF /* Pods-ping-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ping-frameworks.sh"; sourceTree = "<group>"; };
-		DB4118406CE0A0226D8566629FB282EE /* Appirater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Appirater-umbrella.h"; sourceTree = "<group>"; };
-		DBFC00BF8BE7A6018281526A1DD13921 /* SirenAlertMessaging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenAlertMessaging.swift; path = Sources/SirenAlertMessaging.swift; sourceTree = "<group>"; };
-		DCB648DDFE758E01F84CE6D13264FF33 /* SirenUIAlertControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenUIAlertControllerExtension.swift; path = Sources/SirenUIAlertControllerExtension.swift; sourceTree = "<group>"; };
-		E0167A3B27327DB1C263318A896CF4E8 /* Siren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Siren.framework; path = Siren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D2BC447FA0F2D8B5068D0B2E93CDCA /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nb.lproj; sourceTree = "<group>"; };
+		DD6F4158165DE5E533CA6E0EA80FB77E /* Siren.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Siren.xcconfig; sourceTree = "<group>"; };
+		DE01B6336C21B49BF399B0A5A3716A1A /* AppiraterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		E0167A59AEF114AA1BAA2570E606AE2D /* Pods-pingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pingTests-resources.sh"; sourceTree = "<group>"; };
+		E0C36DB847103B837A6922217DD947DA /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ms.lproj; sourceTree = "<group>"; };
+		E497B6A19A90359E040BB6445D679873 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = vi.lproj; sourceTree = "<group>"; };
 		E70132A8BF6D9702E3AC2681C3B87FB6 /* Pods-pingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E76AEF9EB66EF681AA30F48C74F6CBE4 /* Pods-ping-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ping-umbrella.h"; sourceTree = "<group>"; };
-		E77E949E4AD1A430F7A7698EAE6E6933 /* Appirater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Appirater-dummy.m"; sourceTree = "<group>"; };
-		E9A35CDBB8797DD54095F334D63DC8B8 /* SirenError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenError.swift; path = Sources/SirenError.swift; sourceTree = "<group>"; };
+		E7BCE1AA75CB79C557B64E97FDA33289 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = it.lproj; sourceTree = "<group>"; };
+		EA1196B2A7CEF9712F889CC8CB5D3319 /* GBPing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-prefix.pch"; sourceTree = "<group>"; };
 		EBCF7D3CCF80824984E5769112D8AB89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F325F24C68CB19479F877FC7E42D2950 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = vi.lproj; sourceTree = "<group>"; };
+		EFFF2F32B4E12DB8384DD463280F5345 /* SirenUIAlertControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenUIAlertControllerExtension.swift; path = Sources/SirenUIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		F3502A33BBF79D89793208294D8D6061 /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
+		F67C1A4421EACF81D684BA51916B7137 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = nl.lproj; sourceTree = "<group>"; };
+		F6C7719A2B6AB03D654E0EC0A42D9D7D /* SirenLookupModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SirenLookupModel.swift; path = Sources/SirenLookupModel.swift; sourceTree = "<group>"; };
 		F73438897BC0B6134B6259E2B69CD983 /* Pods-ping-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ping-acknowledgements.plist"; sourceTree = "<group>"; };
-		F839C75A3AAD8318557D8F38D0ED5E08 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA210191E93B9947A7351000BDE65D37 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = hu.lproj; sourceTree = "<group>"; };
-		FB5E4197E01377064FF6E2310FF2A465 /* GBPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-umbrella.h"; sourceTree = "<group>"; };
+		FA903A8367B86658EAED48D12354784F /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
+		FAEB093EB2521C2A323C0690D039F3E7 /* GBPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBPing-umbrella.h"; sourceTree = "<group>"; };
 		FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ping.debug.xcconfig"; sourceTree = "<group>"; };
-		FFA1D0021901204F3BB2F09167E0BC22 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = es.lproj; sourceTree = "<group>"; };
+		FE211FBD98909327C956D807CC20A2CC /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = ca.lproj; sourceTree = "<group>"; };
+		FFFB726925ADACA3880F48848C224EC6 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; path = "zh-Hant.lproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B15DEA448C6C90EE570A2B3171FE006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9131C5E2ECC0DC83534CC04AA19B6A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC180D0249EB8EBD166C0D56C2A523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C321DA1CCA983898951E9C3731802 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		530EA7F8F8E8B36F4B6E090CB250F373 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,19 +313,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D296AC63A8B1BFB13A69BA0498D1E8CE /* Frameworks */ = {
+		D3BCDF56DDB1B8EA7A837E7CF5796593 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1758620F1B6B3127DB8E2C639C988F09 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E988FF117AC355DF57D5205516DD98AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C148FD70D7A734B840EFB5400A9D7905 /* Foundation.framework in Frameworks */,
+				E4D5E9D3DA6BB075DA27D20AE13447D0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,18 +331,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E350D82A4B88C2FA4708E6C51B0324D /* Support Files */ = {
+		03E8A2AD48335AD4B4C67F49E291E45F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1B470DFF60E5DF99F41696544848800 /* GBPing.modulemap */,
-				9897AA931A71BEACCA0A464C03BDD2B4 /* GBPing.xcconfig */,
-				8A30D50C91504545F68E500F361C1C02 /* GBPing-dummy.m */,
-				29A836DA7D2F83CBDF99E57C11EA7927 /* GBPing-prefix.pch */,
-				FB5E4197E01377064FF6E2310FF2A465 /* GBPing-umbrella.h */,
-				F839C75A3AAD8318557D8F38D0ED5E08 /* Info.plist */,
+				1EDB4B69E5C814E07F949B53073D9138 /* Siren.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08AB1C44F103CA0EBE7DBCD2EBA8EB14 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				35499D0F088B93630E0B1316268936BC /* Appirater.modulemap */,
+				CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */,
+				14BB45E2B6F6D7A888B87268E0ADBC22 /* Appirater-dummy.m */,
+				48D87242330C0D00E5BB0EA0F94AAB67 /* Appirater-prefix.pch */,
+				31C551690DF743488F8E392F66C4196B /* Appirater-umbrella.h */,
+				5C66222535F3F059503E49B5CCC5B2D9 /* Info.plist */,
+				D6EFD585D910944ABF3BE35A1A1480E0 /* ResourceBundle-Appirater-Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GBPing";
+			path = "../Target Support Files/Appirater";
+			sourceTree = "<group>";
+		};
+		0DC1D5EC5596DB07FC341832E30A8708 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B62FF5590105CC9685EAB81E7D06455C /* Info.plist */,
+				C271F9A1B84704C89663DE3ACCB2BC6A /* SwiftyStoreKit.modulemap */,
+				0A85EB8F4BC7898F4FABBE562EDE8CA0 /* SwiftyStoreKit.xcconfig */,
+				D655682CC7E2A089046C3B4FBB5B7953 /* SwiftyStoreKit-dummy.m */,
+				C8B2CD39CF786AE6B1423D00996DAB3E /* SwiftyStoreKit-prefix.pch */,
+				F3502A33BBF79D89793208294D8D6061 /* SwiftyStoreKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyStoreKit";
 			sourceTree = "<group>";
 		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
@@ -300,17 +376,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1F6169A6681DF2E1D91257D48747C047 /* Appirater */ = {
+		253AD740C578247E473F26810D3A4EA9 /* GBPing */ = {
 			isa = PBXGroup;
 			children = (
-				B49310EDFDC253DAC83F0F1AB52A50E9 /* Appirater.h */,
-				62F07B1F388E88A0B1465360C78C120B /* Appirater.m */,
-				1B4A4ABBF2CCBEBA0643A90C0FD70F15 /* AppiraterDelegate.h */,
-				AF438CCFBE086A63A653636BBE7DE46F /* Resources */,
-				872F40D07A6CFD71EADE82397D1F211B /* Support Files */,
+				52141F43FDC3FC4D876AFD137A19486E /* GBPing.h */,
+				20369373021AF23DA8669D99D7B90293 /* GBPing.m */,
+				A46EA5A72D9B51E3D783931EAF83DD72 /* GBPingSummary.h */,
+				81CD82E9A2D787266932DC7E00E625D0 /* GBPingSummary.m */,
+				0329956607A8560A9B3F0178460CE6D1 /* ICMPHeader.h */,
+				A799774027593CDF78708C2524CF2B69 /* Support Files */,
 			);
-			name = Appirater;
-			path = Appirater;
+			name = GBPing;
+			path = GBPing;
 			sourceTree = "<group>";
 		};
 		47C55653472B2BDBBCE3175EEFEADA05 /* Pods-pingTests */ = {
@@ -359,90 +436,132 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		5C2C37CCE7274013DF5073E12BE499FB /* SwiftyStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				A83D0AF7B8F8EA838121B631FFAF3F9D /* AppleReceiptValidator.swift */,
+				FA903A8367B86658EAED48D12354784F /* CompleteTransactionsController.swift */,
+				B984AF5C1F8D3E78AA3252F89AC221E4 /* InAppProductQueryRequest.swift */,
+				D2EABCE99806CA7BE668588C8614E81E /* InAppReceipt.swift */,
+				9E1CFFCB0AC2B735405E4EECFE423FDE /* InAppReceiptRefreshRequest.swift */,
+				CBF6CE927AC28F8B82884E218AB65D0C /* InAppReceiptVerificator.swift */,
+				A6D5FBF21320E706F4771C25FB118A5D /* OS.swift */,
+				83232C8B1E76113528ED0C869308B9CA /* PaymentQueueController.swift */,
+				582C263D366F7C5609AE203E1AB0DD73 /* PaymentsController.swift */,
+				16DEB8780E1CEDE0B62CEA639AF7B57B /* ProductsInfoController.swift */,
+				5336388A21C3F2EDBDC16A93F71E67AD /* RestorePurchasesController.swift */,
+				A0EFFC7D3915421C1315C9E0BC33594B /* SKProduct+LocalizedPrice.swift */,
+				C697192F4CD7AD84907B9F6F57EA3DB6 /* SwiftyStoreKit.swift */,
+				861071C1DC0423B85851208DAC19261A /* SwiftyStoreKit+Types.swift */,
+				0DC1D5EC5596DB07FC341832E30A8708 /* Support Files */,
+			);
+			name = SwiftyStoreKit;
+			path = SwiftyStoreKit;
+			sourceTree = "<group>";
+		};
+		5C3A2A4D359A9C5A4648957A7A341E81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9C0D6A448FB768572C21CB917AB4E50 /* ar.lproj */,
+				FE211FBD98909327C956D807CC20A2CC /* ca.lproj */,
+				CB2CD1E0B681A84E9976737D3C1225E4 /* cs.lproj */,
+				2253884343792B0A10B16890164604CA /* da.lproj */,
+				9D49D0E827C1711BCE816076D48AA070 /* de.lproj */,
+				8C9B4A5D8903554E713F463EEC398226 /* el.lproj */,
+				A0099F2AF2CDDA52395D84385E0A49FC /* en.lproj */,
+				0C5AA10E6C1339EA67883917D768071C /* es.lproj */,
+				1BC77AADC5E80D68F8BBE0E60C1F3F89 /* fa.lproj */,
+				27732F7FF6CCCCEBC2F81939C2810399 /* fi.lproj */,
+				01C0BCBAF3ECAABC4AB451E8190B96E2 /* fr.lproj */,
+				C4AD8D9B22818AF0A7080835B1AF63AB /* he.lproj */,
+				BEAACC45D13DAF1ABDE65F23C7BF129E /* hu.lproj */,
+				20470A0B1E9411F36AB4F262BF2BA8FD /* hy.lproj */,
+				0BBA55EC5319F81AA86E82A97221F745 /* id.lproj */,
+				E7BCE1AA75CB79C557B64E97FDA33289 /* it.lproj */,
+				27F0FDEC8C0D0D894BF1FFDA38037282 /* ja.lproj */,
+				D38CFDBF4080213ED67CED53E1A6842B /* ko.lproj */,
+				E0C36DB847103B837A6922217DD947DA /* ms.lproj */,
+				D8D2BC447FA0F2D8B5068D0B2E93CDCA /* nb.lproj */,
+				F67C1A4421EACF81D684BA51916B7137 /* nl.lproj */,
+				7C3AEE36B73BCB7893EC4BB99381A96D /* pl.lproj */,
+				D798F1E1C0A490600AE5AB3DB74F2594 /* pt.lproj */,
+				BD7671DAA10627E9061B98EDB30F6E31 /* pt-BR.lproj */,
+				789DD78748870A261DE87D542719FC19 /* ro.lproj */,
+				C060AE24781E43C64D51C78C2A78F407 /* ru.lproj */,
+				79BD34BA14E325F38946D65FE2417CE7 /* sk.lproj */,
+				A79D1E078851CB9CA70AA733F864CCF4 /* sv.lproj */,
+				103ACCAA865473743657EC5240652F8E /* th.lproj */,
+				3D51729CF3DC631FB1472ADC0A4C65B0 /* tr.lproj */,
+				5F66A0CA26B98F2E95A02470BA46F238 /* uk.lproj */,
+				E497B6A19A90359E040BB6445D679873 /* vi.lproj */,
+				CAB634C3448094456DD1E737FFCF9886 /* zh-Hans.lproj */,
+				FFFB726925ADACA3880F48848C224EC6 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7CA63CFE9C8D3666CF75FC0166BC0D65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5089F101EEF4741F4169413351E9E8EC /* Info.plist */,
+				9A4046EDE1AF58CDCB28D38189F2F406 /* Siren.modulemap */,
+				DD6F4158165DE5E533CA6E0EA80FB77E /* Siren.xcconfig */,
+				8C04F2C920FD3AD16A4E917616BCC8BD /* Siren-dummy.m */,
+				B39AF46CD7604726F606222EA576FAB0 /* Siren-prefix.pch */,
+				0D1BD3A501E5FF4C5CB042D26AAC4A6B /* Siren-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Siren";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				F3A8C8BE8216086B00ECAD2F541E5413 /* Pods */,
-				BF437E7979439345A3A31265803FAC18 /* Products */,
+				F88F59C00744E3074A1746710A158777 /* Pods */,
+				D3E01039197133F072EFC6DA26F93604 /* Products */,
 				DF38BBC805350A2D8B801EF906D7AE78 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		872F40D07A6CFD71EADE82397D1F211B /* Support Files */ = {
+		A799774027593CDF78708C2524CF2B69 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4F39DF9C278DEF0199A60F57D8161245 /* Appirater.modulemap */,
-				B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */,
-				E77E949E4AD1A430F7A7698EAE6E6933 /* Appirater-dummy.m */,
-				9A636F28B2F2C22D3399226157758ACC /* Appirater-prefix.pch */,
-				DB4118406CE0A0226D8566629FB282EE /* Appirater-umbrella.h */,
-				C378E42012DACA8E9BA475776919CACB /* Info.plist */,
-				859D8D82E25CD3BDB53D6B6026FD206F /* ResourceBundle-Appirater-Info.plist */,
+				9F467634C48A1D7B8EBCFABCFC254702 /* GBPing.modulemap */,
+				7A156E981BECFDC6832B5D03A0CA5B6F /* GBPing.xcconfig */,
+				05E6D4D5D650B3F46086819DDF58E734 /* GBPing-dummy.m */,
+				EA1196B2A7CEF9712F889CC8CB5D3319 /* GBPing-prefix.pch */,
+				FAEB093EB2521C2A323C0690D039F3E7 /* GBPing-umbrella.h */,
+				9699E9DE8973C5C2AE1A0586337405B9 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Appirater";
+			path = "../Target Support Files/GBPing";
 			sourceTree = "<group>";
 		};
-		AF438CCFBE086A63A653636BBE7DE46F /* Resources */ = {
+		B592CAB1F5F926BEEDEB5E1AC837B787 /* Appirater */ = {
 			isa = PBXGroup;
 			children = (
-				BF36ED2539CC2A119D124A221C7AF9ED /* ar.lproj */,
-				0637BF72314DE245AC1DA6C8EABD6D6E /* ca.lproj */,
-				7DE2E7FD4B0B9B6C5B940E70A61F4610 /* cs.lproj */,
-				57C381FAEE7CCD58192CA384809A0EC4 /* da.lproj */,
-				230D9AD90EB5E72D7242BE5957782C2F /* de.lproj */,
-				9BF25ED29F28369AC8260A8DA1ACBBF8 /* el.lproj */,
-				161A07EF2C1437342A16D1A8E253B71B /* en.lproj */,
-				FFA1D0021901204F3BB2F09167E0BC22 /* es.lproj */,
-				67B05DD1B701F86C78585FFD4F11151D /* fa.lproj */,
-				C8FDF6A6D80A7FBD67EF686277B741DD /* fi.lproj */,
-				AC00BCB958DE632BAF5335DCD6AE527D /* fr.lproj */,
-				0CB634FFDE8487CFBAEA2864DA4B4083 /* he.lproj */,
-				FA210191E93B9947A7351000BDE65D37 /* hu.lproj */,
-				3AD5744019A5967AC2EAFCD7B8A22784 /* hy.lproj */,
-				7DDBB263355833B6837FD5BB0E5E9D6E /* id.lproj */,
-				63C178C96467B87CB0CC75D035DD76FB /* it.lproj */,
-				D05C349F7626AAA64C5C911FFE0A09B4 /* ja.lproj */,
-				23F15E7DE6E4A1A88247027659F165D0 /* ko.lproj */,
-				34D2B648943F69BB2DA3FAA210C7BCB4 /* ms.lproj */,
-				06256D9C0CC7F960627D4C725BE58799 /* nb.lproj */,
-				24D26AEC6FA223C59D3983BAF19D41D9 /* nl.lproj */,
-				35EBDFFE79FC7B2EA6CA21EDF3BE62D6 /* pl.lproj */,
-				C2968390D6F418A55658A3127571316C /* pt.lproj */,
-				5F29DA4BFF055F5871ECE97CBCD7060C /* pt-BR.lproj */,
-				72C7827F341A6C1EFB0609F6B288BA10 /* ro.lproj */,
-				356268CD61D57405B84E5856C7BE4488 /* ru.lproj */,
-				D13A4C394914B13F3A88DCC1002FF6E8 /* sk.lproj */,
-				59A2BDD98F1298EE38BB9C3BDA45D0CD /* sv.lproj */,
-				ACD059160844D833903556D7D5E83DCA /* th.lproj */,
-				04789EDE052983DCABFD386AB52750F6 /* tr.lproj */,
-				0DC4407B68AB1F17D1F34F6206996992 /* uk.lproj */,
-				F325F24C68CB19479F877FC7E42D2950 /* vi.lproj */,
-				5BB1EFF3C579A5C3698AAB0D916D9BB7 /* zh-Hans.lproj */,
-				AD6B527CF2BB6E1397EA151037DA3313 /* zh-Hant.lproj */,
+				3EB134A849FA142ECB34F95E2BEAF45D /* Appirater.h */,
+				0D287CD91CA9D336E1D9F24ABCD29372 /* Appirater.m */,
+				DE01B6336C21B49BF399B0A5A3716A1A /* AppiraterDelegate.h */,
+				5C3A2A4D359A9C5A4648957A7A341E81 /* Resources */,
+				08AB1C44F103CA0EBE7DBCD2EBA8EB14 /* Support Files */,
 			);
-			name = Resources;
+			name = Appirater;
+			path = Appirater;
 			sourceTree = "<group>";
 		};
-		B58F0FF7D973210E8364BDDA4937525B /* Resources */ = {
+		D3E01039197133F072EFC6DA26F93604 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFC3BFDF187747B95A9EBB81ADBC3789 /* Siren.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		BF437E7979439345A3A31265803FAC18 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0E72EBB7188DFA3D1397E8D84F179334 /* Appirater.bundle */,
-				CF2197D174F8325F4C835D6EB410F270 /* Appirater.framework */,
-				427D85132E66F60315B16BE62ED52749 /* GBPing.framework */,
-				125C7AAAD1E1D4CEB728BEC74D26529C /* Pods_ping.framework */,
-				65BF4D0575EB1B200AE1BC6663D9CD77 /* Pods_pingTests.framework */,
-				E0167A3B27327DB1C263318A896CF4E8 /* Siren.framework */,
+				2FECA04742C296DD565CAA7E63C6F071 /* Appirater.bundle */,
+				483F55FC6B9D77527CC61E5C8FEABEB0 /* Appirater.framework */,
+				3EBC4B282CDCBF60303EFD9BD18AEA41 /* GBPing.framework */,
+				B306FFBEDD082F4DDD9AC00EC57EBED2 /* Pods_ping.framework */,
+				232438C48E93DF90C5F42D6BF417C537 /* Pods_pingTests.framework */,
+				CFD3EC9F224BA51C231B521790808480 /* Siren.framework */,
+				6B0E2C402BB50EFB7B4F8B2EECAF121B /* SwiftyStoreKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -456,73 +575,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E0020EAD067744D129777FCC2F8F6F8C /* GBPing */ = {
+		E403070258138281CBC93B0B747F3202 /* Siren */ = {
 			isa = PBXGroup;
 			children = (
-				A684411C9788F998AFDDB4D1715FB7D2 /* GBPing.h */,
-				4CF984177FA11E5F1F6E96A5D9ADFCEB /* GBPing.m */,
-				BE9547327A091379AE159BE67C2260CE /* GBPingSummary.h */,
-				C7ACE78FDA77196E3CF4206A54D7CEE8 /* GBPingSummary.m */,
-				B36171C7A4FB2A1A6BCD053C275D62C3 /* ICMPHeader.h */,
-				0E350D82A4B88C2FA4708E6C51B0324D /* Support Files */,
-			);
-			name = GBPing;
-			path = GBPing;
-			sourceTree = "<group>";
-		};
-		E4F38E2F7A03C7D6A9305E9411EFDDD7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				73D42979FFC8B40B74EDDCF5B0952E18 /* Info.plist */,
-				57D8353207E2C83C074F8AE039D5E805 /* Siren.modulemap */,
-				9DF69D02F1C9B897BC77169094F1E8CF /* Siren.xcconfig */,
-				C827A98D68301E42546517C9CFCB45A7 /* Siren-dummy.m */,
-				7A8348CDDE151BA5BAC386A0CD2D2EEA /* Siren-prefix.pch */,
-				60DDC02DF055DBDDA5EAA6AA1AE24D00 /* Siren-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Siren";
-			sourceTree = "<group>";
-		};
-		F3A8C8BE8216086B00ECAD2F541E5413 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1F6169A6681DF2E1D91257D48747C047 /* Appirater */,
-				E0020EAD067744D129777FCC2F8F6F8C /* GBPing */,
-				FD3A7CE2A124C04265BF096A2FFC9145 /* Siren */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FD3A7CE2A124C04265BF096A2FFC9145 /* Siren */ = {
-			isa = PBXGroup;
-			children = (
-				8975DC73ECB0A8DADD40099F2A78891B /* Siren.swift */,
-				DBFC00BF8BE7A6018281526A1DD13921 /* SirenAlertMessaging.swift */,
-				B6DD147B6C174763703A955E267B4FBD /* SirenBundleExtension.swift */,
-				C87D68B3A6DFDB3A6DB114E77C266C1B /* SirenDateExtension.swift */,
-				C9BA93498EE25EF3F92004B6262C9040 /* SirenDelegate.swift */,
-				E9A35CDBB8797DD54095F334D63DC8B8 /* SirenError.swift */,
-				CCCF6DCF802F2BAF9B4BE447299512C9 /* SirenLog.swift */,
-				4E9495E1076472F275762EAA2C565C9B /* SirenLookupModel.swift */,
-				882A0E9D6F7CFE25CE87D537BCD5F59C /* SirenTestHelper.swift */,
-				DCB648DDFE758E01F84CE6D13264FF33 /* SirenUIAlertControllerExtension.swift */,
-				7C23DADA090349060682D667CCAC4BF5 /* SirenViewController.swift */,
-				B58F0FF7D973210E8364BDDA4937525B /* Resources */,
-				E4F38E2F7A03C7D6A9305E9411EFDDD7 /* Support Files */,
+				28957C6361C7F541C8FBDE080A50FE6F /* Siren.swift */,
+				4617992BB64B30BAEC34A4B9D88B3AE7 /* SirenAlertMessaging.swift */,
+				844F49B68126D1E0C5E7F698AB4E2921 /* SirenBundleExtension.swift */,
+				069178072E5C278F64DC965E4CD850ED /* SirenDateExtension.swift */,
+				6B9D56D6F0FB82D002E318D02CB30035 /* SirenDelegate.swift */,
+				C4293E09CA3608C39F7DC67FC4FB2062 /* SirenError.swift */,
+				5CBD95BC55C4C2CB39D4F66DE2834551 /* SirenLog.swift */,
+				F6C7719A2B6AB03D654E0EC0A42D9D7D /* SirenLookupModel.swift */,
+				075CB390D5459BC1B807D23A8AAFC0E7 /* SirenTestHelper.swift */,
+				EFFF2F32B4E12DB8384DD463280F5345 /* SirenUIAlertControllerExtension.swift */,
+				004E04269BDCBFFD1B2D0447B25C1543 /* SirenViewController.swift */,
+				03E8A2AD48335AD4B4C67F49E291E45F /* Resources */,
+				7CA63CFE9C8D3666CF75FC0166BC0D65 /* Support Files */,
 			);
 			name = Siren;
 			path = Siren;
 			sourceTree = "<group>";
 		};
+		F88F59C00744E3074A1746710A158777 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B592CAB1F5F926BEEDEB5E1AC837B787 /* Appirater */,
+				253AD740C578247E473F26810D3A4EA9 /* GBPing */,
+				E403070258138281CBC93B0B747F3202 /* Siren */,
+				5C2C37CCE7274013DF5073E12BE499FB /* SwiftyStoreKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1B00A97D57F244914CF3747D568F087C /* Headers */ = {
+		334CEEA5D22AB76BFAAEFE85D08E6386 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD443D52C899FD631DD6E3B2CD96444 /* Siren-umbrella.h in Headers */,
+				9C3151FADF888BF872668BFB3AA80D41 /* Siren-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +625,14 @@
 				F699CA58E3DD13833285F2A8FC610AAE /* Appirater-umbrella.h in Headers */,
 				FDD504C08D0925F7B348E661BED008F7 /* Appirater.h in Headers */,
 				A431632242AB6413745307CB80B9D283 /* AppiraterDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54015AACB21A0006DA31C93E7444BD41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D1D9D09A555BE50F5EE5A17D251686C /* Pods-ping-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,25 +655,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1E4EFCA7E098FC0DF7B49E8D2F24D17 /* Headers */ = {
+		D3E63582691C489E79ACF873CA28F8B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5605308DFBC8EA510378FC2EC9C4BE /* Pods-ping-umbrella.h in Headers */,
+				1D4D6278F3D61B15AF2370E9CFCF99D3 /* SwiftyStoreKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4AB126D74EAC2CFD07499D8B84928E7E /* Siren */ = {
+		6152098808AE4BFCC8DC4002BD5ABBF9 /* Siren */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30ACE1A822A40DC3C43C8AF46D86439F /* Build configuration list for PBXNativeTarget "Siren" */;
+			buildConfigurationList = A4F64063AFD704DD04F394FA13718DDC /* Build configuration list for PBXNativeTarget "Siren" */;
 			buildPhases = (
-				E1E28D2582C4A7FB2EF0106BB03FD676 /* Sources */,
-				D296AC63A8B1BFB13A69BA0498D1E8CE /* Frameworks */,
-				CC29A9D3758B57C032718867A5723A94 /* Resources */,
-				1B00A97D57F244914CF3747D568F087C /* Headers */,
+				2B7D9E88F564DDBC52D8319260BAE561 /* Sources */,
+				3BCC180D0249EB8EBD166C0D56C2A523 /* Frameworks */,
+				7269BAB7DB57311ABB47AADE0E1BFD9F /* Resources */,
+				334CEEA5D22AB76BFAAEFE85D08E6386 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -581,7 +681,45 @@
 			);
 			name = Siren;
 			productName = Siren;
-			productReference = E0167A3B27327DB1C263318A896CF4E8 /* Siren.framework */;
+			productReference = CFD3EC9F224BA51C231B521790808480 /* Siren.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D17F7E351935B8A3636CAEAD83BC2DF /* Pods-ping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A33822DF32676C413F885715077A8F /* Build configuration list for PBXNativeTarget "Pods-ping" */;
+			buildPhases = (
+				EAC001ED090371911E1328DC646BB265 /* Sources */,
+				1B15DEA448C6C90EE570A2B3171FE006 /* Frameworks */,
+				54015AACB21A0006DA31C93E7444BD41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E3445F5AEDA98ED839D46A18AD902C /* PBXTargetDependency */,
+				3C6070A448EB89B06D8714983EA1ACF8 /* PBXTargetDependency */,
+				3FC4DCF39C34A13E2648C76A9AB897AC /* PBXTargetDependency */,
+				6A68396D04857D1AA5C003B4E6E4EC98 /* PBXTargetDependency */,
+			);
+			name = "Pods-ping";
+			productName = "Pods-ping";
+			productReference = B306FFBEDD082F4DDD9AC00EC57EBED2 /* Pods_ping.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		847A13B6A8C7AB2BBAA5ECAAEA18AAEE /* SwiftyStoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A578D3192D1A02164C67E7ABEF4D032A /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
+			buildPhases = (
+				783C4128317DCD3D0446102EF7EF66DD /* Sources */,
+				D3BCDF56DDB1B8EA7A837E7CF5796593 /* Frameworks */,
+				D3E63582691C489E79ACF873CA28F8B6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyStoreKit;
+			productName = SwiftyStoreKit;
+			productReference = 6B0E2C402BB50EFB7B4F8B2EECAF121B /* SwiftyStoreKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A8C8D601E92B0B40F48C791C48F237AE /* Appirater-Appirater */ = {
@@ -598,7 +736,7 @@
 			);
 			name = "Appirater-Appirater";
 			productName = "Appirater-Appirater";
-			productReference = 0E72EBB7188DFA3D1397E8D84F179334 /* Appirater.bundle */;
+			productReference = 2FECA04742C296DD565CAA7E63C6F071 /* Appirater.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */ = {
@@ -616,7 +754,7 @@
 			);
 			name = "Pods-pingTests";
 			productName = "Pods-pingTests";
-			productReference = 65BF4D0575EB1B200AE1BC6663D9CD77 /* Pods_pingTests.framework */;
+			productReference = 232438C48E93DF90C5F42D6BF417C537 /* Pods_pingTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B1E1B23226E09977FC2CE4565A336050 /* GBPing */ = {
@@ -633,7 +771,7 @@
 			);
 			name = GBPing;
 			productName = GBPing;
-			productReference = 427D85132E66F60315B16BE62ED52749 /* GBPing.framework */;
+			productReference = 3EBC4B282CDCBF60303EFD9BD18AEA41 /* GBPing.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C7E27398B04EB3E1EDDF1AABEAB23112 /* Appirater */ = {
@@ -652,27 +790,7 @@
 			);
 			name = Appirater;
 			productName = Appirater;
-			productReference = CF2197D174F8325F4C835D6EB410F270 /* Appirater.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CF4C77EE92EAC9032D2F975AAB258618 /* Pods-ping */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4A9264FF6F7464A26815249719BD28B3 /* Build configuration list for PBXNativeTarget "Pods-ping" */;
-			buildPhases = (
-				B3C661486032CEE9DB9591682195D4CE /* Sources */,
-				E988FF117AC355DF57D5205516DD98AC /* Frameworks */,
-				F1E4EFCA7E098FC0DF7B49E8D2F24D17 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD86B94811518FC50F8778D9F2BB50FA /* PBXTargetDependency */,
-				AE8786183D0CA7193DB92749ABDF3B9A /* PBXTargetDependency */,
-				F613E7E7E32A2893B7882424BC0DB13B /* PBXTargetDependency */,
-			);
-			name = "Pods-ping";
-			productName = "Pods-ping";
-			productReference = 125C7AAAD1E1D4CEB728BEC74D26529C /* Pods_ping.framework */;
+			productReference = 483F55FC6B9D77527CC61E5C8FEABEB0 /* Appirater.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -692,16 +810,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BF437E7979439345A3A31265803FAC18 /* Products */;
+			productRefGroup = D3E01039197133F072EFC6DA26F93604 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C7E27398B04EB3E1EDDF1AABEAB23112 /* Appirater */,
 				A8C8D601E92B0B40F48C791C48F237AE /* Appirater-Appirater */,
 				B1E1B23226E09977FC2CE4565A336050 /* GBPing */,
-				CF4C77EE92EAC9032D2F975AAB258618 /* Pods-ping */,
+				7D17F7E351935B8A3636CAEAD83BC2DF /* Pods-ping */,
 				AB592AAEC7924B10C8940026D29ACFB7 /* Pods-pingTests */,
-				4AB126D74EAC2CFD07499D8B84928E7E /* Siren */,
+				6152098808AE4BFCC8DC4002BD5ABBF9 /* Siren */,
+				847A13B6A8C7AB2BBAA5ECAAEA18AAEE /* SwiftyStoreKit */,
 			);
 		};
 /* End PBXProject section */
@@ -748,19 +867,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7269BAB7DB57311ABB47AADE0E1BFD9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CE674D945A48E9C9A11CEC0D03B6A2 /* Siren.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FEFF750E97C1C37F134920C8EFD3A7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				63FBA4760F28796C173DF7FB301B5689 /* Appirater.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CC29A9D3758B57C032718867A5723A94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93B097552E2A4186358D20E00E5E2082 /* Siren.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +903,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B7D9E88F564DDBC52D8319260BAE561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF8759ECB23A7BEC6C631F6F8DC2511 /* Siren-dummy.m in Sources */,
+				C81CE58D60457C6C0AFD1F526966F451 /* Siren.swift in Sources */,
+				54C2019FA39A2279E5C225D069BB0B8A /* SirenAlertMessaging.swift in Sources */,
+				ACFFC902C45880A566C954E89C4A7CAA /* SirenBundleExtension.swift in Sources */,
+				3F3A86F901B5B69DA1741BA91D97A517 /* SirenDateExtension.swift in Sources */,
+				1303DAD21D13E9B69E30084FC4E7446F /* SirenDelegate.swift in Sources */,
+				9C99833EB0A12BACA0A9E6C475DA98DA /* SirenError.swift in Sources */,
+				7E68AD8535B96E05F992836331966F66 /* SirenLog.swift in Sources */,
+				73353C3097D60949604B92981E8360F7 /* SirenLookupModel.swift in Sources */,
+				96285CF3348B4F60F335B3A54DCBCF0B /* SirenTestHelper.swift in Sources */,
+				D4967A3EF0882DB565CCCD9A5BC82A4C /* SirenUIAlertControllerExtension.swift in Sources */,
+				1D2275418A055F741448F44728EC66F2 /* SirenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BB3CF5128E7325E281195E0BED78579 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -792,30 +930,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3C661486032CEE9DB9591682195D4CE /* Sources */ = {
+		783C4128317DCD3D0446102EF7EF66DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FAF5894411561CB54CE6E440B508F6 /* Pods-ping-dummy.m in Sources */,
+				F3CE8284E65442BEF0E4EAB12BAF10C1 /* AppleReceiptValidator.swift in Sources */,
+				363A6490124691501CFD79BC5C4FC9CC /* CompleteTransactionsController.swift in Sources */,
+				C86E8FD11EDDE4639287F8087B24DEBE /* InAppProductQueryRequest.swift in Sources */,
+				D63B9B2C86F277DE2A22BBACADFA9CE8 /* InAppReceipt.swift in Sources */,
+				3D8D98F3773F51DA43152A7F5D611D37 /* InAppReceiptRefreshRequest.swift in Sources */,
+				380E20DEAF881ABEF7A6F31C8A4E4545 /* InAppReceiptVerificator.swift in Sources */,
+				B505946D8568927E18FD5A2AEDAA9D41 /* OS.swift in Sources */,
+				B4C0F5AD2B86361C8C5A878EAF09C540 /* PaymentQueueController.swift in Sources */,
+				394DEC070CCFFD66F78AC7C4E097D0C0 /* PaymentsController.swift in Sources */,
+				392BA25BB17712A3189752F5C129F039 /* ProductsInfoController.swift in Sources */,
+				086CC8A302BEC1895B600376D72F6680 /* RestorePurchasesController.swift in Sources */,
+				287276828D505503AA86CFD4567D9584 /* SKProduct+LocalizedPrice.swift in Sources */,
+				A6057DE2C9EEC2426A4A622E86BF5361 /* SwiftyStoreKit+Types.swift in Sources */,
+				8CA02AB25DC26848BF8CCE9244806C0F /* SwiftyStoreKit-dummy.m in Sources */,
+				624B4FB355857E2B91DEBAF56F552F9B /* SwiftyStoreKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1E28D2582C4A7FB2EF0106BB03FD676 /* Sources */ = {
+		EAC001ED090371911E1328DC646BB265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2438B0C1C9A1E1F006CA200BA3B6F6A1 /* Siren-dummy.m in Sources */,
-				0F1CE06126D71005AAC5EECED7079440 /* Siren.swift in Sources */,
-				2F88BD69E7A2D2A98626E98A8DDCAA17 /* SirenAlertMessaging.swift in Sources */,
-				FEA5C5F7CC99EEFB285211A36AF3C8E7 /* SirenBundleExtension.swift in Sources */,
-				0204F507610C484A9AC1844AA17F98C7 /* SirenDateExtension.swift in Sources */,
-				033E379B4F7B6D3B20EFBBE297D6C784 /* SirenDelegate.swift in Sources */,
-				B14F16ECE7E175678C13CA6AC82BE69F /* SirenError.swift in Sources */,
-				BF637623A88B6EDAC5885F1C097397B6 /* SirenLog.swift in Sources */,
-				8FA676E9235371FEE56C034089346548 /* SirenLookupModel.swift in Sources */,
-				A5CBDC134465B9CBB4C4C18CA383C71E /* SirenTestHelper.swift in Sources */,
-				9F3DB8D3999894A371C9A92F7E316680 /* SirenUIAlertControllerExtension.swift in Sources */,
-				6DBD86FC61810869EE47C737422184BD /* SirenViewController.swift in Sources */,
+				D614736935A142CB9E8EE060799DA7CE /* Pods-ping-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,35 +972,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		00E3445F5AEDA98ED839D46A18AD902C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Appirater;
+			target = C7E27398B04EB3E1EDDF1AABEAB23112 /* Appirater */;
+			targetProxy = B19A9F943B9599574041309F9CA7B38C /* PBXContainerItemProxy */;
+		};
 		2B35965F161287483DF55DDCD2329CBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Appirater-Appirater";
 			target = A8C8D601E92B0B40F48C791C48F237AE /* Appirater-Appirater */;
 			targetProxy = 1C8FEC82E6192E2EF9DDE1EABE594C19 /* PBXContainerItemProxy */;
 		};
-		66879116489CB14BDCB3625DC7947E17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ping";
-			target = CF4C77EE92EAC9032D2F975AAB258618 /* Pods-ping */;
-			targetProxy = 4C4287CF4E9A8453FDFC6CBD496A0C98 /* PBXContainerItemProxy */;
-		};
-		AE8786183D0CA7193DB92749ABDF3B9A /* PBXTargetDependency */ = {
+		3C6070A448EB89B06D8714983EA1ACF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GBPing;
 			target = B1E1B23226E09977FC2CE4565A336050 /* GBPing */;
-			targetProxy = 0A49A8730F7EBE52199086F2E63F709D /* PBXContainerItemProxy */;
+			targetProxy = C311FC42B89CB671CDF4143DA0214FA2 /* PBXContainerItemProxy */;
 		};
-		F613E7E7E32A2893B7882424BC0DB13B /* PBXTargetDependency */ = {
+		3FC4DCF39C34A13E2648C76A9AB897AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Siren;
-			target = 4AB126D74EAC2CFD07499D8B84928E7E /* Siren */;
-			targetProxy = 0B10064746FF064959EA730413BCF3E4 /* PBXContainerItemProxy */;
+			target = 6152098808AE4BFCC8DC4002BD5ABBF9 /* Siren */;
+			targetProxy = 91FC6919A34BF3CC3DFC79DE7C1431B0 /* PBXContainerItemProxy */;
 		};
-		FD86B94811518FC50F8778D9F2BB50FA /* PBXTargetDependency */ = {
+		66879116489CB14BDCB3625DC7947E17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Appirater;
-			target = C7E27398B04EB3E1EDDF1AABEAB23112 /* Appirater */;
-			targetProxy = 81EE523FF7D47CD4BB30C6A6E1E2D351 /* PBXContainerItemProxy */;
+			name = "Pods-ping";
+			target = 7D17F7E351935B8A3636CAEAD83BC2DF /* Pods-ping */;
+			targetProxy = 4C4287CF4E9A8453FDFC6CBD496A0C98 /* PBXContainerItemProxy */;
+		};
+		6A68396D04857D1AA5C003B4E6E4EC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyStoreKit;
+			target = 847A13B6A8C7AB2BBAA5ECAAEA18AAEE /* SwiftyStoreKit */;
+			targetProxy = B239C711E31EF61C529C234FA8D73CA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -904,7 +1051,7 @@
 		};
 		097621A246FEB1092CE30C8F7B82BFE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9897AA931A71BEACCA0A464C03BDD2B4 /* GBPing.xcconfig */;
+			baseConfigurationReference = 7A156E981BECFDC6832B5D03A0CA5B6F /* GBPing.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -937,46 +1084,9 @@
 			};
 			name = Debug;
 		};
-		14A567446499CC57D545A568244E4069 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DF69D02F1C9B897BC77169094F1E8CF /* Siren.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Siren/Siren-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Siren/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Siren/Siren.modulemap";
-				PRODUCT_MODULE_NAME = Siren;
-				PRODUCT_NAME = Siren;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		2140D4265B433F1BD45AFB757D9CE408 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */;
+			baseConfigurationReference = CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Appirater";
@@ -989,82 +1099,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
-		};
-		25936381FE82219F157FD26C473281B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DF69D02F1C9B897BC77169094F1E8CF /* Siren.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Siren/Siren-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Siren/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Siren/Siren.modulemap";
-				PRODUCT_MODULE_NAME = Siren;
-				PRODUCT_NAME = Siren;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2635A5C3564BFC54A28506CC06876743 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		553022A828EE1991F07D2D73F565AEF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1189,7 +1223,7 @@
 		};
 		5ABA507AE7DE9A2EB85B48EC1A02C989 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9897AA931A71BEACCA0A464C03BDD2B4 /* GBPing.xcconfig */;
+			baseConfigurationReference = 7A156E981BECFDC6832B5D03A0CA5B6F /* GBPing.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1223,12 +1257,10 @@
 			};
 			name = Release;
 		};
-		825EF01FAEDACC68EABF780F8529D4D5 /* Release */ = {
+		8C40DE88C503AAE4E61B0D15BF375FC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */;
+			baseConfigurationReference = DD6F4158165DE5E533CA6E0EA80FB77E /* Siren.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1238,34 +1270,32 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Siren/Siren-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Siren/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Siren/Siren.modulemap";
+				PRODUCT_MODULE_NAME = Siren;
+				PRODUCT_NAME = Siren;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		93D554540916ADE1C293660373006ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */;
+			baseConfigurationReference = CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1291,6 +1321,43 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E241DD0312F0E01E1A25AAA1E324F98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A85EB8F4BC7898F4FABBE562EDE8CA0 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStoreKit;
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1338,9 +1405,46 @@
 			};
 			name = Release;
 		};
+		CF4BDEDF10521D1080ABD1160CDBDFED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6F4158165DE5E533CA6E0EA80FB77E /* Siren.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Siren/Siren-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Siren/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Siren/Siren.modulemap";
+				PRODUCT_MODULE_NAME = Siren;
+				PRODUCT_NAME = Siren;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D067B70B370F39FC2F62B5CC1C71AC81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */;
+			baseConfigurationReference = CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Appirater";
@@ -1354,9 +1458,89 @@
 			};
 			name = Debug;
 		};
+		D9192E18066CBD3354FF8773C3B78129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DB1642258CF35BE5F966D3C8C8C3968 /* Pods-ping.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DF31E8E3373D1FB8B70FF7433838689A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC070971352885956B8122E13006836 /* Pods-ping.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ping/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ping/Pods-ping.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E3F2B623FD9504E4822E0D1D6ADA878E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7568F274BBC3417F3D65BEBE6987334 /* Appirater.xcconfig */;
+			baseConfigurationReference = CEC0DAD72A6C92483DF47BDE3571946E /* Appirater.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1389,6 +1573,42 @@
 			};
 			name = Debug;
 		};
+		EEB6BB18798DD5AC8D844E59DE04D7AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A85EB8F4BC7898F4FABBE562EDE8CA0 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyStoreKit;
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1410,29 +1630,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30ACE1A822A40DC3C43C8AF46D86439F /* Build configuration list for PBXNativeTarget "Siren" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25936381FE82219F157FD26C473281B3 /* Debug */,
-				14A567446499CC57D545A568244E4069 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		475D89C395431FB29C8E3BB0E32A091F /* Build configuration list for PBXNativeTarget "Appirater-Appirater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D067B70B370F39FC2F62B5CC1C71AC81 /* Debug */,
 				2140D4265B433F1BD45AFB757D9CE408 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4A9264FF6F7464A26815249719BD28B3 /* Build configuration list for PBXNativeTarget "Pods-ping" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2635A5C3564BFC54A28506CC06876743 /* Debug */,
-				825EF01FAEDACC68EABF780F8529D4D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1451,6 +1653,33 @@
 			buildConfigurations = (
 				063D98FA82720F87B27D1A3FCDE5F899 /* Debug */,
 				B80591DD6B27DD55747C073216408CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4F64063AFD704DD04F394FA13718DDC /* Build configuration list for PBXNativeTarget "Siren" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C40DE88C503AAE4E61B0D15BF375FC8 /* Debug */,
+				CF4BDEDF10521D1080ABD1160CDBDFED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A578D3192D1A02164C67E7ABEF4D032A /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEB6BB18798DD5AC8D844E59DE04D7AB /* Debug */,
+				9E241DD0312F0E01E1A25AAA1E324F98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5A33822DF32676C413F885715077A8F /* Build configuration list for PBXNativeTarget "Pods-ping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF31E8E3373D1FB8B70FF7433838689A /* Debug */,
+				D9192E18066CBD3354FF8773C3B78129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

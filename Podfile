@@ -9,6 +9,7 @@ target 'ping' do
   pod 'Appirater'
   pod 'GBPing'
   pod 'Siren'
+  pod 'SwiftyStoreKit'
 
   target 'pingTests' do
     inherit! :search_paths

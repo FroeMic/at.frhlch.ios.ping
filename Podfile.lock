@@ -2,23 +2,27 @@ PODS:
   - Appirater (2.3.1)
   - GBPing (1.4.1)
   - Siren (3.4.1)
+  - SwiftyStoreKit (0.13.2)
 
 DEPENDENCIES:
   - Appirater
   - GBPing
   - Siren
+  - SwiftyStoreKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Appirater
     - GBPing
     - Siren
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
   GBPing: 3bf8bf81f74da35d3b94d83d0290ba78bbde7e0f
   Siren: 94e13d40b48d8c0ddac053140d607c36bb487767
+  SwiftyStoreKit: b7563505440a68c9d9fa70bc43d8a97015519409
 
-PODFILE CHECKSUM: a1a7569f7960d6685a7ddd29c7ba23b92e07fa56
+PODFILE CHECKSUM: 09b7f80accc6c60190ea11b7c352f11993d297b2
 
 COCOAPODS: 1.5.3
