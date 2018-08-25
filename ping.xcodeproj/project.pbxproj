@@ -42,6 +42,7 @@
 		276453FD2120218F00E78077 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276453FC2120218F00E78077 /* StoreKit.framework */; };
 		276820DB213153BD00AA96D7 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276820DA213153BD00AA96D7 /* StoreKitManager.swift */; };
 		276820DD21316AA600AA96D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276820DC21316AA600AA96D7 /* Product.swift */; };
+		276820DF2131770400AA96D7 /* TransactionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276820DE2131770400AA96D7 /* TransactionState.swift */; };
 		2781CE8F20D19A8F0050C8A7 /* Array+stdev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */; };
 		2781CE9120D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */; };
 		2781CE9520D1CD520050C8A7 /* HostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */; };
@@ -118,6 +119,7 @@
 		276453FC2120218F00E78077 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		276820DA213153BD00AA96D7 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		276820DC21316AA600AA96D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		276820DE2131770400AA96D7 /* TransactionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionState.swift; sourceTree = "<group>"; };
 		2781CE8E20D19A8F0050C8A7 /* Array+stdev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+stdev.swift"; sourceTree = "<group>"; };
 		2781CE9020D1BBEA0050C8A7 /* HostHistoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostHistoryViewDelegate.swift; sourceTree = "<group>"; };
 		2781CE9420D1CD510050C8A7 /* HostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostTableViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				276820DA213153BD00AA96D7 /* StoreKitManager.swift */,
+				276820DE2131770400AA96D7 /* TransactionState.swift */,
 				276820DC21316AA600AA96D7 /* Product.swift */,
 			);
 			path = StoreKitHandler;
@@ -574,6 +577,7 @@
 				270B11B620E9F279002B6829 /* LightTheme.swift in Sources */,
 				2726370C21179EB00002B2F1 /* OrchidMildTheme.swift in Sources */,
 				278A6C9C20D067280007322A /* Injection.swift in Sources */,
+				276820DF2131770400AA96D7 /* TransactionState.swift in Sources */,
 				27B7939B20E4BFB40081884A /* PingConfiguration.swift in Sources */,
 				276820DD21316AA600AA96D7 /* Product.swift in Sources */,
 				2763C4322118E99F00B70FF8 /* ThemeProvider.swift in Sources */,

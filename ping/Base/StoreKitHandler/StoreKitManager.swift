@@ -21,6 +21,8 @@ class StoreKitManager {
         return receiptData?.base64EncodedString(options: [])
     }
     
+    var purchaseFinishedBlock: ((TransactionState)->())?
+    
     private init() { }
     
     func registerTransactionObserver() {
@@ -33,7 +35,9 @@ class StoreKitManager {
                         // Deliver content from server, then:
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                // Unlock content
+                    
+                    self.purchaseFinishedBlock?(.purchased)
+                    // Unlock content
                 case .failed, .purchasing, .deferred:
                     break // do nothing
                 }
@@ -55,9 +59,9 @@ class StoreKitManager {
         
         SwiftyStoreKit.fetchReceipt(forceRefresh: false) { result in
             switch result {
-            case .success(let receiptData):
+            case .success(let _):
                 completed(true)
-            case .error(let error):
+            case .error(let _):
                 completed(false)
             }
         }
@@ -71,11 +75,27 @@ class StoreKitManager {
                 if !downloads.isEmpty {
                     SwiftyStoreKit.start(downloads)
                 }
+                self.purchaseFinishedBlock?(.purchased)
             case .error(let error):
                 print("\(error)")
             }
         }
     }
+    
+    func restorePurchases() {
+        SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                self.purchaseFinishedBlock?(.failed)
+            }
+            else if results.restoredPurchases.count > 0 {
+                self.purchaseFinishedBlock?(.restored)
+            }
+            else {
+                self.purchaseFinishedBlock?(.notRestored)
+            }
+        }
+    }
+    
     
     func verifyReceipt(receipt: Receipt) -> Bool {
         
