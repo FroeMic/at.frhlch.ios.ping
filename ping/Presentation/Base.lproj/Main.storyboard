@@ -526,7 +526,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="d8d-fs-CTp">
-                            <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </view>
                         <sections>
@@ -720,6 +720,53 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle=" " id="qH8-Yh-VCE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="8aI-PJ-ZXI">
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8aI-PJ-ZXI" id="7SI-8Z-Sxi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGZ-ZG-CaN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore Purchases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-DG-w5r">
+                                                            <rect key="frame" x="10" y="11.5" width="160" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="160" id="ynM-sz-vTa"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="Qh7-aC-L2Q">
+                                                            <rect key="frame" x="349" y="14" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="2Ii-95-9ug"/>
+                                                                <constraint firstAttribute="width" constant="16" id="sC7-jl-6h4"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="g8c-DG-w5r" firstAttribute="centerY" secondItem="cGZ-ZG-CaN" secondAttribute="centerY" id="9tp-qc-Nkt"/>
+                                                        <constraint firstItem="Qh7-aC-L2Q" firstAttribute="centerY" secondItem="cGZ-ZG-CaN" secondAttribute="centerY" id="Lwn-4S-aVM"/>
+                                                        <constraint firstItem="g8c-DG-w5r" firstAttribute="leading" secondItem="cGZ-ZG-CaN" secondAttribute="leading" constant="10" id="f5j-Gr-TnO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qh7-aC-L2Q" secondAttribute="trailing" constant="10" id="sqU-hP-XsU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cGZ-ZG-CaN" secondAttribute="trailing" id="59x-lD-oeV"/>
+                                                <constraint firstAttribute="bottom" secondItem="cGZ-ZG-CaN" secondAttribute="bottom" id="V2g-go-BHo"/>
+                                                <constraint firstItem="cGZ-ZG-CaN" firstAttribute="top" secondItem="7SI-8Z-Sxi" secondAttribute="top" id="rCS-6B-kEf"/>
+                                                <constraint firstItem="cGZ-ZG-CaN" firstAttribute="leading" secondItem="7SI-8Z-Sxi" secondAttribute="leading" id="v3e-cN-29E"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="bLB-gA-kVJ" id="3Tm-Fk-Quc"/>
@@ -737,6 +784,9 @@
                         <outlet property="getPremiumImageView" destination="hMK-cV-Em9" id="XUz-De-yTr"/>
                         <outlet property="getPremiumLabel" destination="Pf1-FK-frE" id="ZWw-g5-PRY"/>
                         <outlet property="getPremiumTableViewCell" destination="XhT-bY-y9R" id="nDl-AB-uHc"/>
+                        <outlet property="restorePurchasesImageView" destination="Qh7-aC-L2Q" id="GX1-7D-eqC"/>
+                        <outlet property="restorePurchasesLabel" destination="g8c-DG-w5r" id="cqr-V0-nn6"/>
+                        <outlet property="restorePurchasesTableViewCell" destination="8aI-PJ-ZXI" id="rmI-lD-cdL"/>
                         <outlet property="selectedThemeLabel" destination="03G-kp-f5R" id="Ltg-5r-fwB"/>
                         <outlet property="themeChevronImageView" destination="pdH-Iz-Plf" id="KIg-QI-V3Z"/>
                         <outlet property="themeLabel" destination="4zp-ov-Lui" id="zzD-9x-aWa"/>

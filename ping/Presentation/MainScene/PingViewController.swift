@@ -95,6 +95,7 @@ class PingViewController: UIViewController {
             hostTextField.becomeFirstResponder()
         }
         
+        tableView.reloadData()
         applyTheme()
         
         navigationController?.setNavigationBarHidden(true, animated: animated)

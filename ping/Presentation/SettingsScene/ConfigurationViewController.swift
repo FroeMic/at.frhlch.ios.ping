@@ -62,7 +62,7 @@ class ConfigurationViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+        if !StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
             let alertView = UIAlertController(title: "", message: "Configuration options will be available once you have bought Ping Premium.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                 
@@ -120,7 +120,7 @@ extension ConfigurationViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if !IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+        if !StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
             return
         }
         

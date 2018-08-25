@@ -31,12 +31,18 @@ class SettingViewController: UITableViewController {
     @IBOutlet var getPremiumLabel: UILabel!
     @IBOutlet var getPremiumImageView: UIImageView!
     
+    @IBOutlet var restorePurchasesTableViewCell: UITableViewCell!
+    @IBOutlet var restorePurchasesLabel: UILabel!
+    @IBOutlet var restorePurchasesImageView: UIImageView!
+    
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Settings"
         getPremiumImageView.alpha = 0
+        restorePurchasesImageView.alpha = 0
     }
     
     
@@ -46,12 +52,7 @@ class SettingViewController: UITableViewController {
         applyTheme()
         tableView.reloadData()
         
-        if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
-            DispatchQueue.main.async {
-                self.getPremiumImageView.alpha = 1.0
-                self.getPremiumTableViewCell.alpha = 0.5
-            }
-        }
+        updateAccordingToPurchaseState()
         
         // Show the Navigation Bar
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -60,17 +61,22 @@ class SettingViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
+        StoreKitManager.shared.purchaseFinishedBlock = {[weak self] (state) in
             guard let strongSelf = self else { return }
             
-            if type == .purchased || type == .restored {
+            if state.viewControllerShouldShowAlert {
+                let alertView = UIAlertController(title: "", message: state.description, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                    
+                })
+                alertView.addAction(action)
+                
                 DispatchQueue.main.async {
-                    strongSelf.getPremiumImageView.alpha = 1.0
-                    strongSelf.getPremiumTableViewCell.alpha = 0.5
+                    strongSelf.present(alertView, animated: true, completion: nil)
                 }
             }
             
+            strongSelf.updateAccordingToPurchaseState()
         }
         
     }
@@ -129,6 +135,25 @@ class SettingViewController: UITableViewController {
             getPremiumImageView.image = coloredImage
             getPremiumImageView.tintColor = theme.textColor
         }
+        
+        restorePurchasesTableViewCell.selectionStyle = .none
+        restorePurchasesTableViewCell.backgroundColor = theme.backgroundColor
+        restorePurchasesLabel.textColor = theme.textColor
+        
+        if let image = restorePurchasesImageView.image {
+            let coloredImage = image.withRenderingMode(.alwaysTemplate)
+            restorePurchasesImageView.image = coloredImage
+            restorePurchasesImageView.tintColor = theme.textColor
+        }
+    }
+    
+    func updateAccordingToPurchaseState() {
+        if StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
+            DispatchQueue.main.async {
+                self.getPremiumImageView.alpha = 1.0
+                self.getPremiumTableViewCell.alpha = 0.5
+            }
+        }
     }
     
 }
@@ -157,8 +182,8 @@ extension SettingViewController {
                 return
                 // do nothing
             }
-        } else {
-            if IAPHandler.shared.doesOwnProduct(id: IAPHandler.shared.PING_PREMIUM_PRODUCT_ID) {
+        } else if indexPath.section == 1 {
+            if StoreKitManager.shared.doesOwnProduct(id: Product.PING_PREMIUM_PRODUCT_ID) {
                 let alertView = UIAlertController(title: "", message: "You have already bought Ping Premium.", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
                     
@@ -166,8 +191,10 @@ extension SettingViewController {
                 alertView.addAction(action)
                 present(alertView, animated: true, completion: nil)
             } else {
-                IAPHandler.shared.purchaseMyProduct(index: 0)
+                StoreKitManager.shared.purchaseProduct(id: Product.PING_PREMIUM_PRODUCT_ID)
             }
+        } else if indexPath.section == 2 {
+            StoreKitManager.shared.restorePurchases()
         }
 
     }
